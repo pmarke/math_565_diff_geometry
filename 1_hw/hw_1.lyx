@@ -786,9 +786,10 @@ is also smooth.
  is a smooth manifold.
  We can then take each component function to form a new function 
 \begin_inset Formula 
-\[
-\psi\circ f\circ\varphi^{-1}=\left(\psi_{1}\circ\pi_{1}\circ f\circ\varphi^{-1},\ldots,\psi_{k}\circ\pi_{k}\circ f\circ\varphi^{-1}\right):\varphi\left(U\right)\to\psi\left(V\right)
-\]
+\begin{align*}
+\psi\circ f\circ\varphi^{-1} & =\left(\psi_{1}\circ\pi_{1}\circ f\circ\varphi^{-1},\ldots,\right.\\
+ & \left.\psi_{k}\circ\pi_{k}\circ f\circ\varphi^{-1}\right):\varphi\left(U\right)\to\psi\left(V\right)
+\end{align*}
 
 \end_inset
 

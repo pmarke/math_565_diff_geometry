@@ -884,12 +884,29 @@ which is also smooth.
  We can then write the above map as 
 \begin_inset Formula 
 \[
-\psi_{j}\circ\psi_{k}^{-1}:\varphi_{k}\circ f\left(V_{k}\right)\to\varphi_{j}\circ f\left(V_{j}\right).
+\psi_{j}\circ\psi_{k}^{-1}:\varphi_{k}\circ f\left(V_{k}\right)\to\varphi_{j}\circ f\left(V_{j}\right),
 \]
 
 \end_inset
 
- 
+which is smooth.
+ Thus we have the smooth charts 
+\begin_inset Formula $\left(V_{i},\psi_{i}\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ where 
+\begin_inset Formula $V_{i}=f^{-1}\left(U_{i}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{i}=\varphi_{i}\circ f$
+\end_inset
+
+.
 \end_layout
 
 \end_body
