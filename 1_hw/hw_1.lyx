@@ -1,0 +1,913 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+HWK 1
+\end_layout
+
+\begin_layout Author
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M_{1,\ldots,}M_{k}$
+\end_inset
+
+ be topological manifolds of dimensions 
+\begin_inset Formula $n_{1},\ldots,n_{k}$
+\end_inset
+
+ respectively.
+ Prove that 
+\begin_inset Formula $M_{1}\times\cdots\times M_{k}$
+\end_inset
+
+ is a topological manifold of dimension 
+\begin_inset Formula $n_{1}+\cdots+n_{k}$
+\end_inset
+
+.
+ Use this fact to show that the n-torus 
+\begin_inset Formula $\mathbb{T}^{n}=S_{1}^{1}\times\cdots\times S_{n}^{1}$
+\end_inset
+
+ is an n-dimensional topological manifold.
+ 
+\end_layout
+
+\begin_layout Proof
+We will prove this by induction.
+ We assume that for some 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ that 
+\begin_inset Formula $\mathcal{M}=M_{1}\times\cdots\times M_{m}$
+\end_inset
+
+ is a topological manifold of dimension 
+\begin_inset Formula $N=n_{1}+\cdots+n_{m}$
+\end_inset
+
+ and we want to show that 
+\begin_inset Formula $\mathcal{M}\times M_{m+1}$
+\end_inset
+
+ is a topological manifold with dimention 
+\begin_inset Formula $N+n_{m+1}$
+\end_inset
+
+.
+ By definition, 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{m+1}$
+\end_inset
+
+ are Hausdorff and second countable topological spaces with 
+\begin_inset Formula $N$
+\end_inset
+
+ respectively 
+\begin_inset Formula $n_{m+1}$
+\end_inset
+
+ dimensional coordinate charts.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{m+1}$
+\end_inset
+
+ are Hausdorff then for every 
+\begin_inset Formula $p_{\mathcal{M}},q_{\mathcal{M}}\in\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{M_{m+1}},q_{M_{m+1}}\in M_{m+1}$
+\end_inset
+
+ there exists open sets 
+\begin_inset Formula $U_{\mathcal{M}}\subseteq\mathcal{M}$
+\end_inset
+
+, 
+\begin_inset Formula $V_{\mathcal{M}}\subseteq\mathcal{M}$
+\end_inset
+
+, 
+\begin_inset Formula $U_{M_{m+1}}\subseteq M_{m+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{M_{m+1}}\subseteq M_{m+1}$
+\end_inset
+
+ with 
+\begin_inset Formula $p_{\mathcal{M}}\in U_{\mathcal{M}}$
+\end_inset
+
+, 
+\begin_inset Formula $q_{\mathcal{M}}\in V_{\mathcal{M}}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{M_{m+1}}\in U_{M_{m+1}}$
+\end_inset
+
+, 
+\begin_inset Formula $q_{M_{m+1}}\in V_{M_{m+1}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $U_{\mathcal{M}}\cap V_{\mathcal{M}}=\emptyset$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{M_{m+1}}\cap V_{M_{m+1}}\neq\emptyset$
+\end_inset
+
+.
+ Therefore, for all 
+\begin_inset Formula $p,q\in\mathcal{M}\times M_{m+1}$
+\end_inset
+
+ where 
+\begin_inset Formula $p=\left(p_{\mathcal{M}},p_{M_{m+1}}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $q=\left(q_{\mathcal{M}},q_{M_{m+1}}\right)$
+\end_inset
+
+ there exists open sets 
+\begin_inset Formula $U=U_{\mathcal{M}}\times U_{M_{m+1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $V=V_{\mathcal{M}}\times V_{M_{m+1}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $U\cap V=\emptyset$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\mathcal{M}\times M_{m+1}$
+\end_inset
+
+ is Hausdorff.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{m+1}$
+\end_inset
+
+ are second countable, they each have a basis with countable cardinality.
+ Therefore, there exists contable bases 
+\begin_inset Formula $\mathcal{B}_{\mathcal{M}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{B}_{M_{m+1}}$
+\end_inset
+
+ such that for every open sets 
+\begin_inset Formula $U_{\mathcal{M}}\subseteq\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{M_{m+1}}\subseteq M_{m+1}$
+\end_inset
+
+ and points 
+\begin_inset Formula $p_{\mathcal{M}}\in U_{\mathcal{M}}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{M_{m+1}}\in U_{M_{m+1}}$
+\end_inset
+
+ there exists a 
+\begin_inset Formula $B_{\mathcal{M}}\subseteq\mathcal{B}_{\mathcal{M}}$
+\end_inset
+
+ and 
+\begin_inset Formula $B_{M_{m+1}}\subseteq\mathcal{B}_{M_{m+1}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p_{\mathcal{M}}\in B_{\mathcal{M}}\subseteq U_{\mathcal{M}}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{M_{m+1}}\in\mathcal{B}_{M_{m+1}}\subseteq U_{M_{m+1}}$
+\end_inset
+
+.
+ This implies that for every point 
+\begin_inset Formula $p=\left(p_{\mathcal{M}},p_{M_{m+1}}\right)\in U=U_{\mathcal{M}}\times U_{M_{m+1}}$
+\end_inset
+
+, there exists a 
+\begin_inset Formula $B\subseteq\mathcal{B}_{\mathcal{M}}\times\mathcal{B}_{M_{m+1}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\in B\subseteq U$
+\end_inset
+
+.
+ Since the direct product of two countable sets is countable, the set 
+\begin_inset Formula $B$
+\end_inset
+
+ is countable; thus 
+\begin_inset Formula $B$
+\end_inset
+
+ is a countable basis for 
+\begin_inset Formula $\mathcal{M}\times M_{m+1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{m+1}$
+\end_inset
+
+ are topological manifolds, then for all 
+\begin_inset Formula $p_{\mathcal{M}}\in\mathcal{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{M_{m+1}}\in M_{m+1}$
+\end_inset
+
+ there exists an 
+\begin_inset Formula $N$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{m+1}$
+\end_inset
+
+ dimensional coordinate charts 
+\begin_inset Formula $\left(U_{\mathcal{M}},\varphi_{\mathcal{M}}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(U_{M_{m+1}},\varphi_{M_{m+1}}\right)$
+\end_inset
+
+.
+ We can take the direct product of the charts to create another coordinate
+ chart on 
+\begin_inset Formula $\mathcal{M}\times M_{m+1}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p=\left(p_{\mathcal{M}},p_{M_{m+1}}\right)\in\mathcal{M}\times M_{m+1}$
+\end_inset
+
+, then there exists a 
+\begin_inset Formula $N+n_{m+1}$
+\end_inset
+
+ dimensional coordinate chart with domain 
+\begin_inset Formula $U=U_{\mathcal{M}}\times U_{M_{m+1}}$
+\end_inset
+
+ and mapping 
+\begin_inset Formula $\varphi=\left(\varphi_{\mathcal{M}},\varphi_{M_{m+1}}\right):U\to\mathbb{R}^{N+n_{m+1}}$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+\varphi\left(p\right)=\left(\varphi_{\mathcal{M}}\left(p_{\mathcal{M}}\right),\varphi_{M_{m+1}}\left(p_{M_{m+1}}\right)\right).
+\]
+
+\end_inset
+
+We have shown that 
+\begin_inset Formula $\mathcal{M}\times M_{m+1}$
+\end_inset
+
+ is a Hausdorff, second countable topological space such that for all 
+\begin_inset Formula $p\in\mathcal{M}\times M_{m+1}$
+\end_inset
+
+ there exists an 
+\begin_inset Formula $N+n_{m+1}$
+\end_inset
+
+ dimensional coordinate chart.
+ Therefore 
+\begin_inset Formula $\mathcal{M}\times M_{m+1}$
+\end_inset
+
+ is an 
+\begin_inset Formula $N+n_{m+1}$
+\end_inset
+
+ dimensional topological manifold.
+ Thus by induction, 
+\begin_inset Formula $M_{1}\times\cdots\times M_{k}$
+\end_inset
+
+ is a topological manifold of dimension 
+\begin_inset Formula $n_{1}+\cdots+n_{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+We can use this fact to show that the n-torus 
+\begin_inset Formula $\mathbb{T}^{n}=S_{1}^{1}\times\cdots\times S_{n}^{1}$
+\end_inset
+
+ is an n-dimensional topological manifold.
+ Since 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ is a topological manifold of dimension 
+\begin_inset Formula $1$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbb{T}^{n}$
+\end_inset
+
+ is a topological manifold of dimension 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Show that if 
+\begin_inset Formula $M$
+\end_inset
+
+ is a smooth manifold and 
+\begin_inset Formula $f:M\to\mathbb{R}^{k}$
+\end_inset
+
+ is a smooth function.
+ Then 
+\begin_inset Formula $f\circ\varphi^{-1}$
+\end_inset
+
+ is smooth for all charts 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We suppose directly that 
+\begin_inset Formula $M$
+\end_inset
+
+ is a smooth manifold and 
+\begin_inset Formula $f:M\to\mathbb{R}^{k}$
+\end_inset
+
+ is a smooth function.
+ By definition, since 
+\begin_inset Formula $f$
+\end_inset
+
+ is smooth, then for every 
+\begin_inset Formula $p\in M$
+\end_inset
+
+, there exists a chart 
+\begin_inset Formula $\left(U_{i},\varphi_{i}\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ containing 
+\begin_inset Formula $p$
+\end_inset
+
+ and a chart 
+\begin_inset Formula $\left(V_{i},\psi_{i}\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}^{k}$
+\end_inset
+
+ containing 
+\begin_inset Formula $f\left(p\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(U_{i}\right)\subseteq V_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{i}\circ f\circ\varphi_{i}^{-1}:\varphi_{i}\left(U_{i}\right)\to\psi_{i}\left(V_{i}\right)$
+\end_inset
+
+ is smooth.
+ Since 
+\begin_inset Formula $\mathbb{R}^{k}$
+\end_inset
+
+ is Euclidean, the maximal atlas is a single chart 
+\begin_inset Formula $\left(\mathbb{R}^{k},I\right)$
+\end_inset
+
+ with the function being the identity function.
+ Therefore, we can simplify the map 
+\begin_inset Formula $\psi_{i}\circ f\circ\varphi_{i}^{-1}:\varphi_{i}\left(U_{i}\right)\to\psi_{i}\left(V_{i}\right)$
+\end_inset
+
+ to 
+\begin_inset Formula $f\circ\varphi_{i}^{-1}:\varphi_{i}\left(U_{i}\right)\to V_{i}$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $f\circ\varphi_{i}^{-1}$
+\end_inset
+
+ is smooth for every chart.
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M_{1},\ldots,M_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ be smooth manifolds.
+ Show that 
+\begin_inset Formula $f:N\to M_{1}\times\cdots\times M_{k}$
+\end_inset
+
+ is smooth if an only if each component function is smooth 
+\begin_inset Formula $\left(\pi_{i}\circ f:N\to M_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since this is a biconditional statement, we must show both ways.
+ Let 
+\begin_inset Formula $\mathcal{M}=M_{1}\times\cdots\times M_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left(\implies\right):$
+\end_inset
+
+ We assume directly that 
+\begin_inset Formula $f:N\to M_{1}\times\cdots\times M_{k}$
+\end_inset
+
+ is smooth, then for every 
+\begin_inset Formula $p\in N$
+\end_inset
+
+, there exists a chart 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $N$
+\end_inset
+
+ containing 
+\begin_inset Formula $p$
+\end_inset
+
+ and a chart 
+\begin_inset Formula $\left(V,\psi\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ containing 
+\begin_inset Formula $f\left(p\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(U\right)\subseteq V$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi\circ f\circ\varphi^{-1}:\varphi\left(U\right)\to\psi\left(V\right)$
+\end_inset
+
+ is smooth.
+ The subset 
+\begin_inset Formula $V$
+\end_inset
+
+ can be represented as 
+\begin_inset Formula $V=V_{1}\times\cdots\times V_{k}$
+\end_inset
+
+ where 
+\begin_inset Formula $V_{i}\subseteq M_{i}$
+\end_inset
+
+ and the mapping 
+\begin_inset Formula $\psi$
+\end_inset
+
+ has a smooth inverse 
+\begin_inset Formula $\psi^{-1}$
+\end_inset
+
+which can be represented as 
+\begin_inset Formula $\psi^{-1}=\left(\psi_{1}^{-1},\ldots,\psi_{k}^{-1}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $\psi_{i}^{-1}:\psi\left(V\right)\to M_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\psi\circ f\circ\varphi^{-1}:\varphi\left(U\right)\to\psi\left(V\right)$
+\end_inset
+
+ is smooth, we know that 
+\begin_inset Formula 
+\[
+\psi\circ\psi^{-1}\circ\psi\circ f\circ\varphi^{-1}:\varphi\left(U\right)\to\psi\left(V\right)
+\]
+
+\end_inset
+
+is also smooth.
+ Let 
+\begin_inset Formula $\Pi=\psi^{-1}\circ\psi\circ f:N\to M$
+\end_inset
+
+ , then 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ is smooth and can be represented as 
+\begin_inset Formula $\Pi=\left(\Pi_{i},\ldots,\Pi_{k}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $\Pi_{i}=\psi_{i}^{-1}\circ\psi\circ f:N\to M_{i}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ is smooth, then 
+\begin_inset Formula $\Pi_{i}$
+\end_inset
+
+ is smooth.
+ Therefore, 
+\begin_inset Formula $\left(\pi_{i}\circ f:N\to M_{i}\right)$
+\end_inset
+
+ is smooth for each component.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left(\impliedby\right):$
+\end_inset
+
+ We assume directly that each component function is smooth 
+\begin_inset Formula $\left(\pi_{i}\circ f:N\to M_{i}\right)$
+\end_inset
+
+.
+ Then for every 
+\begin_inset Formula $p\in N$
+\end_inset
+
+, there exists a chart 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $N$
+\end_inset
+
+ containing 
+\begin_inset Formula $p$
+\end_inset
+
+ and a chart 
+\begin_inset Formula $\left(V_{i},\psi_{i}\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ containing 
+\begin_inset Formula $\pi_{i}\circ f\left(p\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\pi_{i}\circ f\left(U\right)\subseteq V_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{i}\circ\pi_{i}\circ f\circ\varphi^{-1}:\varphi\left(U\right)\to\psi_{i}\left(V_{i}\right)$
+\end_inset
+
+ is smooth.
+ From exercise 1, we showed that 
+\begin_inset Formula $M_{1}\times\cdots\times M_{k}$
+\end_inset
+
+ is a topological manifold with charts 
+\begin_inset Formula $\left(V,\psi\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $V=V_{i}\times\cdots\times V_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi=\left(\psi_{1},\ldots,\psi_{k}\right)$
+\end_inset
+
+.
+ Since each 
+\begin_inset Formula $\psi_{i}$
+\end_inset
+
+ is smooth and compatible, then each 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is smooth and compatible; therefore, 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ is a smooth manifold.
+ We can then take each component function to form a new function 
+\begin_inset Formula 
+\[
+\psi\circ f\circ\varphi^{-1}=\left(\psi_{1}\circ\pi_{1}\circ f\circ\varphi^{-1},\ldots,\psi_{k}\circ\pi_{k}\circ f\circ\varphi^{-1}\right):\varphi\left(U\right)\to\psi\left(V\right)
+\]
+
+\end_inset
+
+which is smooth because each of its componentes is smooth.
+ 
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $f:M\to N$
+\end_inset
+
+ be a homeomorphism between topological manifolds.
+ Assume that 
+\begin_inset Formula $N$
+\end_inset
+
+ is a smooth manifold.
+ Use 
+\begin_inset Formula $f$
+\end_inset
+
+ to pullback the smooth structure on 
+\begin_inset Formula $N$
+\end_inset
+
+ to a smooth structure on 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $\left(U_{i},\varphi_{i}\right)$
+\end_inset
+
+ be the smooth charts on 
+\begin_inset Formula $N$
+\end_inset
+
+ which constitute a maximal atlas, then any two charts 
+\begin_inset Formula $\left(U_{j},\varphi_{j}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(U_{k},\varphi_{k}\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $U_{j}\cap U_{k}\neq\emptyset$
+\end_inset
+
+ are compatible and the map 
+\begin_inset Formula $\varphi_{j}\circ\varphi_{k}^{-1}:\varphi_{k}\left(U_{k}\right)\to\varphi_{j}\left(U_{j}\right)$
+\end_inset
+
+ is smooth.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is a homeomorphism, its inverse is also a homeomorphism.
+ This allows us to constuct the map 
+\begin_inset Formula 
+\[
+\varphi_{j}\circ f\circ f^{-1}\circ\varphi_{k}:\varphi_{k}\left(U_{k}\right)\to\varphi_{j}\left(U_{j}\right)
+\]
+
+\end_inset
+
+which is also smooth.
+ Let 
+\begin_inset Formula $\varphi_{i}\circ f=\psi_{i}$
+\end_inset
+
+, then the above map can be simplified to 
+\begin_inset Formula $\psi_{j}\circ\psi_{k}^{-1}:\varphi_{k}\left(U_{k}\right)\to\varphi_{j}\left(U_{j}\right)$
+\end_inset
+
+ which is smooth.
+ Since 
+\begin_inset Formula $f$
+\end_inset
+
+ is a homeomorphism, 
+\begin_inset Formula $f^{-1}\left(U_{i}\right)=V_{i}$
+\end_inset
+
+ is also an open set.
+ We can then write the above map as 
+\begin_inset Formula 
+\[
+\psi_{j}\circ\psi_{k}^{-1}:\varphi_{k}\circ f\left(V_{k}\right)\to\varphi_{j}\circ f\left(V_{j}\right),
+\]
+
+\end_inset
+
+which is smooth.
+ Thus we have the smooth charts 
+\begin_inset Formula $\left(V_{i},\psi_{i}\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ where 
+\begin_inset Formula $V_{i}=f^{-1}\left(U_{i}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{i}=\varphi_{i}\circ f$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
