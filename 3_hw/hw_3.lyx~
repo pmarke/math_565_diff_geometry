@@ -1,0 +1,852 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 3
+\end_layout
+
+\begin_layout Author
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $F:\mathbb{R}^{n+1}\to\mathbb{R}$
+\end_inset
+
+ be 
+\begin_inset Formula $C^{r}$
+\end_inset
+
+ for some 
+\begin_inset Formula $r\geq1$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula $df_{p}\neq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in F^{-1}\left(c\right)$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $F^{-1}\left(c\right)$
+\end_inset
+
+ is a smooth 
+\begin_inset Formula $C^{r}$
+\end_inset
+
+ manifold.
+\end_layout
+
+\begin_layout Proof
+We assume directly that 
+\begin_inset Formula $F:\mathbb{R}^{n+1}\to\mathbb{R}$
+\end_inset
+
+ be 
+\begin_inset Formula $C^{r}$
+\end_inset
+
+ for some 
+\begin_inset Formula $r\geq1$
+\end_inset
+
+.
+ We assume also that for 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $df_{p}\neq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in F^{-1}\left(c\right)$
+\end_inset
+
+.
+ We note that 
+\begin_inset Formula $\mathbb{R}^{n+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are smooth manifolds that have charts 
+\begin_inset Formula $\left(\mathbb{R}^{n+1},\varphi\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\mathbb{R},\psi\right)$
+\end_inset
+
+.
+ Since the codomain of 
+\begin_inset Formula $F$
+\end_inset
+
+ has rank 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $df_{p}$
+\end_inset
+
+ has rank 
+\begin_inset Formula $1$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in F^{-1}\left(c\right)$
+\end_inset
+
+.
+ According to the implicit function theorem, for every 
+\begin_inset Formula $p=\left(x,y\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in\mathbb{R}$
+\end_inset
+
+, there exists open neighborhoods 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{y}$
+\end_inset
+
+, where 
+\begin_inset Formula $x\in V_{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in V_{y}$
+\end_inset
+
+, and a smooth map 
+\begin_inset Formula $f_{V_{x}}:V_{x}\to V_{y}$
+\end_inset
+
+ such that for every 
+\begin_inset Formula $x\in V_{x}$
+\end_inset
+
+ we have 
+\begin_inset Formula $F\left(x,f_{V_{x}}\left(x\right)\right)=c$
+\end_inset
+
+.
+ We also note that since 
+\begin_inset Formula $F$
+\end_inset
+
+ is smooth the preimage is a Hausdorff and 2nd countable.
+ 
+\end_layout
+
+\begin_layout Proof
+We can form charts on 
+\begin_inset Formula $F^{-1}\left(c\right)$
+\end_inset
+
+ at 
+\begin_inset Formula $p$
+\end_inset
+
+ using the charts on 
+\begin_inset Formula $\mathbb{R}^{n+1}$
+\end_inset
+
+.
+ By restricting the domain of 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ do 
+\begin_inset Formula $V_{x}\times V_{y}$
+\end_inset
+
+ we get 
+\begin_inset Formula $\left.\varphi\right|_{V_{x}\times V_{y}}\left(x,y\right)=\left(x,f_{V_{x}}\left(x\right)\right)$
+\end_inset
+
+.
+ With the domain restricted to 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+, the 
+\begin_inset Formula $y$
+\end_inset
+
+ component is known from the function 
+\begin_inset Formula $f_{V_{x}}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\pi_{V_{x}}:V_{x}\times V_{y}\to V_{x}$
+\end_inset
+
+ be the projection function such that 
+\begin_inset Formula $\pi_{V_{x}}\circ\left.\varphi\right|_{V_{x}\times V_{y}}\left(x,y\right)=x$
+\end_inset
+
+ whose inverse is 
+\begin_inset Formula $\pi_{V_{x}}^{-1}:V_{x}\to V_{x}\times V_{y}$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+\pi_{V_{x}}^{-1}=\left(x,f_{V_{x}}\left(x\right)\right).
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $f_{V_{x}}$
+\end_inset
+
+ is smooth, the projection 
+\begin_inset Formula $\pi_{V_{x}}$
+\end_inset
+
+ and its inverse are smooth maps.
+ We can define new charts on 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+ which are 
+\begin_inset Formula $\left(V_{x},\tilde{\varphi}_{V_{x}}\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $\tilde{\varphi}_{V_{x}}=\left.\varphi\right|_{V_{x}}$
+\end_inset
+
+ where 
+\begin_inset Formula $\left.\varphi\right|_{V_{x}}$
+\end_inset
+
+ is the part of 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ that only operates on 
+\begin_inset Formula $V_{x}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\left.\varphi\right|_{V_{x}\times V_{y}}$
+\end_inset
+
+ is smooth, the chart 
+\begin_inset Formula $\left(V_{x},\tilde{\varphi}_{V_{x}}\right)$
+\end_inset
+
+ is smooth.
+ 
+\end_layout
+
+\begin_layout Proof
+Now suppose that we have two charts 
+\begin_inset Formula $\left(V_{x},\tilde{\varphi}_{V_{x}}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(U_{x},\tilde{\varphi}_{U_{x}}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $p\in V_{x}\times V_{y}$
+\end_inset
+
+ , 
+\begin_inset Formula $p\in U_{x}\times U_{u}$
+\end_inset
+
+, 
+\begin_inset Formula $\left(V_{x}\times V_{y}\right)\cap\left(U_{x}\times U_{y}\right)\neq\emptyset$
+\end_inset
+
+ and smooth maps 
+\begin_inset Formula $f_{V_{x}}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{U_{x}}$
+\end_inset
+
+ such that every 
+\begin_inset Formula $x\in V_{x}$
+\end_inset
+
+ we have 
+\begin_inset Formula $F\left(x,f_{V_{x}}\left(x\right)\right)=c$
+\end_inset
+
+ and for every 
+\begin_inset Formula $x\in U_{x}$
+\end_inset
+
+ we have 
+\begin_inset Formula $F\left(x,f_{U_{x}}\left(x\right)\right)=c$
+\end_inset
+
+.
+ The existence of the smooth functions 
+\begin_inset Formula $f_{V_{x}}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{U_{x}}$
+\end_inset
+
+ are guaranteed by the implicit function theorem.
+ We can construct the map between charts 
+\begin_inset Formula $\Phi:\tilde{\varphi}_{V_{x}}\left(V_{x}\cap U_{x}\right)\to\tilde{\varphi}_{U_{x}}\left(V_{x}\cap U_{x}\right)$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+\Phi=\tilde{\varphi}_{V_{x}}\circ\pi_{V_{x}}\circ\pi_{U_{x}}^{-1}\circ\tilde{\varphi}_{U_{x}}^{-1}
+\]
+
+\end_inset
+
+which is smooth since 
+\begin_inset Formula $f_{V_{x}}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{U_{x}}$
+\end_inset
+
+ are smooth.
+ Therefore, the preimage of 
+\begin_inset Formula $F$
+\end_inset
+
+ is Hausdorff, 2nd countable and has compatible smooth 
+\begin_inset Formula $C^{r}$
+\end_inset
+
+ charts; hence, it is a 
+\begin_inset Formula $C^{r}$
+\end_inset
+
+ manifold.
+ 
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional manifold and 
+\begin_inset Formula $TS$
+\end_inset
+
+ be the set of all points 
+\begin_inset Formula $\left(x,v\right)\in TM$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left|v\right|=1$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $S\left(M\right)$
+\end_inset
+
+ is a 
+\begin_inset Formula $2k-1$
+\end_inset
+
+-dimensional subbundle of 
+\begin_inset Formula $TM$
+\end_inset
+
+ called the sphere bundle of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+We suppose directly that 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 
+\begin_inset Formula $k$
+\end_inset
+
+-dimensional smooth manifold and 
+\begin_inset Formula $TS$
+\end_inset
+
+ is the set previously described.
+ Let 
+\begin_inset Formula $v=\left(v_{1:k^{-}},v_{k}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $v_{1:k^{-}}=\left(v_{1},\ldots,v_{k-1}\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $\Phi:\mathbb{R}^{k-1}\times\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ be a smooth map defined as 
+\begin_inset Formula $\Phi\left(v\right)=\sqrt{1-\sum_{j=1}^{k-1}v_{j}^{2}}$
+\end_inset
+
+.
+ The partial derivative is 
+\begin_inset Formula 
+\[
+\frac{\partial\Phi}{\partial v}=\alpha\begin{bmatrix}-v_{1} & \cdots & -v_{k-1} & 0\end{bmatrix},
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $\alpha=\left(1-\sum_{j=1}^{k-1}v_{j}^{2}\right)^{\frac{-1}{2}}.$
+\end_inset
+
+ Under the constraint 
+\begin_inset Formula $\left|v\right|=1$
+\end_inset
+
+, the rank of 
+\begin_inset Formula $\frac{\partial\Phi}{\partial v}$
+\end_inset
+
+ is always 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Therefore, according to the implicit function theorem, there exists a neighborh
+ood 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ containing 
+\begin_inset Formula $v_{1:k^{-}}$
+\end_inset
+
+, a neighborhood 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ containing 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ and a smooth map 
+\begin_inset Formula $f:V_{0}\to V_{1}$
+\end_inset
+
+ with constant rank 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ According to exercise 
+\begin_inset Formula $1$
+\end_inset
+
+, we then know that 
+\begin_inset Formula $TS$
+\end_inset
+
+ is a manifold.
+ Let 
+\begin_inset Formula $F:TS\to TM$
+\end_inset
+
+ defined as 
+\begin_inset Formula $F\left(x,v_{1:k^{-}}\right)=F\left(x,\left(v_{1:k^{-}},f\left(v_{1:k^{-}}\right)\right)\right).$
+\end_inset
+
+ The function 
+\begin_inset Formula $F$
+\end_inset
+
+ is injective and constant rank; therefore, it is an immersion.
+ The image of 
+\begin_inset Formula $F$
+\end_inset
+
+ is simply 
+\begin_inset Formula 
+\[
+N=\left\{ F\left(x,\left(v_{1:k^{-}},1\right)\right):\left(x,v_{1:k^{-}}\right)\in TS\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Note that 
+\begin_inset Formula $N$
+\end_inset
+
+ inherits a subspace topology from 
+\begin_inset Formula $TM$
+\end_inset
+
+; therefore, for every open set 
+\begin_inset Formula $U\in TM$
+\end_inset
+
+ the set 
+\begin_inset Formula $N\cap U$
+\end_inset
+
+ is open in 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $V\times\left\{ 1\right\} $
+\end_inset
+
+ be open in 
+\begin_inset Formula $N$
+\end_inset
+
+, then 
+\begin_inset Formula $F^{-1}\left(V\times\left\{ 1\right\} \right)=V$
+\end_inset
+
+ which is open in 
+\begin_inset Formula $TS$
+\end_inset
+
+; hence, 
+\begin_inset Formula $F$
+\end_inset
+
+ is also a homeomorphism.
+ Therefore, 
+\begin_inset Formula $F$
+\end_inset
+
+ is an embedding.
+ 
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $G:\mathbb{R}^{2}\to\mathbb{R}^{4}$
+\end_inset
+
+ be given by 
+\begin_inset Formula 
+\[
+G\left(x,y\right)=\left(\left(r\cos y+1\right)\cos x,\left(r\cos y+1\right)\sin x,r\sin y\cos\frac{x}{2},r\sin y\sin\frac{x}{2}\right).
+\]
+
+\end_inset
+
+Show this gives an embedding of the Klein bottle.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M=\left[0,2\pi\right]\times\left[0,2\pi\right]\subsetneq\mathbb{R}^{2}$
+\end_inset
+
+ be the subset of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ on which the Klein bottle is defined.
+ That is every 
+\begin_inset Formula $\left(0,y\right)\in M$
+\end_inset
+
+ is identified with 
+\begin_inset Formula $\left(2\pi,y\right)$
+\end_inset
+
+ and every 
+\begin_inset Formula $\left(x,2\pi\right)\in M$
+\end_inset
+
+ is identified with 
+\begin_inset Formula $\left(2\pi-x,0\right)$
+\end_inset
+
+.
+ We suppose by contradiction that 
+\begin_inset Formula $\left.G\right|_{M}$
+\end_inset
+
+ is not injective, then there exists a 
+\begin_inset Formula $a=\left(x_{1},y_{1}\right),b=\left(x_{2},y_{2}\right)\in M$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+ and 
+\begin_inset Formula $G\left(a\right)=G\left(b\right)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+G\left(a\right)=\left(\left(r\cos y_{1}+1\right)\cos x_{1},\left(r\cos y_{1}+1\right)\sin x_{1},r\sin y_{1}\cos\frac{x_{1}}{2},r\sin y_{1}\sin\frac{x_{1}}{2}\right)
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+G\left(b\right)=\left(\left(r\cos y_{2}+1\right)\cos x_{2},\left(r\cos y_{2}+1\right)\sin x_{2},r\sin y_{2}\cos\frac{x_{2}}{2},r\sin y_{2}\sin\frac{x_{2}}{2}\right).
+\]
+
+\end_inset
+
+By assumption 
+\begin_inset Formula 
+\begin{align*}
+\left(r\cos y_{1}+1\right)\cos x_{1} & =\left(r\cos y_{2}+1\right)\cos x_{2}\\
+\left(r\cos y_{1}+1\right)\sin x_{1} & =\left(r\cos y_{2}+1\right)\sin x_{2}\\
+r\sin y_{1}\cos\frac{x_{1}}{2} & =r\sin y_{2}\cos\frac{x_{2}}{2}\\
+r\sin y_{1}\sin\frac{x_{1}}{2} & =r\sin y_{2}\sin\frac{x_{2}}{2}.
+\end{align*}
+
+\end_inset
+
+Note that the last term divided by the third term is 
+\begin_inset Formula 
+\[
+\frac{r\sin y_{1}\sin\frac{x_{1}}{2}}{r\sin y_{1}\cos\frac{x_{1}}{2}}=\frac{r\sin y_{2}\sin\frac{x_{2}}{2}}{r\sin y_{2}\cos\frac{x_{2}}{2}}
+\]
+
+\end_inset
+
+which simplifies to 
+\begin_inset Formula 
+\[
+\tan\left(\frac{x_{1}}{2}\right)=\tan\left(\frac{x_{2}}{2}\right),
+\]
+
+\end_inset
+
+which can only be possible if 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\cos x_{1}=\cos\left(x_{2}\right)$
+\end_inset
+
+.
+ Rearranging the first term and substituting in 
+\begin_inset Formula $\alpha=\cos\left(x_{1}\right)=\cos$
+\end_inset
+
+
+\begin_inset Formula $\left(x_{2}\right)$
+\end_inset
+
+ we get that 
+\begin_inset Formula 
+\[
+\left(r\cos y_{1}+1\right)\alpha=\left(r\cos y_{2}+1\right)\alpha
+\]
+
+\end_inset
+
+which is simplified to 
+\begin_inset Formula 
+\[
+\cos y_{1}=\cos y_{2},
+\]
+
+\end_inset
+
+which con only be possible if 
+\begin_inset Formula $y_{1}=y_{2}$
+\end_inset
+
+.
+ This is a contradiction; hence, 
+\begin_inset Formula $\left.G\right|_{M}$
+\end_inset
+
+ is injective.
+ 
+\end_layout
+
+\begin_layout Proof
+We begin by taking the partial derivative of 
+\begin_inset Formula $G$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial G}{\partial\left(x,y\right)}=\begin{bmatrix}-\left(r\cos y+1\right)\sin x & -r\sin y\cos x\\
+\left(r\cos y+1\right)\cos x & -r\sin y\sin x\\
+-\frac{1}{2}r\sin y\sin\frac{x}{2} & r\cos y\cos\frac{x}{2}\\
+\frac{1}{2}r\sin y\cos\frac{x}{2} & r\cos y\sin\frac{x}{2}
+\end{bmatrix}.
+\]
+
+\end_inset
+
+ .
+ For every 
+\begin_inset Formula $p\in M$
+\end_inset
+
+, the partial derivative of 
+\begin_inset Formula $G$
+\end_inset
+
+ is rank 
+\begin_inset Formula $2$
+\end_inset
+
+; hence, 
+\begin_inset Formula $G$
+\end_inset
+
+ gives an immersion of the Klein bottle.
+ Since 
+\begin_inset Formula $\left.G\right|_{M}$
+\end_inset
+
+ is a smooth injective immersion whose domain is compact, 
+\begin_inset Formula $\left.G\right|_{M}$
+\end_inset
+
+ is an embedding; therefore, 
+\begin_inset Formula $G$
+\end_inset
+
+ is an embedding of the Klein bottle.
+ 
+\end_layout
+
+\end_body
+\end_document
