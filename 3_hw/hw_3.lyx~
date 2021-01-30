@@ -798,7 +798,7 @@ which con only be possible if
 \end_layout
 
 \begin_layout Proof
-We begin by taking the partial derivative of 
+Next we take the partial derivative of 
 \begin_inset Formula $G$
 \end_inset
 
@@ -814,7 +814,6 @@ We begin by taking the partial derivative of
 
 \end_inset
 
- .
  For every 
 \begin_inset Formula $p\in M$
 \end_inset
@@ -845,6 +844,150 @@ We begin by taking the partial derivative of
 \end_inset
 
  is an embedding of the Klein bottle.
+ 
+\end_layout
+
+\begin_layout Exercise
+Show that 
+\begin_inset Formula $f:S^{1}\to\mathbb{R}$
+\end_inset
+
+ given by 
+\begin_inset Formula $f\left(t\right)=\left(\sin\left(2t\right)\cos\left(t\right),\sin\left(2t\right)\sin\left(t\right)\right)$
+\end_inset
+
+ is an immersion.
+ Explain why 
+\begin_inset Formula $f\left(S^{1}\right)$
+\end_inset
+
+ is not a submanifold of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+The partial derivative of 
+\begin_inset Formula $f$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial t}=\begin{bmatrix}2\cos\left(2t\right)\cos\left(t\right)-\sin\left(2t\right)\sin\left(t\right) & 2\cos\left(2t\right)\sin\left(t\right)+\sin\left(2t\right)\cos\left(t\right)\end{bmatrix},
+\]
+
+\end_inset
+
+which can be simplified to 
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial t}=\begin{bmatrix}6\cos^{3}\left(t\right)-4\cos\left(t\right) & 2\cos\left(2t\right)\sin\left(t\right)+\sin\left(2t\right)\cos\left(t\right)\end{bmatrix}
+\]
+
+\end_inset
+
+For the partial derivative to be injective we need it to be rank 
+\begin_inset Formula $1$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in S^{1}$
+\end_inset
+
+.
+ Essentially, we must show that 
+\begin_inset Formula $\frac{\partial f}{\partial t}\neq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in S^{1}$
+\end_inset
+
+.
+ We suppose by contradiction that there exists a 
+\begin_inset Formula $t\in S^{1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\frac{\partial f}{\partial t}=0$
+\end_inset
+
+, then there exists a 
+\begin_inset Formula $t\in S^{1}$
+\end_inset
+
+ such that the first and second terms are zero.
+ Setting the first term to zero and solving for 
+\begin_inset Formula $t$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\[
+t=\pm\arccos\left(\sqrt{\frac{2}{3}}\right),
+\]
+
+\end_inset
+
+plugging these values of 
+\begin_inset Formula $t$
+\end_inset
+
+ into the second term yields 
+\begin_inset Formula $\approx0.6367$
+\end_inset
+
+ and 
+\begin_inset Formula $\approx0.817$
+\end_inset
+
+ which are not zero; thus the partial derivative of 
+\begin_inset Formula $f$
+\end_inset
+
+ has rank 
+\begin_inset Formula $1$
+\end_inset
+
+ for all values of 
+\begin_inset Formula $t\in S^{1}$
+\end_inset
+
+; hence 
+\begin_inset Formula $f$
+\end_inset
+
+ is an immersion.
+ However, at 
+\begin_inset Formula $t=k\frac{\pi}{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $k\in\mathbb{Z}$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(t\right)=0$
+\end_inset
+
+ so it is not injective and cannot be a homeomorphism.
+ Thus 
+\begin_inset Formula $f$
+\end_inset
+
+ is not an embedding which means that 
+\begin_inset Formula $f\left(S^{1}\right)$
+\end_inset
+
+ is not a submanifold of 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
  
 \end_layout
 
