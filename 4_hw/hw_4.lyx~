@@ -293,12 +293,50 @@ To prove the first one we will take it term by term
 \begin{align*}
 \left[\left[X,Y\right],Z\right] & =\left[x_{i}\left(p\right)\frac{\partial}{\partial x_{i}}\left(y_{j}\left(p\right)\frac{\partial}{\partial x_{j}}\right)-y_{i}\left(p\right)\frac{\partial}{\partial x_{i}}\left(x_{j}\left(p\right)\frac{\partial}{\partial x_{j}}\right),Z\right]\\
  & =\left[x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}+x_{i}\left(p\right)y_{i}\left(p\right)\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}-y_{i}\left(p\right)x_{i}\left(p\right)\frac{\partial^{2}}{\partial x_{i}\partial x_{j}},Z\right]\\
- & =\left[x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}},Z\right]
+ & =\left[x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}},Z\right]\\
+ & =\left(x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}\right)z_{k}\left(p\right)\frac{\partial}{\partial x_{k}}-z_{k}\left(p\right)\frac{\partial}{\partial x_{k}}\left(x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}\right)\\
+ & =x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}\left(z_{k}\left(p\right)\frac{\partial}{\partial x_{k}}\right)-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}\left(z_{k}\left(p\right)\frac{\partial}{\partial x_{k}}\right)-z_{k}\left(p\right)\frac{\partial}{\partial x_{k}}\left(x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}\right)+z_{k}\left(p\right)\frac{\partial}{\partial x_{k}}\left(y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}\right)\\
+ & =x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial z_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}+x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}z_{k}\left(p\right)\frac{\partial^{2}}{\partial x_{j}\partial x_{k}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial z_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}z_{k}\left(p\right)\frac{\partial^{2}}{\partial x_{j}\partial x_{k}}\\
+ & -z_{k}\left(p\right)\left.\frac{\partial x_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}-z_{k}\left(p\right)x_{i}\left(p\right)\frac{\partial^{2}}{\partial x_{k}\partial x_{j}}+z_{k}\left(p\right)\left.\frac{\partial y_{i}}{\partial x_{k}}\right|\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}+z_{k}\left(p\right)y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial^{2}}{\partial x_{k}\partial x_{j}}\\
+ & =x_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial z_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-y_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial z_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-z_{k}\left(p\right)\left.\frac{\partial x_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}+z_{k}\left(p\right)\left.\frac{\partial y_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}.
 \end{align*}
 
 \end_inset
 
+Following the patter we get 
+\begin_inset Formula 
+\[
+\left[\left[Y,Z\right],X\right]=y_{i}\left(p\right)\left.\frac{\partial z_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial x_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-z_{i}\left(p\right)\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial x_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-x_{k}\left(p\right)\left.\frac{\partial y_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial z_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}+x_{k}\left(p\right)\left.\frac{\partial z_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial y_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}.
+\]
 
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left[\left[Z,X\right],Y\right]=z_{i}\left(p\right)\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial y_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-x_{i}\left(p\right)\left.\frac{\partial z_{j}}{\partial x_{i}}\right|_{p}\left.\frac{\partial y_{k}}{\partial x_{j}}\right|_{p}\frac{\partial}{\partial x_{k}}-y_{k}\left(p\right)\left.\frac{\partial z_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial x_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}+y_{k}\left(p\right)\left.\frac{\partial x_{i}}{\partial x_{k}}\right|_{p}\left.\frac{\partial z_{j}}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}.
+\]
+
+\end_inset
+
+Adding the three terms together and adjusting indices we can see that the
+ terms cancel.
+ Thus 
+\begin_inset Formula $\left[\left[X,Y\right],Z\right]+\left[\left[Y,Z\right],X\right]+\left[\left[Z,X\right],Y\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+To prove the second 
 \end_layout
 
 \end_body
