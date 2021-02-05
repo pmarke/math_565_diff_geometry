@@ -338,9 +338,77 @@ Adding the three terms together and adjusting indices we can see that the
 \begin_layout Proof
 To prove the second we will expand out the term
 \begin_inset Formula 
-\[
-\left[fX,gY\right]=f\left(p\right)
-\]
+\begin{align*}
+\left[fX,gY\right] & =f\left(p\right)x_{i}\left(p\right)\frac{\partial}{\partial x_{i}}\left(g\left(p\right)y_{j}\left(p\right)\frac{\partial}{\partial x_{j}}\right)-g\left(p\right)y_{i}\left(p\right)\frac{\partial}{\partial x_{i}}\left(f\left(p\right)x_{j}\frac{\partial}{\partial x_{j}}\right)\\
+ & =f\left(p\right)x_{i}\left(p\right)\left(y_{j}\left(p\right)\left.\frac{\partial g}{\partial x_{i}}\right|_{p}\frac{\partial}{\partial x_{j}}+g\left(p\right)\frac{\partial y_{j}}{\partial x_{i}}\frac{\partial}{\partial x_{j}}\right)-g\left(p\right)y_{i}\left(p\right)\left(\left.\frac{\partial f}{\partial x_{i}}\right|_{p}x_{j}\frac{\partial}{\partial x_{j}}+f\left(p\right)\frac{\partial x_{j}}{\partial x_{i}}\frac{\partial}{\partial x_{j}}\right)\\
+ & =fX\left(g\right)Y+fgXY-gY\left(f\right)X-gfYX\\
+ & =fg\left[X,Y\right]+fX\left(g\right)Y-gY\left(f\right)X.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Compute 
+\begin_inset Formula $\left[V,W\right]$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ for the following pairs of vector fields:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V=y\frac{\partial}{\partial z}-2xy^{2}\frac{\partial}{\partial y}$
+\end_inset
+
+ and 
+\begin_inset Formula $W=\frac{\partial}{\partial y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V=x\frac{\partial}{\partial y}-y\frac{\partial}{\partial x}$
+\end_inset
+
+ and 
+\begin_inset Formula $W=y\frac{\partial}{\partial z}-z\frac{\partial}{\partial y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first one is 
+\begin_inset Formula 
+\begin{align*}
+\left[V,W\right] & =\left(y\frac{\partial}{\partial z}-2xy^{2}\frac{\partial}{\partial y}\right)\left(\frac{\partial}{\partial y}\right)-\left(\frac{\partial}{\partial y}\right)\left(y\frac{\partial}{\partial z}-2xy^{2}\frac{\partial}{\partial y}\right)\\
+ & =y\frac{\partial^{2}}{\partial z\partial y}-2xy^{2}\frac{\partial^{2}}{\partial y\partial y}-\frac{\partial}{\partial z}-y\frac{\partial^{2}}{\partial y\partial z}+4xy\frac{\partial}{\partial y}+2xy^{2}\frac{\partial^{2}}{\partial y\partial y}\\
+ & =4xy\frac{\partial}{\partial y}-\frac{\partial}{\partial z}.
+\end{align*}
+
+\end_inset
+
+and the second one is 
+\begin_inset Formula 
+\begin{align*}
+\left[V,W\right] & =\left(x\frac{\partial}{\partial y}-y\frac{\partial}{\partial x}\right)\left(y\frac{\partial}{\partial z}-z\frac{\partial}{\partial y}\right)-\left(y\frac{\partial}{\partial z}-z\frac{\partial}{\partial y}\right)\left(x\frac{\partial}{\partial y}-y\frac{\partial}{\partial x}\right)\\
+ & =x\frac{\partial}{\partial z}+xy\frac{\partial^{2}}{\partial y\partial z}-xz\frac{\partial^{2}}{\partial y\partial y}-y^{2}\frac{\partial^{2}}{\partial x\partial z}+yz\frac{\partial^{2}}{\partial x\partial y}-yx\frac{\partial^{2}}{\partial z\partial y}+y^{2}\frac{\partial^{2}}{\partial z\partial x}+zx\frac{\partial^{2}}{\partial y\partial y}-z\frac{\partial}{\partial x}-zy\frac{\partial^{2}}{\partial y\partial x}\\
+ & =x\frac{\partial}{\partial z}-z\frac{\partial}{\partial x}.
+\end{align*}
 
 \end_inset
 
