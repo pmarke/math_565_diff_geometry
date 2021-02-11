@@ -728,8 +728,31 @@ This is a surjective mapping such that if
 \begin_inset Formula $P^{n}\left(R\right)$
 \end_inset
 
-.
- 
+ as 
+\begin_inset Formula 
+\[
+\left\langle d\pi u,d\pi v\right\rangle \triangleq g\left(u,v\right).
+\]
+
+\end_inset
+
+In the latter case we get 
+\begin_inset Formula 
+\begin{align*}
+g_{A\left(p\right)}\left(u,v\right) & =\left\langle d\pi_{A\left(p\right)}dA_{p}u,d\pi_{A\left(p\right)}dA_{p}v\right\rangle \\
+ & =\left\langle -d\pi_{A\left(p\right)}u,-d\pi_{A\left(p\right)}v\right\rangle \\
+ & =\left\langle -u,-v\right\rangle \\
+ & =g\left(-u,-v\right)\\
+ & =g\left(u,v\right).
+\end{align*}
+
+\end_inset
+
+Since the projection 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is a smooth map, we get that is is also a local isometry.
 \end_layout
 
 \end_body

@@ -707,65 +707,36 @@ thus
 
 \end_inset
 
-Globally, this is not an bijective mapping since 
-\begin_inset Formula $\pi\left(p\right)=\pi\left(-p\right)$
+This is a surjective mapping such that if 
+\begin_inset Formula $\pi\left(p\right)=\pi\left(q\right)$
 \end_inset
 
-; however, there does exist a neighborhood 
-\begin_inset Formula $U$
+, then 
+\begin_inset Formula $p=q$
 \end_inset
 
- of 
-\begin_inset Formula $p$
+ or 
+\begin_inset Formula $p=A\left(q\right)$
 \end_inset
 
- where 
-\begin_inset Formula $\pi$
+.
+ Let us define the metric 
+\begin_inset Formula $\left(h\right)$
 \end_inset
 
- is a bijection.
- This allows us to induce a metric locally on 
+ on 
 \begin_inset Formula $P^{n}\left(R\right)$
 \end_inset
 
- define as 
+ as 
 \begin_inset Formula 
 \[
-g\left(d\pi^{-1}v,d\pi^{-1}u\right),
+\left\langle d\pi u,d\pi v\right\rangle \triangleq g\left(v,u\right)
 \]
 
 \end_inset
 
-with 
-\begin_inset Formula $g$
-\end_inset
 
- being the metric on 
-\begin_inset Formula $S^{n}$
-\end_inset
-
-, 
-\begin_inset Formula $v,u\in T_{\pi\left(p\right)}P^{n}\left(R\right)$
-\end_inset
-
- and 
-\begin_inset Formula $d\pi^{-1}$
-\end_inset
-
- is the differential of 
-\begin_inset Formula $\pi^{-1}$
-\end_inset
-
- which is either 
-\begin_inset Formula $I$
-\end_inset
-
- or 
-\begin_inset Formula $-I$
-\end_inset
-
-.
- 
 \end_layout
 
 \end_body
