@@ -5,6 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass IEEEtran
+\options onecolumn
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -475,40 +476,44 @@ To show that the functions
 
 .
  Also, let 
-\begin_inset Formula $\gamma\left(t\right):\left(-\epsilon,\epsilon\right)\to M$
-\end_inset
-
- be a smooth curve in 
-\begin_inset Formula $M$
-\end_inset
-
- such that 
-\begin_inset Formula $\gamma\left(0\right)=p\in U_{a}\cap U_{b}$
-\end_inset
-
- and 
-\begin_inset Formula $v_{a}\frac{\partial}{\partial x_{a}^{i}}=\left.\frac{d}{dt}\varphi_{a}\circ\gamma\right|_{t=0}$
-\end_inset
-
-, then
-\begin_inset Formula 
-\[
-\left(g_{i}\right)_{k,\ell}\left(p\right)\left(\left.\frac{d}{dt}\gamma\right|_{t=0}\right)=\sum_{i=1}^{n}v_{i}^{2}
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $n$
-\end_inset
-
- is the dimension of 
-\begin_inset Formula $M$
+\begin_inset Formula $v,u\in T_{p}M$
 \end_inset
 
 .
+ The vectors in the chart 
+\begin_inset Formula $\left(U_{a},\varphi_{a}\right)$
+\end_inset
+
+ can be represented as 
+\begin_inset Formula $v_{a}^{k}\frac{\partial}{\partial x_{a}^{k}}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{a}^{k}\frac{\partial}{\partial x_{a}^{k}}$
+\end_inset
+
+, then the metric 
+\begin_inset Formula $g_{a}$
+\end_inset
+
+ acting on 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\left(g_{a}\right)_{k,\ell}\left(p\right)\left(v,u\right) & =\left\langle v,u\right\rangle =\sum v_{a}^{k}u_{a}^{\ell}\left\langle \frac{\partial}{\partial x_{a}^{k}},\frac{\partial}{\partial x_{a}^{\ell}}\right\rangle _{p}.
+\end{align*}
+
+\end_inset
+
  We can express the vector 
-\begin_inset Formula $v_{a}\frac{\partial}{\partial x_{a}^{i}}$
+\begin_inset Formula $v_{a}^{k}\frac{\partial}{\partial x_{a}^{k}}$
 \end_inset
 
  in the chart 
@@ -518,8 +523,24 @@ where
  as 
 \begin_inset Formula 
 \[
-\left.\frac{d}{dt}\varphi_{b}\circ\varphi_{a}^{-1}\circ\varphi_{a}\circ\gamma\right|_{t=0}=\frac{\partial\varphi_{b}\circ\varphi_{a}^{-1}}{\partial x_{a}^{i}}\left.\frac{d}{dt}\varphi_{a}\circ\gamma\right|_{t=0}
+v_{b}^{k}\frac{\partial}{\partial x_{a}^{k}}=\left.\frac{\partial\varphi_{b}\circ\varphi_{a}^{-1}}{\partial x_{a}^{k}}\right|_{p}v_{a}^{k}\frac{\partial}{\partial x_{a}^{k}},
 \]
+
+\end_inset
+
+thus the metric 
+\begin_inset Formula $g_{b}$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{align*}
+\left(g_{b}\right)_{k,\ell}\left(p\right)\left(v,u\right) & =\left\langle v,u\right\rangle =\sum v_{a}^{k}u_{a}^{\ell}\left\langle \left.\frac{\partial\varphi_{b}\circ\varphi_{a}^{-1}}{\partial x_{a}^{k}}\right|_{p}\frac{\partial}{\partial x_{a}^{k}},\left.\frac{\partial\varphi_{b}\circ\varphi_{a}^{-1}}{\partial x_{a}^{k}}\right|_{p}\frac{\partial}{\partial x_{a}^{\ell}}\right\rangle _{p}\\
+ & =\sum v_{b}^{k}u_{b}^{\ell}\left\langle \frac{\partial}{\partial x_{b}^{k}},\frac{\partial}{\partial x_{b}^{\ell}}\right\rangle _{p}.
+\end{align*}
 
 \end_inset
 
@@ -553,14 +574,35 @@ Consider the Riemannian metric induced by
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Exercise
+As done prevoiusly 
 \begin_inset Formula 
 \[
-dr=\begin{bmatrix}-\sin s & 0\\
+\frac{\partial r}{\partial x}=\begin{bmatrix}-\sin s & 0\\
 \cos s & 0\\
 0 & -\sin t\\
 0 & \cos t
-\end{bmatrix}
+\end{bmatrix},
 \]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\begin{align*}
+\left(\frac{\partial r}{\partial x}^{\top}\frac{\partial r}{\partial x}\right) & =\begin{bmatrix}-\sin s & \cos s & 0 & 0\\
+0 & 0 & -\sin t & \cos t
+\end{bmatrix}\begin{bmatrix}-\sin s & 0\\
+\cos s & 0\\
+0 & -\sin t\\
+0 & \cos t
+\end{bmatrix}\\
+ & =\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix},
+\end{align*}
 
 \end_inset
 
@@ -568,7 +610,15 @@ dr=\begin{bmatrix}-\sin s & 0\\
 \end_layout
 
 \begin_layout Exercise
-asdfa
+thus 
+\begin_inset Formula $E=G=1$
+\end_inset
+
+ and 
+\begin_inset Formula $F=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
