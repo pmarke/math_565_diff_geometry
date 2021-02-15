@@ -648,9 +648,140 @@ where
 
 
 \begin_inset Formula 
+\begin{align*}
+\Gamma_{12}^{2} & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{21}+\frac{\partial}{\partial x_{2}}g_{11}-\frac{\partial}{\partial x_{1}}g_{12}\right\} g^{12}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{22}+\frac{\partial}{\partial x_{2}}g_{21}-\frac{\partial}{\partial x_{2}}g_{12}\right\} g^{22}\\
+ & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}0+\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}-\frac{\partial}{\partial x_{1}}0\right\} 0+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}+\frac{\partial}{\partial x_{2}}0-\frac{\partial}{\partial x_{2}}0\right\} y^{2}\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{22}^{1} & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}g_{21}+\frac{\partial}{\partial x_{2}}g_{12}-\frac{\partial}{\partial x_{1}}g_{22}\right\} g^{11}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}g_{22}+\frac{\partial}{\partial x_{2}}g_{22}-\frac{\partial}{\partial x_{2}}g_{22}\right\} g^{21}\\
+ & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}0+\frac{\partial}{\partial x_{2}}0-\frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}\right\} y^{2}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}+\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}-\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}\right\} 0\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{11}^{2} & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{11}+\frac{\partial}{\partial x_{1}}g_{11}-\frac{\partial}{\partial x_{1}}g_{11}\right\} g^{12}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{12}+\frac{\partial}{\partial x_{1}}g_{21}-\frac{\partial}{\partial x_{2}}g_{11}\right\} g^{22}\\
+ & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}+\frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}-\frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}\right\} 0+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}0+\frac{\partial}{\partial x_{1}}0-\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}\right\} y^{2}\\
+ & =\frac{1}{2}\left(-\left(-2\frac{1}{y^{3}}\right)\right)y^{2}\\
+ & =\frac{1}{y}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{12}^{1} & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{21}+\frac{\partial}{\partial x_{2}}g_{11}-\frac{\partial}{\partial x_{1}}g_{12}\right\} g^{11}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{22}+\frac{\partial}{\partial x_{2}}g_{21}-\frac{\partial}{\partial x_{2}}g_{12}\right\} g^{21}\\
+ & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}0+\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}-\frac{\partial}{\partial x_{1}}0\right\} y^{2}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}+\frac{\partial}{\partial x_{2}}0-\frac{\partial}{\partial x_{2}}0\right\} 0\\
+ & =\frac{1}{2}\left(-2\frac{1}{y^{3}}\right)y^{2}\\
+ & =-\frac{1}{y}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{22}^{2} & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}g_{21}+\frac{\partial}{\partial x_{2}}g_{12}-\frac{\partial}{\partial x_{1}}g_{22}\right\} g^{12}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}g_{22}+\frac{\partial}{\partial x_{2}}g_{22}-\frac{\partial}{\partial x_{2}}g_{22}\right\} g^{22}\\
+ & =\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}0+\frac{\partial}{\partial x_{2}}0-\frac{\partial}{\partial x_{1}}\frac{1}{y^{2}}\right\} 0+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}+\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}-\frac{\partial}{\partial x_{2}}\frac{1}{y^{2}}\right\} y^{2}\\
+ & =\frac{1}{2}\left(-2\frac{1}{y^{3}}-2\frac{1}{y^{3}}+2\frac{1}{y^{3}}\right)y^{2}\\
+ & =-\frac{1}{y}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the Christoffel symbols, we can then create the differential equations
+ for the parallel vector whose ode must satisfy the equation 
+\begin_inset Formula 
 \[
-\Gamma_{12}^{2}=\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{21}+\frac{\partial}{\partial x_{2}}g_{11}-\frac{\partial}{\partial x_{1}}g_{12}\right\} g^{12}+\frac{1}{2}\left\{ \frac{\partial}{\partial x_{1}}g_{22}+\frac{\partial}{\partial x_{1}}g_{21}-\frac{\partial}{\partial x_{2}}g_{11}\right\} g^{22}
+0=\frac{dv^{k}}{dt}+\sum_{i,j}\Gamma_{ij}^{k}v^{j}\frac{dx_{i}}{dt},\quad k=1,2
 \]
+
+\end_inset
+
+with initial conditions 
+\begin_inset Formula $v\left(t_{0}\right)=\left(0,1\right)$
+\end_inset
+
+, and that moves along the curve 
+\begin_inset Formula $\gamma\left(t\right)=\left(t,1\right)$
+\end_inset
+
+.
+ The parallel vector field can be written as 
+\begin_inset Formula $v\left(t\right)=a\left(t\right)\frac{\partial}{\partial x_{1}}+b\left(t\right)\frac{\partial}{\partial x_{2}}$
+\end_inset
+
+, thus the ode must satisfy 
+\begin_inset Formula 
+\begin{align*}
+0 & =\left(\frac{da}{dt}+\Gamma_{11}^{1}a\left(t\right)\frac{dx_{1}}{dt}+\Gamma_{12}^{1}b\left(t\right)\frac{dx_{1}}{dt}+\Gamma_{21}^{1}a\left(t\right)\frac{dx_{2}}{dt}+\Gamma_{22}^{1}b\left(t\right)\frac{dx_{2}}{dt}\right)\frac{\partial}{\partial x_{1}}\\
+ & =\left(\frac{da}{dt}-\frac{1}{y}b\left(t\right)\right)\frac{\partial}{\partial x_{1}}
+\end{align*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+0 & =\left(\frac{db}{dt}+\Gamma_{11}^{2}a\left(t\right)\frac{dx_{1}}{dt}+\Gamma_{12}^{2}b\left(t\right)\frac{dx_{1}}{dt}+\Gamma_{21}^{2}a\left(t\right)\frac{dx_{2}}{dt}+\Gamma_{22}^{2}b\left(t\right)\frac{dx_{2}}{dt}\right)\frac{\partial}{\partial x_{2}}\\
+ & =\left(\frac{db}{dt}+\frac{1}{y}a\left(t\right)\right)\frac{\partial}{\partial x_{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the hint in the book, we get that 
+\begin_inset Formula 
+\begin{align*}
+a\left(t\right) & =\cos\left(\frac{\pi}{2}-t\right)\\
+b\left(t\right) & =\sin\left(\frac{\pi}{2}-t\right),
+\end{align*}
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+v\left(t\right)=\cos\left(\frac{\pi}{2}-t\right)\frac{\partial}{\partial x_{1}}+\sin\left(\frac{\pi}{2}-t\right)\frac{\partial}{\partial x_{2}}.
+\]
+
+\end_inset
+
+Taking the inner product of 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ with the 
+\begin_inset Formula $y$
+\end_inset
+
+ axis gives us 
+\begin_inset Formula 
+\begin{align*}
+\left\langle v\left(t\right),\frac{\partial}{\partial x_{2}}\right\rangle  & =\cos\left(\frac{\pi}{2}-t\right)\left\langle \frac{\partial}{\partial x_{1}},\frac{\partial}{\partial x_{2}}\right\rangle +\sin\left(\frac{\pi}{2}-t\right)\left\langle \frac{\partial}{\partial x_{2}},\frac{\partial}{\partial x_{2}}\right\rangle \\
+ & =\sin\left(\frac{\pi}{2}-t\right)\frac{1}{y^{2}}\\
+ & =\sin\left(\frac{\pi}{2}-t\right)
+\end{align*}
 
 \end_inset
 
