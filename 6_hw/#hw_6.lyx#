@@ -289,21 +289,34 @@ Let
  in local coordinates as 
 \begin_inset Formula 
 \begin{align*}
-Y & \left(t\right)=\sum y_{i}\left(t\right)X_{i},
+Y & \left(t\right)=\sum y_{i}\left(t\right)X_{i}\left(t\right),
 \end{align*}
 
 \end_inset
 
-then 
+m(tthen 
 \begin_inset Formula 
 \begin{align*}
-\left(\nabla_{X}Y\right)\left(p\right) & =\frac{DY\left(t\right)}{dt}=\sum\frac{y_{i}\left(t\right)}{dt}X_{i}+y_{i}\left(d\right)\frac{DX_{i}}{dt}\\
- & =\sum\frac{y_{i}\left(t\right)}{dt}X_{i}
+\left(\nabla_{X}Y\right)\left(p\right) & =\frac{DY\left(t\right)}{dt}=\sum\frac{y_{i}\left(t\right)}{dt}X_{i}\left(t\right)+y_{i}\left(d\right)\frac{DX_{i}}{dt}\\
+ & =\sum\frac{y_{i}\left(t\right)}{dt}X_{i}\left(t\right).
 \end{align*}
 
 \end_inset
 
-and thus 
+The term 
+\begin_inset Formula $\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}}$
+\end_inset
+
+ can be expanded out as 
+\begin_inset Formula 
+\begin{align*}
+\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}} & =\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(\sum y_{i}\left(t\right)X_{i}\left(t\right)\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)P_{c,t_{0},t}^{-1}\left(X_{i}\left(t\right)\right)\right|_{t=t_{0}}
+\end{align*}
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \left(\nabla_{X}Y\right)\left(p\right)=\sum_{k}\left(\sum_{ij}x_{i}y_{j}\Gamma_{ij}^{k}+X\left(y_{k}\right)\right)X_{k}

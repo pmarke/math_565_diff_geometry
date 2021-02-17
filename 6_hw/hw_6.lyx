@@ -135,87 +135,63 @@ Let
 \end_inset
 
  and 
-\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\begin_inset Formula $g_{p}:T_{p}M\times T_{p}M\to\mathbb{R}$
 \end_inset
 
-.
- A vector that is transported from one tangent space to another via parallel
- transport does not have a change in it's components.
- Thus the components of 
-\begin_inset Formula $v_{t_{0}}$
-\end_inset
-
- and 
-\begin_inset Formula $v_{t}\in T_{c\left(t\right)}M$
-\end_inset
-
- are the same, and the components of 
-\begin_inset Formula $w_{t_{0}}$
-\end_inset
-
- and 
-\begin_inset Formula $w_{t}\in T_{c\left(t\right)}M$
-\end_inset
-
- are the same.
- Thus in local coordinates
+ be a compatible Riemannian metric.
+ Then 
 \begin_inset Formula 
 \[
-P\left(\sum v_{i}^{t_{0}}\frac{\partial}{\partial x_{i}^{t_{0}}}\right)=\sum v_{i}^{t}\frac{\partial}{\partial x_{i}^{t}}
+g_{c\left(t_{0}\right)}\left(v_{t_{0}},w_{t_{0}}\right)=a
 \]
 
 \end_inset
 
-where for all 
-\begin_inset Formula $v_{i}^{t}$
+ is equal to a constant 
+\begin_inset Formula $a$
 \end_inset
 
- there exists a 
-\begin_inset Formula $v_{j}^{t_{0}}$
+.
+ Let 
+\begin_inset Formula $v\left(t\right)=P_{c,t_{o},t}\left(v_{t_{0}}\right)$
 \end_inset
 
- such that 
-\begin_inset Formula $v_{i}^{t}=v_{j}^{t_{0}}$
+ and 
+\begin_inset Formula $w\left(t\right)=P_{c,t_{o},t}\left(w_{t_{0}}\right)$
 \end_inset
 
- and vice versa.
- Therefore 
+.
+ Taking the derivative of the metric applied to the vector fields yields
+ 
 \begin_inset Formula 
 \begin{align*}
-P\left(\alpha v_{t_{0}}+\beta w_{t_{0}}\right) & =\alpha\sum v_{i}^{t}\frac{\partial}{\partial x_{i}^{t}}+\beta\sum w_{i}^{t}\frac{\partial}{\partial x_{i}^{t}}\\
- & =\alpha P\left(v_{t_{0}}\right)+\beta P\left(w_{t_{0}}\right),
+\frac{d}{dt}g_{c\left(t\right)}\left(v\left(t\right),w\left(t\right)\right) & =g_{c\left(t\right)}\left(\frac{Dv\left(t\right)}{dt},w\left(t\right)\right)+g_{c\left(t\right)}\left(v\left(t\right),\frac{Dw\left(t\right)}{dt}\right)\\
+ & =g_{c\left(t\right)}\left(0,w\left(t\right)\right)+g_{c\left(t\right)}\left(v\left(t\right),0\right)\\
+ & =0,
 \end{align*}
 
 \end_inset
 
-which shows that 
+thus, the quantity 
+\begin_inset Formula $g_{c\left(t\right)}\left(v\left(t\right),w\left(t\right)\right)$
+\end_inset
+
+ is constant along the curve 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+.
+ This means that the length and angles of vectors that are parallel transported
+ remain the same, which means that 
+\begin_inset Formula $P_{c,t_{o},t}$
+\end_inset
+
+ is an isometry.
+ Since the angles between vectors stay the same, 
 \begin_inset Formula $P$
 \end_inset
 
- is an isomorphism.
- Note that the vector field required to parallel transport 
-\begin_inset Formula $v_{t_{0}}$
-\end_inset
-
-, 
-\begin_inset Formula $w_{t_{0}}$
-\end_inset
-
-, and 
-\begin_inset Formula $\alpha v_{t_{0}}+\beta w_{t_{0}}$
-\end_inset
-
- may be different.
- As we have shown, the signs of the components of the vector do not change
- as they are being parallel transported along 
-\begin_inset Formula $c$
-\end_inset
-
-, thus 
-\begin_inset Formula $P$
-\end_inset
-
- must preserve orientation.
+ preserves orientation.
  
 \end_layout
 
@@ -292,45 +268,53 @@ m).
 \end_layout
 
 \begin_layout Proof
-The vector field 
+Let 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ form a basis of vector fields in local coordinates that are parallel transport
+ along 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ We can write the vector field 
 \begin_inset Formula $Y$
 \end_inset
 
- evaluated at 
-\begin_inset Formula $c\left(t\right)$
+ along 
+\begin_inset Formula $c$
 \end_inset
 
- is 
-\begin_inset Formula 
-\[
-Y\left(c\left(t\right)\right)=\sum y_{i}^{t}\left(c\left(t\right)\right)\frac{\partial}{\partial x_{i}^{t}},
-\]
-
-\end_inset
-
-and thus 
-\begin_inset Formula 
-\[
-P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)=\sum y_{i}^{t_{0}}\left(c\left(t\right)\right)\frac{\partial}{\partial x_{i}^{t_{0}}}.
-\]
-
-\end_inset
-
-Taking the derivative w.r.t.
- time yields
+ in local coordinates as 
 \begin_inset Formula 
 \begin{align*}
-\frac{d}{dt}P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right) & =\frac{d}{dt}\sum y_{i}^{t_{0}}\left(c\left(t\right)\right)\frac{\partial}{\partial x_{i}^{t_{0}}}\\
- & =\sum\frac{\partial}{\partial x_{i}^{t_{0}}}\left.\frac{\partial y_{i}^{t_{0}}}{\partial x_{j}}\right|_{c\left(t\right)}\left.\frac{dx_{j}}{dt}\right|_{t}
+Y & \left(t\right)=\sum y_{i}\left(t\right)X_{i}\left(t\right),
 \end{align*}
 
 \end_inset
 
-
+m(tthen 
 \begin_inset Formula 
-\[
-\left(\nabla_{X}Y\right)\left(p\right)=\sum_{ij}x_{i}\left(p\right)y_{i}\left(p\right)\nabla_{X_{i}}X_{j}+\sum_{ij}x_{i}\left(p\right)X_{i}\left(y_{j}\left(p\right)\right)X_{j}.
-\]
+\begin{align*}
+\left(\nabla_{X}Y\right)\left(p\right) & =\frac{DY\left(t_{0}\right)}{dt}=\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right)+y_{i}\left(t\right)\frac{DX_{i}}{dt}\\
+ & =\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right).
+\end{align*}
+
+\end_inset
+
+The term 
+\begin_inset Formula $\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}}$
+\end_inset
+
+ can be expanded out as 
+\begin_inset Formula 
+\begin{align*}
+\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}} & =\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(\sum y_{i}\left(t\right)X_{i}\left(t\right)\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)P_{c,t_{0},t}^{-1}\left(X_{i}\left(t\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)X_{i}\left(t_{0}\right)\right|_{t=t_{0}}\\
+ & =\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right).
+\end{align*}
 
 \end_inset
 
