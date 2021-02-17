@@ -510,11 +510,128 @@ For the second statement, we suppose directly that
 \end_inset
 
 .
- ??????? Can I just do 
-\begin_inset Formula $R\left(t\right)p$
+ Let 
+\begin_inset Formula $\gamma:I\to S^{2}$
 \end_inset
 
+ be an integral curve along a great circle defined as 
+\begin_inset Formula $\gamma\left(t\right)=\left(u\left(t\right),v\left(t\right)\right)$
+\end_inset
 
+, and let 
+\begin_inset Formula $c:I\to S^{2}$
+\end_inset
+
+ be the rotated curve of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ such that 
+\begin_inset Formula $c$
+\end_inset
+
+ is the curve along the equator.
+ Since the rotation doesn't affect the velocity of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a parallel curve if and only if 
+\begin_inset Formula $c$
+\end_inset
+
+ is a parallel curve.
+ 
+\end_layout
+
+\begin_layout Proof
+We can parameterize the surface by 
+\begin_inset Formula 
+\[
+r\left(u,v\right)=\left(\sin u\left(t\right)\cos v\left(t\right),\sin u\left(t\right)\sin v\left(t\right),\cos u\left(t\right)\right),
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+c\left(t\right)=\left(\cos\left(\alpha t\right),\sin\left(\alpha t\right),0\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ which is the arc length.
+ 
+\end_layout
+
+\begin_layout Proof
+The derivative of 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{dc}{dt}=V\left(t\right)=\left(-\alpha\sin\left(\alpha t\right),\alpha\cos\left(\alpha t\right),0\right).
+\]
+
+\end_inset
+
+which is a vector field along the great circle.
+ Taking the derivative again yields 
+\begin_inset Formula 
+\[
+\frac{dV}{dt}=\left(-\alpha^{2}\cos\left(\alpha t\right),-\alpha^{2}\sin\left(\alpha t\right),0\right).
+\]
+
+\end_inset
+
+We know that 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+is orthogonal to 
+\begin_inset Formula $T_{c\left(t\right)}M$
+\end_inset
+
+.
+ We can project 
+\begin_inset Formula $\frac{DV}{dt}$
+\end_inset
+
+ onto 
+\begin_inset Formula $T_{c\left(t\right)}M$
+\end_inset
+
+ using the projection theorem
+\begin_inset Formula 
+\begin{align*}
+\left(I-\frac{cc\top}{\left|c\right|^{2}}\right)\frac{dV}{dt} & =\begin{bmatrix}\sin^{2}\left(\alpha t\right) & -\cos\left(\alpha t\right)\sin\left(\alpha t\right) & 0\\
+-\cos\left(\alpha t\right)\sin\left(\alpha t\right) & \cos^{2}\left(\alpha t\right) & 0\\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}-\alpha^{2}\cos\left(\alpha t\right)\\
+-\alpha^{2}\sin\left(\alpha t\right)\\
+0
+\end{bmatrix}\\
+ & =\begin{bmatrix}-\alpha^{2}\sin^{2}\left(\alpha t\right)\cos\left(\alpha t\right)-\alpha^{2}\cos\left(\alpha t\right)\sin^{2}\left(\alpha t\right)\\
+\alpha^{2}\cos^{2}\left(\alpha t\right)\sin\left(\alpha t\right)-\alpha^{2}\cos^{2}\left(\alpha t\right)\sin\left(\alpha t\right)\\
+0
+\end{bmatrix}\\
+ & =0.
+\end{align*}
+
+\end_inset
+
+Therefore, the velocity field along a great circle is a parallel field.
+ 
 \end_layout
 
 \begin_layout Exercise

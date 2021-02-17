@@ -510,8 +510,110 @@ For the second statement, we suppose directly that
 \end_inset
 
 .
- ??????? Can I just do 
-\begin_inset Formula $R\left(t\right)p$
+ Let 
+\begin_inset Formula $\gamma:I\to S^{2}$
+\end_inset
+
+ be an integral curve along a great circle defined as 
+\begin_inset Formula $\gamma\left(t\right)=\left(u\left(t\right),v\left(t\right)\right)$
+\end_inset
+
+, and let 
+\begin_inset Formula $c:I\to S^{2}$
+\end_inset
+
+ be the rotated curve of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ such that 
+\begin_inset Formula $c$
+\end_inset
+
+ is the curve along the equator.
+ Since the rotation doesn't affect the velocity of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a parallel curve if and only if 
+\begin_inset Formula $c$
+\end_inset
+
+ is a parallel curve.
+ 
+\end_layout
+
+\begin_layout Proof
+We can parameterize the surface by 
+\begin_inset Formula 
+\[
+r\left(u,v\right)=\left(\sin u\left(t\right)\cos v\left(t\right),\sin u\left(t\right)\sin v\left(t\right),\cos u\left(t\right)\right),
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+c\left(t\right)=\left(\cos\left(\alpha t\right),\sin\left(\alpha t\right),0\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ which is the arc length.
+ 
+\end_layout
+
+\begin_layout Proof
+The derivative of 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{dc}{dt}=V\left(t\right)=\left(-\alpha\sin\left(\alpha t\right),\alpha\cos\left(\alpha t\right),0\right).
+\]
+
+\end_inset
+
+which is a vector field along the great circle.
+ Taking the derivative again yields 
+\begin_inset Formula 
+\[
+\frac{dV}{dt}=\left(-\alpha^{2}\cos\left(\alpha t\right),-\alpha^{2}\sin\left(\alpha t\right),0\right).
+\]
+
+\end_inset
+
+We know that 
+\begin_inset Formula $V\left(t\right)\in T_{c\left(t\right)}M$
+\end_inset
+
+.
+ We must show that the projection of 
+\begin_inset Formula $\frac{dV}{dt}$
+\end_inset
+
+ onto 
+\begin_inset Formula $T_{c\left(t\right)}M$
+\end_inset
+
+ is zero.
+ 
+\begin_inset Formula 
+\[
+\frac{dV}{dt}-\left\langle \frac{dV}{dt},V\right\rangle \frac{1}{\left|V\right|}V
+\]
+
 \end_inset
 
 
@@ -767,20 +869,22 @@ v\left(t\right)=\cos\left(\frac{\pi}{2}-t\right)\frac{\partial}{\partial x_{1}}+
 
 \end_inset
 
-Taking the inner product of 
+The angle between 
 \begin_inset Formula $v\left(t\right)$
 \end_inset
 
- with the 
+ and the 
 \begin_inset Formula $y$
 \end_inset
 
- axis gives us 
+ axis is calculated as 
 \begin_inset Formula 
 \begin{align*}
-\left\langle v\left(t\right),\frac{\partial}{\partial x_{2}}\right\rangle  & =\cos\left(\frac{\pi}{2}-t\right)\left\langle \frac{\partial}{\partial x_{1}},\frac{\partial}{\partial x_{2}}\right\rangle +\sin\left(\frac{\pi}{2}-t\right)\left\langle \frac{\partial}{\partial x_{2}},\frac{\partial}{\partial x_{2}}\right\rangle \\
- & =\sin\left(\frac{\pi}{2}-t\right)\frac{1}{y^{2}}\\
- & =\sin\left(\frac{\pi}{2}-t\right)
+\cos^{-1}\frac{\left\langle v\left(t\right),\frac{\partial}{\partial x_{2}}\right\rangle }{\sqrt{\left\langle v\left(t\right)v\left(t\right)\right\rangle }\sqrt{\left\langle \frac{\partial}{\partial x_{2}},\frac{\partial}{\partial x_{2}}\right\rangle }} & =\cos^{-1}\left\{ \frac{1}{\sqrt{\left(\cos^{2}\left(\frac{\pi}{2}-t\right)+\sin^{2}\left(\frac{\pi}{2}-t\right)\right)}y}\left(\cos\left(\frac{\pi}{2}-t\right)\left\langle \frac{\partial}{\partial x_{1}},\frac{\partial}{\partial x_{2}}\right\rangle +\sin\left(\frac{\pi}{2}-t\right)\left\langle \frac{\partial}{\partial x_{2}},\frac{\partial}{\partial x_{2}}\right\rangle \right)\right\} \\
+ & =\cos^{-1}\left(\sin\left(\frac{\pi}{2}-t\right)\frac{1}{y^{3}}\right)\\
+ & =\cos^{-1}\left(\sin\left(\frac{\pi}{2}-t\right)\right)\\
+ & =\cos^{-1}\left(\cos\left(t\right)\right)\\
+ & =t.
 \end{align*}
 
 \end_inset
