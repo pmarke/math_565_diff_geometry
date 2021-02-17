@@ -289,25 +289,32 @@ Let
  in local coordinates as 
 \begin_inset Formula 
 \begin{align*}
-Y & \left(t\right)=\sum y_{i}\left(t\right)X_{i},
+Y & \left(t\right)=\sum y_{i}\left(t\right)X_{i}\left(t\right),
 \end{align*}
 
 \end_inset
 
-then 
+m(tthen 
 \begin_inset Formula 
 \begin{align*}
-\left(\nabla_{X}Y\right)\left(p\right) & =\frac{DY\left(t\right)}{dt}=\sum\frac{y_{i}\left(t\right)}{dt}X_{i}+y_{i}\left(d\right)\frac{DX_{i}}{dt}\\
- & =\sum\frac{y_{i}\left(t\right)}{dt}X_{i}
+\left(\nabla_{X}Y\right)\left(p\right) & =\frac{DY\left(t_{0}\right)}{dt}=\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right)+y_{i}\left(t\right)\frac{DX_{i}}{dt}\\
+ & =\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right).
 \end{align*}
 
 \end_inset
 
-and thus 
+The term 
+\begin_inset Formula $\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}}$
+\end_inset
+
+ can be expanded out as 
 \begin_inset Formula 
-\[
-\left(\nabla_{X}Y\right)\left(p\right)=\sum_{k}\left(\sum_{ij}x_{i}y_{j}\Gamma_{ij}^{k}+X\left(y_{k}\right)\right)X_{k}
-\]
+\begin{align*}
+\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}} & =\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(\sum y_{i}\left(t\right)X_{i}\left(t\right)\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)P_{c,t_{0},t}^{-1}\left(X_{i}\left(t\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)X_{i}\left(t_{0}\right)\right|_{t=t_{0}}\\
+ & =\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right).
+\end{align*}
 
 \end_inset
 
@@ -881,6 +888,399 @@ The angle between
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a smooth path-connected manifold with Riemannian metric 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula $\ell_{a}^{b}\left(\gamma\right)$
+\end_inset
+
+ denotes the length of a smooth curve 
+\begin_inset Formula $\gamma:\left[a,b\right]\to M$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $p,q\in M$
+\end_inset
+
+, let 
+\begin_inset Formula 
+\[
+d\left(p,q\right)=\inf\left\{ \ell_{a}^{b}\left(\gamma\right)\mid\gamma:\left[a,b\right]\to M\text{ is piecewise smooth with }\gamma\left(a\right)=p\text{ and }\gamma\left(b\right)=q\right\} .
+\]
+
+\end_inset
+
+Prove that the pair 
+\begin_inset Formula $\left(M,d\right)$
+\end_inset
+
+ is a metric space.
+\end_layout
+
+\begin_layout Proof
+A metric 
+\begin_inset Formula $d:M\times M\to\mathbb{R}$
+\end_inset
+
+ must satisfy the following properties
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d\left(p,q\right)=d\left(q,p\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d\left(p,q\right)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d\left(p,q\right)=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For all points 
+\begin_inset Formula $p,q,z\in M$
+\end_inset
+
+, 
+\begin_inset Formula $d\left(p,z\right)\leq d\left(p,q\right)+d\left(q,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The length of a smooth curve is defined as 
+\begin_inset Formula 
+\[
+\ell_{a}^{b}\left(\gamma\right)=\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt.
+\]
+
+\end_inset
+
+To prove the first property, suppose that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the curve from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+ with minimum length, then 
+\begin_inset Formula 
+\begin{align*}
+d\left(p,q\right) & =\ell_{a}^{b}\left(\gamma\right)\\
+ & =\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt.
+\end{align*}
+
+\end_inset
+
+We can construct another curve that goes from 
+\begin_inset Formula $q$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+ as 
+\begin_inset Formula $\alpha\left(t\right)=\gamma\left(b-t\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $t\in\left[0,b-a\right]$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+d\left(q,p\right) & =\ell_{b}^{a}\left(\alpha\right)\\
+ & =\int_{0}^{b-a}g_{\alpha\left(t\right)}\left(\frac{d\alpha}{dt},\frac{d\alpha}{dt}\right)^{\frac{1}{2}}dt\\
+ & =\int_{0}^{b-a}g_{\gamma\left(b-t\right)}\left(-\frac{d\gamma}{dt},-\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt\\
+ & =\int_{0}^{b-a}g_{\gamma\left(b-t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt.
+\end{align*}
+
+\end_inset
+
+Since the integral is just a sum of positive numbers, the two integrals
+ are equivalent.
+ 
+\end_layout
+
+\begin_layout Standard
+The second and third property come from the fact that the Riemannian metric
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ is an inner product.
+ Thus 
+\begin_inset Formula 
+\[
+g\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)\geq0,
+\]
+
+\end_inset
+
+and is only equal to zero when 
+\begin_inset Formula $\frac{d\gamma}{dt}=0$
+\end_inset
+
+.
+ Thus the length of a curve is greater than or equal to zero, and is only
+ equal to zero when 
+\begin_inset Formula 
+\[
+\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt=0.
+\]
+
+\end_inset
+
+This implies that all of the velocities along the curve must be zero, thus
+ 
+\begin_inset Formula $p=q$
+\end_inset
+
+.
+ Also, if 
+\begin_inset Formula $p=q$
+\end_inset
+
+, then the shortest curve between them is the curve 
+\begin_inset Formula $\gamma\left(t\right)=p=q$
+\end_inset
+
+ which is constant; thus 
+\begin_inset Formula $\frac{d\gamma}{dt}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt=0$
+\end_inset
+
+ which implies that 
+\begin_inset Formula $d\left(x,y\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the thrid property, let 
+\begin_inset Formula $\gamma_{i,j}$
+\end_inset
+
+ be the curve from 
+\begin_inset Formula $i\in\left\{ p,q,r\right\} $
+\end_inset
+
+ to 
+\begin_inset Formula $j\in\left\{ p,q,r\right\} $
+\end_inset
+
+ such that 
+\begin_inset Formula $d\left(i,j\right)=\ell_{a}^{b}\left(\gamma_{i,j}\right)$
+\end_inset
+
+.
+ We can construct a new curve 
+\begin_inset Formula $\beta:\left[a,2b-a\right]\to M$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\beta\left(t\right)=\begin{cases}
+\gamma_{p,q}\left(t\right) & \text{if }t\in\left[a,b\right]\\
+\gamma_{q,z}\left(t-b\right) & \text{else}
+\end{cases}.
+\]
+
+\end_inset
+
+which is the curve that goes from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+, then to 
+\begin_inset Formula $z$
+\end_inset
+
+ along the curves that are shortest distance from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+ and from 
+\begin_inset Formula $q$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ The length of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\ell_{a}^{2b-a}\left(\beta\right) & =\ell_{a}^{b}\left(\gamma_{p,q}\right)+\ell_{a}^{b}\left(\gamma_{q,z}\right)\\
+ & =d\left(p,q\right)+d\left(q,z\right).
+\end{align*}
+
+\end_inset
+
+By definition of the metric, 
+\begin_inset Formula 
+\begin{align*}
+d\left(p,z\right) & =\ell_{a}^{b}\left(\gamma_{p,z}\right)\\
+ & \leq\ell_{a}^{2b-a}\left(\beta\right),
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $\gamma_{p,z}$
+\end_inset
+
+ is the shortest path between 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ and must be shorter than or equal to the curve 
+\begin_inset Formula $\beta$
+\end_inset
+
+, thus 
+\begin_inset Formula $d\left(p,z\right)\leq d\left(p,q\right)+d\left(q,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $F:M\to N$
+\end_inset
+
+ be a smooth immersion, and let 
+\begin_inset Formula $g_{N}$
+\end_inset
+
+ be a Riemannian metric on 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(V,\psi\right)$
+\end_inset
+
+ be charts on 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ with 
+\begin_inset Formula $F\left(U\right)\subset V$
+\end_inset
+
+,a nd let 
+\begin_inset Formula $\left(g_{N}\right)_{i,j}$
+\end_inset
+
+ be the local coordinate description of 
+\begin_inset Formula $g_{N}$
+\end_inset
+
+ under the chart 
+\begin_inset Formula $\left(V,\psi\right)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $g_{M}$
+\end_inset
+
+ is the metric induced on 
+\begin_inset Formula $M$
+\end_inset
+
+ from the immersion 
+\begin_inset Formula $F$
+\end_inset
+
+, describe how the local coordinate description of 
+\begin_inset Formula $g_{M}$
+\end_inset
+
+ under 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ denoted by 
+\begin_inset Formula $\left(g_{M}\right)_{i,j}$
+\end_inset
+
+ are related to functions 
+\begin_inset Formula $\left(g_{N}\right)_{i,j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
 
 \end_layout
 
