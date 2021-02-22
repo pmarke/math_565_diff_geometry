@@ -456,9 +456,161 @@ Do Carmo
 Using the Christoffel symbols we can now construct the local equations of
  geodesics
 \begin_inset Formula 
+\begin{align}
+\frac{d^{2}u}{dt}+\sum_{i,j}\Gamma_{ij}^{1}\frac{dx_{i}}{dt}\frac{dx_{j}}{dt} & =0\nonumber \\
+\frac{d^{2}u}{dt}+\frac{2ff'}{f^{2}}\frac{du}{dt}\frac{dv}{dt} & =0\label{eq:p1_u}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\frac{d^{2}v}{dt}+\sum_{i,j}\Gamma_{ij}^{2}\frac{dx_{i}}{dt}\frac{dx_{j}}{dt} & =0\nonumber \\
+\frac{d^{2}v}{dt}-\frac{ff'}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{du}{dt}\right)^{2}+\frac{f'f''+g'g''}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{dv}{dt}\right)^{2} & =0.\label{eq:p1_v}
+\end{align}
+
+\end_inset
+
+To prove part (3) we note that by definition 
+\begin_inset Formula $\gamma\left(t\right)$
+\end_inset
+
+ is a geodesic, thus 
+\begin_inset Formula 
 \begin{align*}
-\frac{d^{2}u}{dt}+\sum_{i,j}\Gamma_{ij}^{1}\frac{dx_{i}}{dt}\frac{dx_{j}}{dt} & =0\\
-\frac{d^{2}u}{dt}+\frac{2ff'}{f^{2}}\frac{du}{dt}\frac{dv}{dt} & =0
+0 & =\frac{d}{dt}\left\langle \frac{d\gamma}{dt},\frac{d\gamma}{dt}\right\rangle \\
+ & =\frac{d}{dt}\left(\left(\frac{du}{dt}\right)^{2}f^{2}+\left(\frac{dv}{dt}\right)^{2}\left(\left(f'\right)^{2}+\left(g'\right)^{2}\right)\right)\\
+ & =2\frac{d^{2}u}{dt^{2}}\frac{du}{dt}f^{2}+2\left(\frac{du}{dt}\right)^{2}ff'\frac{dv}{dt}+2\frac{d^{2}v}{dt^{2}}\frac{dv}{dt}\left(\left(f'\right)^{2}+\left(g'\right)^{2}\right)+2\left(\frac{dv}{dt}\right)^{2}\left(f'f''\frac{dv}{dt}+g'g''\frac{dv}{dt}\right)\\
+ & =2\left(\frac{d^{2}u}{dt^{2}}f^{2}+2ff'\frac{du}{dt}\frac{dv}{dt}-ff'\frac{du}{dt}\frac{dv}{dt}\right)\frac{du}{dt}+2\left(\frac{d^{2}v}{dt^{2}}\frac{dv}{dt}\left(\left(f'\right)^{2}+\left(g'\right)^{2}\right)+\left(\frac{dv}{dt}\right)^{2}\left(f'f''\frac{dv}{dt}+g'g''\frac{dv}{dt}\right)\right),
+\end{align*}
+
+\end_inset
+
+we can simplify this using equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:p1_u"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to get 
+\begin_inset Formula 
+\begin{align*}
+0 & =-2ff'\left(\frac{du}{dt}\right)^{2}\frac{dv}{dt}+2\left(\frac{d^{2}v}{dt^{2}}\frac{dv}{dt}\left(\left(f'\right)^{2}+\left(g'\right)^{2}\right)+\left(\frac{dv}{dt}\right)^{2}\left(f'f''\frac{dv}{dt}+g'g''\frac{dv}{dt}\right)\right)\\
+ & =2\left(\left(f'\right)^{2}+\left(g'\right)^{2}\right)\left(\frac{d^{2}v}{dt}-\frac{ff'}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{du}{dt}\right)^{2}+\frac{f'f''+g'g''}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{dv}{dt}\right)^{2}\right)\frac{dv}{dt}\\
+ & =\frac{d^{2}v}{dt}-\frac{ff'}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{du}{dt}\right)^{2}+\frac{f'f''+g'g''}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{dv}{dt}\right)^{2}.
+\end{align*}
+
+\end_inset
+
+Therefore, we see that equaiton 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:p1_v"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is equivalent to constant energy along a geodesic.
+ 
+\end_layout
+
+\begin_layout Proof
+We now proceed to show that 
+\begin_inset Formula $r\cos\beta=\text{const}$
+\end_inset
+
+ where 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is the angel between the geodesic 
+\begin_inset Formula $\gamma\left(t\right)=\left(u\left(t\right),v\left(t\right)\right)$
+\end_inset
+
+ and the parallel.
+ We can define the parallel as 
+\begin_inset Formula $h\left(t\right)=\left(f\left(v_{0}\right)\cos\left(u\left(t\right)\right),f\left(v_{0}\right)\sin\left(u\left(t\right)\right),g\left(v_{0}\right)\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $v_{0}\in\mathbb{R}$
+\end_inset
+
+ is a constant.
+ Taking the derivative of 
+\begin_inset Formula $h\left(t\right)$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\[
+\frac{dh}{dt}=\left(-f\left(v_{0}\right)\sin\left(u\left(t\right)\right)\frac{du}{dt},f\left(v_{0}\right)\cos\left(u\left(t\right)\right)\frac{du}{dt},0\right).
+\]
+
+\end_inset
+
+We can map the derivative of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ using 
+\begin_inset Formula $d\varphi$
+\end_inset
+
+ to get 
+\begin_inset Formula 
+\begin{align*}
+d\varphi\circ\frac{d\gamma}{dt} & =\begin{bmatrix}-f\left(v\right)\sin\left(u\right) & f'\left(v\right)\cos\left(u\right)\\
+f\left(v\right)\cos\left(u\right) & f'\left(v\right)\sin\left(u\right)\\
+0 & g'\left(v\right)
+\end{bmatrix}\begin{bmatrix}\frac{du}{dt}\\
+\frac{dv}{dt}
+\end{bmatrix}\\
+ & =\begin{bmatrix}-f\left(v\right)\sin\left(u\right)\frac{du}{dt}+f'\left(v\right)\cos\left(u\right)\frac{dv}{dt}\\
+f\left(v\right)\cos\left(u\right)\frac{du}{dt}+f'\left(v\right)\sin\left(u\right)\frac{dv}{dt}\\
+g'\left(v\right)\frac{dv}{dt}.
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+Calculating the angle between 
+\begin_inset Formula $\frac{dh}{dt}$
+\end_inset
+
+ and 
+\begin_inset Formula $d\varphi\circ\frac{d\gamma}{dt}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\cos\beta\left(t\right)=\frac{\left\langle \frac{dh}{dt},d\varphi\circ\frac{d\gamma}{dt}\right\rangle }{\left\Vert \frac{dh}{dt}\right\Vert \left\Vert d\varphi\circ\frac{d\gamma}{dt}\right\Vert }.
+\]
+
+\end_inset
+
+We compute this quantity by looking at each component.
+ 
+\begin_inset Formula 
+\begin{align*}
+\left\Vert \frac{dh}{dt}\right\Vert  & =\left\langle \frac{dh}{dt},\frac{dh}{dt}\right\rangle ^{\frac{1}{2}}\\
+ & =\left|f\left(v_{0}\right)\frac{du}{dt}\right|=\text{const}
 \end{align*}
 
 \end_inset
@@ -466,8 +618,86 @@ Using the Christoffel symbols we can now construct the local equations of
 
 \begin_inset Formula 
 \begin{align*}
-\frac{d^{2}v}{dt}+\sum_{i,j}\Gamma_{ij}^{2}\frac{dx_{i}}{dt}\frac{dx_{j}}{dt} & =0\\
-\frac{d^{2}v}{dt}-\frac{ff'}{\left(f'\right)^{2}+\left(g'\right)^{2}} & \left(\frac{du}{dt}\right)^{2}+\frac{f'f''+g'g''}{\left(f'\right)^{2}+\left(g'\right)^{2}}\left(\frac{dv}{dt}\right)^{2}.
+\left\langle \frac{dh}{dt},d\varphi\circ\frac{d\gamma}{dt}\right\rangle  & =f\left(v_{0}\right)f\left(v\right)\sin^{2}\left(u\right)\left(\frac{du}{dt}\right)^{2}-f\left(v_{0}\right)f'\left(v\right)\sin\left(u\right)\cos\left(u\right)\frac{du}{dt}\frac{dv}{dt}\\
+ & +f\left(v_{0}\right)f\left(v\right)\cos^{2}\left(u\right)\left(\frac{du}{dt}\right)^{2}+f\left(v_{0}\right)f'\left(v\right)\cos\left(u\right)\sin\left(u\right)\frac{du}{dt}\frac{dv}{dt}\\
+ & =f\left(v_{0}\right)f\left(v\right)\left(\frac{du}{dt}\right)^{2}.
+\end{align*}
+
+\end_inset
+
+As we have shown before, 
+\begin_inset Formula $\left|\gamma'\left(t\right)\right|=\text{const }$
+\end_inset
+
+; thus, 
+\begin_inset Formula 
+\begin{align*}
+\cos\beta\left(t\right) & =\frac{f\left(v_{0}\right)f\left(v\right)\left(\frac{du}{dt}\right)^{2}}{f\left(v_{0}\right)\frac{du}{dt}\alpha},\\
+ & =\frac{f\left(v\right)\frac{du}{dt}}{\alpha}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ is a constant.
+ Since 
+\begin_inset Formula $\left|\gamma'\left(t\right)\right|=\text{const }$
+\end_inset
+
+, 
+\begin_inset Formula $f^{2}\left(v\right)\left(\frac{du}{dt}\right)^{2}=\text{const}$
+\end_inset
+
+, thus 
+\begin_inset Formula $f\left(v\right)\left(\frac{du}{dt}\right)$
+\end_inset
+
+ is also a constant.
+ Applying this we get 
+\begin_inset Formula 
+\[
+\cos\beta\left(t\right)=\frac{\delta}{\alpha},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\delta\in\mathbb{R}$
+\end_inset
+
+ is a constant.
+ 
+\end_layout
+
+\begin_layout Proof
+To prove the last part, let 
+\begin_inset Formula $f\left(v\right)=v$
+\end_inset
+
+ and 
+\begin_inset Formula $g$
+\end_inset
+
+
+\begin_inset Formula $\left(v\right)=v^{2}$
+\end_inset
+
+ for 
+\begin_inset Formula $0<v<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $-\epsilon<u<2\pi+\epsilon$
+\end_inset
+
+, then the local equations fo a geodesic are 
+\begin_inset Formula 
+\begin{align*}
+\frac{d^{2}u}{dt^{2}}+\frac{2}{v}\frac{du}{dt}\frac{dv}{dt} & =0\\
+\frac{d^{2}v}{dt^{2}}-\frac{v}{4v^{2}}\left(\frac{du}{dt}\right)^{2}+\frac{4v}{4v^{2}}\left(\frac{dv}{dt}\right)^{2} & =0
 \end{align*}
 
 \end_inset
