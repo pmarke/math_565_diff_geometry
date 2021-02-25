@@ -1,0 +1,858 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Midterm
+\end_layout
+
+\begin_layout Author
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $P:\mathbb{R}^{n+1}\backslash\left\{ 0\right\} \to\mathbb{R}^{n+1}\left\{ 0\right\} $
+\end_inset
+
+ be a smooth map, with 
+\begin_inset Formula $P\left(\lambda x\right)=\lambda^{d}P\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+ and all 
+\begin_inset Formula $x\in\mathbb{R}^{n+1}\backslash\left\{ 0\right\} $
+\end_inset
+
+.
+ Prove that the map 
+\begin_inset Formula 
+\begin{align*}
+P_{*} & :\mathbb{RP}^{n}\to\mathbb{RP}^{k}\\
+ & \left[x\right]\mapsto\left[P\left(x\right)\right]
+\end{align*}
+
+\end_inset
+
+is well defined and smooth.
+\end_layout
+
+\begin_layout Proof
+The projective space 
+\begin_inset Formula $\mathbb{RP}^{n}$
+\end_inset
+
+ consists of an equivalence class of points defined by the relation 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ iff 
+\begin_inset Formula $x=\lambda y$
+\end_inset
+
+ for some 
+\begin_inset Formula $\lambda\in\mathbb{R}\backslash\left\{ 0\right\} $
+\end_inset
+
+.
+ Thus for an equivalence class 
+\begin_inset Formula $\left[x\right]$
+\end_inset
+
+, it can be equally represented as 
+\begin_inset Formula $\left[\lambda x\right]$
+\end_inset
+
+.
+ According the the function 
+\begin_inset Formula $P_{*}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+P_{*}\left(\left[\lambda x\right]\right) & =\left[\lambda^{d}P\left(x\right)\right]\\
+ & =\left[\lambda^{d}y\right]\\
+ & =\left[y\right],
+\end{align*}
+
+\end_inset
+
+which shows that 
+\begin_inset Formula $P_{*}$
+\end_inset
+
+ maps an equivalence class 
+\begin_inset Formula $\left[x\right]$
+\end_inset
+
+ to an equivalence class 
+\begin_inset Formula $\left[y\right]$
+\end_inset
+
+ regardless of the representation of 
+\begin_inset Formula $\left[x\right]$
+\end_inset
+
+; therefore, it is well defined.
+ By definition of the function 
+\begin_inset Formula $P_{*}$
+\end_inset
+
+ it maps an equivalence class 
+\begin_inset Formula $\left[x\right]$
+\end_inset
+
+ using the smooth function 
+\begin_inset Formula $P$
+\end_inset
+
+ to the equivalence class 
+\begin_inset Formula $\left[P\left(x\right)\right]$
+\end_inset
+
+.
+ Since the equivalence class is represented using 
+\begin_inset Formula $x\in\mathbb{R}^{n+1}\backslash\left\{ 0\right\} $
+\end_inset
+
+, and 
+\begin_inset Formula $P$
+\end_inset
+
+ is a smooth map on 
+\begin_inset Formula $\mathbb{R}^{n+1}\backslash\left\{ 0\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $P_{*}$
+\end_inset
+
+ is smooth.
+ 
+\end_layout
+
+\begin_layout Exercise
+If 
+\begin_inset Formula $S^{1}=\left\{ \left(x,y\right)\in\mathbb{R}^{2}|x^{2}+y^{2}=1\right\} $
+\end_inset
+
+, prove that 
+\begin_inset Formula $TS^{1}$
+\end_inset
+
+ is diffeomorphic to 
+\begin_inset Formula $S^{1}\times\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\gamma:\left(-\epsilon,\epsilon\right):S^{1}$
+\end_inset
+
+ denote a smooth curve on 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\gamma\left(0\right)=p$
+\end_inset
+
+, 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ be a chart on 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\gamma}=\varphi\circ\gamma$
+\end_inset
+
+ denote the smooth curve in local coordinates.
+ We define the tangent vectors of 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ as the equivalence class of curves such that 
+\begin_inset Formula $\left(\varphi\circ\gamma_{1}\right)^{'}\left(0\right)=\left(\varphi\circ\gamma_{2}\right)^{'}\left(0\right)$
+\end_inset
+
+.
+ As stated in class, this is independent of the chart used, so we can define
+ the equivalence class in local coordinates.
+ In local coordinates 
+\begin_inset Formula 
+\[
+\left(\varphi\circ\gamma\right)^{'}\left(0\right)=\left.\frac{d\tilde{\gamma}}{dt}\right|_{t=0},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\tilde{\gamma}:\left(-\epsilon,\epsilon\right)\to\mathbb{R}$
+\end_inset
+
+, thus the derivative at 
+\begin_inset Formula $t=0$
+\end_inset
+
+ is a scalar can be represented as 
+\begin_inset Formula 
+\[
+\alpha\frac{\partial}{\partial x},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+.
+ Thus, all of the curves in the same equivalence class can be identified
+ by 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in the chart 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\left[\gamma\right]$
+\end_inset
+
+ represent the equivalence class whose derivative at 
+\begin_inset Formula $t=0$
+\end_inset
+
+ in 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\alpha\frac{\partial}{\partial x},
+\]
+
+\end_inset
+
+we can then create a map 
+\begin_inset Formula $f:T_{p}S^{1}\to\left\{ p\right\} \times\mathbb{R}$
+\end_inset
+
+ defined as
+\begin_inset Formula 
+\[
+f\left(p,\alpha\frac{\partial}{\partial x}\right)=\left(p,\alpha\right).
+\]
+
+\end_inset
+
+which shows that 
+\begin_inset Formula $T_{p}S^{1}$
+\end_inset
+
+ is diffeomorphic to 
+\begin_inset Formula $\left\{ p\right\} \times\mathbb{R}$
+\end_inset
+
+ since the map is invertible and smooth in both directions.
+ Let 
+\begin_inset Formula $X\in\mathcal{X}^{\infty}$
+\end_inset
+
+ be a vector field.
+ A vector field on 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ can be defined by a congruence of curves on 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ is one dimension, any vector field on 
+\begin_inset Formula $S^{1}$
+\end_inset
+
+ is defined by a single smooth curve.
+ This allows us to extend 
+\begin_inset Formula $f$
+\end_inset
+
+ to all of 
+\begin_inset Formula $TS^{1}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+f:TS^{1}\to S^{1}\times\mathbb{R}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a smooth compact manifold (without boundary), of dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, and 
+\begin_inset Formula $F:M\to\mathbb{R}^{n}$
+\end_inset
+
+ a smooth map.
+ Prove that 
+\begin_inset Formula $F$
+\end_inset
+
+ cannot be a submersion, and it cannot be an immersion.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is a smooth compact manifold (without boundary) of dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, it is not a subset of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ and it can be covered by a finite number of charts denoted 
+\begin_inset Formula $\left(U_{i},\varphi_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ be a chart on 
+\begin_inset Formula $M$
+\end_inset
+
+, then we can define the differential of 
+\begin_inset Formula $F$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+dF=\frac{\partial}{\partial x}\left(F\circ\varphi^{-1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a smooth manifold with Riemannian metric 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\gamma:\left[a,b\right]\to M$
+\end_inset
+
+ be a smooth curve, and 
+\begin_inset Formula $\tau:\left[c,d\right]\to\left[a,b\right]$
+\end_inset
+
+ a diffeomorphism.
+ Prove that the length of the curve 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the same as the length of the curve 
+\begin_inset Formula $\gamma\circ\tau:\left[c,d\right]\to M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ be a chart on 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\tilde{\gamma}$
+\end_inset
+
+ be the local representation of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\tau}$
+\end_inset
+
+ be the local representation of 
+\begin_inset Formula $\gamma\circ\tau$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+\tilde{\tau}=\tilde{\gamma}\circ\tau.
+\]
+
+\end_inset
+
+The length of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\ell\left(\gamma\right)=\int_{a}^{b}g\left(\frac{d\tilde{\gamma}}{dt},\frac{d\tilde{\gamma}}{dt}\right)^{1/2}dt,
+\]
+
+\end_inset
+
+and the length of 
+\begin_inset Formula $\gamma\circ\tau$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\ell\left(\gamma\circ\tau\right) & =\int_{c}^{d}g\left(\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)}\frac{d\tau}{dt},\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)}\frac{d\tau}{dt}\right)^{1/2}dt\\
+ & =\int_{c}^{d}g\left(\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)},\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)}\right)^{1/2}\left|\frac{d\tau}{dt}\right|dt,
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\frac{d\tau}{dt}$
+\end_inset
+
+ is a scalar and we are able to pull it out of the inner product.
+ Notice that for every 
+\begin_inset Formula $\beta\in\left[c,d\right]$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left.g\left(\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)},\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)}\right)^{1/2}\right|_{t=\beta}=\left.g\left(\frac{d\tilde{\gamma}}{dt},\frac{d\tilde{\gamma}}{dt}\right)^{1/2}\right|_{t=\tau\left(\beta\right)},
+\]
+
+\end_inset
+
+and the scalar 
+\begin_inset Formula $\left|\frac{d\tau}{dt}\right|$
+\end_inset
+
+ is just weighing the volume of the integral according to the speed of 
+\begin_inset Formula $\left.\frac{\partial\tilde{\gamma}}{\partial x}\right|_{\tau\left(t\right)}$
+\end_inset
+
+.
+ This is similar to the change of basis where 
+\begin_inset Formula $\left|\frac{d\tau}{dt}\right|$
+\end_inset
+
+ is the Jacobian acting as the change in volume.
+ Therefore, 
+\begin_inset Formula 
+\[
+\ell\left(\gamma\right)=\ell\left(\gamma\circ\tau\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a smooth manifold of dimension 
+\begin_inset Formula $n$
+\end_inset
+
+, and let 
+\begin_inset Formula $\left\{ \left(U_{\lambda},\varphi_{\lambda}\right)\right\} _{\lambda\in\Lambda}$
+\end_inset
+
+ be a collection of coordinate charts which cover 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Suppose that for each 
+\begin_inset Formula $\lambda\in\Lambda$
+\end_inset
+
+, there are 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ functions 
+\begin_inset Formula $g_{i,j}^{\lambda}:U_{\lambda}\to\mathbb{R}$
+\end_inset
+
+, where 
+\begin_inset Formula $1\leq i,j\leq n$
+\end_inset
+
+.
+ State a set of necessary and sufficient conditions on the functions 
+\begin_inset Formula $\left\{ g_{i,j}^{\lambda}\right\} $
+\end_inset
+
+ so that there exists a Riemannian metric 
+\begin_inset Formula $g$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ whose coordinate description under the chart 
+\begin_inset Formula $\left(U_{\lambda},\varphi_{\lambda}\right)$
+\end_inset
+
+ is given by the 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ functions 
+\begin_inset Formula $\left\{ g_{i,j}^{\lambda}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A Riemannian metric is an assignment 
+\begin_inset Formula $g$
+\end_inset
+
+ of an inner product 
+\begin_inset Formula $g\left(p\right)=\left\langle ,\right\rangle _{p}$
+\end_inset
+
+ on each tangent space 
+\begin_inset Formula $T_{p}M$
+\end_inset
+
+ such that for any coordinate chart 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $g_{i,j}\left(p\right)$
+\end_inset
+
+ is a smooth function on 
+\begin_inset Formula $U$
+\end_inset
+
+ for each 
+\begin_inset Formula $1\leq i,j\leq n$
+\end_inset
+
+.
+ An inner product is symmetric, bi-linear, and positive definite.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $v,w\in T_{p}M$
+\end_inset
+
+ which can be represented as 
+\begin_inset Formula $v=v_{i}\frac{\partial}{\partial x_{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $w=w_{i}\frac{\partial}{\partial x}_{i}$
+\end_inset
+
+ in local coordinates.
+ We define the metric 
+\begin_inset Formula $g^{\lambda}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+g^{\lambda}\left(v,w\right)=\sum_{i,j}g_{ij}^{\lambda}v_{i}w_{j}
+\]
+
+\end_inset
+
+which we can represent in matrix notation 
+\begin_inset Formula 
+\[
+g^{\lambda}\left(v,w\right)=\left[w_{1},\ldots,w_{n}\right]\begin{bmatrix}g_{11}^{\lambda} & \cdots & g_{1n}^{\lambda}\\
+\vdots & \ddots & \vdots\\
+g_{n1}^{\lambda} & \cdots & g_{nn}^{\lambda}
+\end{bmatrix}\begin{bmatrix}v_{1}\\
+\vdots\\
+v_{n}
+\end{bmatrix},
+\]
+
+\end_inset
+
+and we will denote as 
+\begin_inset Formula $\left[g_{ij}^{\lambda}\right]$
+\end_inset
+
+.
+ By this definition 
+\begin_inset Formula $\left[g_{ij}^{\lambda}\right]$
+\end_inset
+
+ is bilinear.
+ We then impose the conditions that 
+\begin_inset Formula $g_{ij}^{\lambda}=g_{ji}^{\lambda}$
+\end_inset
+
+ and that 
+\begin_inset Formula $g_{ij}^{\lambda}$
+\end_inset
+
+ is a smooth function on 
+\begin_inset Formula $U_{\lambda}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left[g_{ij}^{\lambda}\right]$
+\end_inset
+
+ is a positive definite matrix.
+ Lastly, we need the metric to be independent of coordinate chart.
+ Let 
+\begin_inset Formula $\left(U_{1},\varphi_{1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(U_{2},\varphi_{2}\right)$
+\end_inset
+
+ be coordinate charts on 
+\begin_inset Formula $M$
+\end_inset
+
+ where 
+\begin_inset Formula $1,2\in\Lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{1}\cap U_{2}\neq\emptyset$
+\end_inset
+
+.
+ We can express the vectors 
+\begin_inset Formula $v$
+\end_inset
+
+ and 
+\begin_inset Formula $w$
+\end_inset
+
+ in either chart, and we want the measure of their length and angle to be
+ independent of the chart we use.
+ In other words, we want 
+\begin_inset Formula 
+\[
+g^{1}\left(v,w\right)=g^{2}\left(v,w\right)
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $v,w\in T_{p}M$
+\end_inset
+
+.
+ We can show this relation in matrix notation as 
+\begin_inset Formula 
+\[
+\left[w_{1}^{1},\ldots,w_{n}^{1}\right]\begin{bmatrix}g_{11}^{1} & \cdots & g_{1n}^{1}\\
+\vdots & \ddots & \vdots\\
+g_{n1}^{1} & \cdots & g_{nn}^{1}
+\end{bmatrix}\begin{bmatrix}v_{1}^{1}\\
+\vdots\\
+v_{n}^{1}
+\end{bmatrix}=\left[w_{1}^{2},\ldots,w_{n}^{2}\right]\begin{bmatrix}g_{11}^{2} & \cdots & g_{1n}^{2}\\
+\vdots & \ddots & \vdots\\
+g_{n1}^{2} & \cdots & g_{nn}^{2}
+\end{bmatrix}\begin{bmatrix}v_{1}^{2}\\
+\vdots\\
+v_{n}^{2}
+\end{bmatrix}
+\]
+
+\end_inset
+
+where the superscripts are used to denote the chart they are expressed in.
+ Using the differential 
+\begin_inset Formula $d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)$
+\end_inset
+
+ we can map the vectors from the first chart to the second chart and map
+ them back such that 
+\begin_inset Formula 
+\[
+g^{1}\left(d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)^{-1}d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)v^{1},d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)^{-1}d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)v^{2}\right)=g^{1}\left(v,w\right).
+\]
+
+\end_inset
+
+Using this relation we get the last condition 
+\begin_inset Formula 
+\[
+\left(d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)^{-1}\right)^{\top}\left[g_{ij}^{1}\right]d\left(\varphi_{2}\circ\varphi_{1}^{-1}\right)^{-1}=\left[g_{ij}^{2}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Define the torus 
+\begin_inset Formula $\mathbb{T}^{2}$
+\end_inset
+
+ as the quotient 
+\begin_inset Formula 
+\[
+\mathbb{T}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
