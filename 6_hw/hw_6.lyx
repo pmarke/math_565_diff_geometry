@@ -135,87 +135,63 @@ Let
 \end_inset
 
  and 
-\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\begin_inset Formula $g_{p}:T_{p}M\times T_{p}M\to\mathbb{R}$
 \end_inset
 
-.
- A vector that is transported from one tangent space to another via parallel
- transport does not have a change in it's components.
- Thus the components of 
-\begin_inset Formula $v_{t_{0}}$
-\end_inset
-
- and 
-\begin_inset Formula $v_{t}\in T_{c\left(t\right)}M$
-\end_inset
-
- are the same, and the components of 
-\begin_inset Formula $w_{t_{0}}$
-\end_inset
-
- and 
-\begin_inset Formula $w_{t}\in T_{c\left(t\right)}M$
-\end_inset
-
- are the same.
- Thus in local coordinates
+ be a compatible Riemannian metric.
+ Then 
 \begin_inset Formula 
 \[
-P\left(\sum v_{i}^{t_{0}}\frac{\partial}{\partial x_{i}^{t_{0}}}\right)=\sum v_{i}^{t}\frac{\partial}{\partial x_{i}^{t}}
+g_{c\left(t_{0}\right)}\left(v_{t_{0}},w_{t_{0}}\right)=a
 \]
 
 \end_inset
 
-where for all 
-\begin_inset Formula $v_{i}^{t}$
+ is equal to a constant 
+\begin_inset Formula $a$
 \end_inset
 
- there exists a 
-\begin_inset Formula $v_{j}^{t_{0}}$
+.
+ Let 
+\begin_inset Formula $v\left(t\right)=P_{c,t_{o},t}\left(v_{t_{0}}\right)$
 \end_inset
 
- such that 
-\begin_inset Formula $v_{i}^{t}=v_{j}^{t_{0}}$
+ and 
+\begin_inset Formula $w\left(t\right)=P_{c,t_{o},t}\left(w_{t_{0}}\right)$
 \end_inset
 
- and vice versa.
- Therefore 
+.
+ Taking the derivative of the metric applied to the vector fields yields
+ 
 \begin_inset Formula 
 \begin{align*}
-P\left(\alpha v_{t_{0}}+\beta w_{t_{0}}\right) & =\alpha\sum v_{i}^{t}\frac{\partial}{\partial x_{i}^{t}}+\beta\sum w_{i}^{t}\frac{\partial}{\partial x_{i}^{t}}\\
- & =\alpha P\left(v_{t_{0}}\right)+\beta P\left(w_{t_{0}}\right),
+\frac{d}{dt}g_{c\left(t\right)}\left(v\left(t\right),w\left(t\right)\right) & =g_{c\left(t\right)}\left(\frac{Dv\left(t\right)}{dt},w\left(t\right)\right)+g_{c\left(t\right)}\left(v\left(t\right),\frac{Dw\left(t\right)}{dt}\right)\\
+ & =g_{c\left(t\right)}\left(0,w\left(t\right)\right)+g_{c\left(t\right)}\left(v\left(t\right),0\right)\\
+ & =0,
 \end{align*}
 
 \end_inset
 
-which shows that 
+thus, the quantity 
+\begin_inset Formula $g_{c\left(t\right)}\left(v\left(t\right),w\left(t\right)\right)$
+\end_inset
+
+ is constant along the curve 
+\begin_inset Formula $c\left(t\right)$
+\end_inset
+
+.
+ This means that the length and angles of vectors that are parallel transported
+ remain the same, which means that 
+\begin_inset Formula $P_{c,t_{o},t}$
+\end_inset
+
+ is an isometry.
+ Since the angles between vectors stay the same, 
 \begin_inset Formula $P$
 \end_inset
 
- is an isomorphism.
- Note that the vector field required to parallel transport 
-\begin_inset Formula $v_{t_{0}}$
-\end_inset
-
-, 
-\begin_inset Formula $w_{t_{0}}$
-\end_inset
-
-, and 
-\begin_inset Formula $\alpha v_{t_{0}}+\beta w_{t_{0}}$
-\end_inset
-
- may be different.
- As we have shown, the signs of the components of the vector do not change
- as they are being parallel transported along 
-\begin_inset Formula $c$
-\end_inset
-
-, thus 
-\begin_inset Formula $P$
-\end_inset
-
- must preserve orientation.
+ preserves orientation.
  
 \end_layout
 
@@ -292,45 +268,53 @@ m).
 \end_layout
 
 \begin_layout Proof
-The vector field 
+Let 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ form a basis of vector fields in local coordinates that are parallel transport
+ along 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ We can write the vector field 
 \begin_inset Formula $Y$
 \end_inset
 
- evaluated at 
-\begin_inset Formula $c\left(t\right)$
+ along 
+\begin_inset Formula $c$
 \end_inset
 
- is 
-\begin_inset Formula 
-\[
-Y\left(c\left(t\right)\right)=\sum y_{i}^{t}\left(c\left(t\right)\right)\frac{\partial}{\partial x_{i}^{t}},
-\]
-
-\end_inset
-
-and thus 
-\begin_inset Formula 
-\[
-P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)=\sum y_{i}^{t_{0}}\left(c\left(t\right)\right)\frac{\partial}{\partial x_{i}^{t_{0}}}.
-\]
-
-\end_inset
-
-Taking the derivative w.r.t.
- time yields
+ in local coordinates as 
 \begin_inset Formula 
 \begin{align*}
-\frac{d}{dt}P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right) & =\frac{d}{dt}\sum y_{i}^{t_{0}}\left(c\left(t\right)\right)\frac{\partial}{\partial x_{i}^{t_{0}}}\\
- & =\sum\frac{\partial}{\partial x_{i}^{t_{0}}}\left.\frac{\partial y_{i}^{t_{0}}}{\partial x_{j}}\right|_{c\left(t\right)}\left.\frac{dx_{j}}{dt}\right|_{t}
+Y & \left(t\right)=\sum y_{i}\left(t\right)X_{i}\left(t\right),
 \end{align*}
 
 \end_inset
 
-
+m(tthen 
 \begin_inset Formula 
-\[
-\left(\nabla_{X}Y\right)\left(p\right)=\sum_{ij}x_{i}\left(p\right)y_{i}\left(p\right)\nabla_{X_{i}}X_{j}+\sum_{ij}x_{i}\left(p\right)X_{i}\left(y_{j}\left(p\right)\right)X_{j}.
-\]
+\begin{align*}
+\left(\nabla_{X}Y\right)\left(p\right) & =\frac{DY\left(t_{0}\right)}{dt}=\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right)+y_{i}\left(t\right)\frac{DX_{i}}{dt}\\
+ & =\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right).
+\end{align*}
+
+\end_inset
+
+The term 
+\begin_inset Formula $\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}}$
+\end_inset
+
+ can be expanded out as 
+\begin_inset Formula 
+\begin{align*}
+\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(Y\left(c\left(t\right)\right)\right)\right)\right|_{t=t_{0}} & =\left.\frac{d}{dt}\left(P_{c,t_{0},t}^{-1}\left(\sum y_{i}\left(t\right)X_{i}\left(t\right)\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)P_{c,t_{0},t}^{-1}\left(X_{i}\left(t\right)\right)\right|_{t=t_{0}}\\
+ & =\left.\frac{d}{dt}\sum y_{i}\left(t\right)X_{i}\left(t_{0}\right)\right|_{t=t_{0}}\\
+ & =\sum\left.\frac{y_{i}\left(t\right)}{dt}\right|_{t=t_{0}}X_{i}\left(t_{0}\right).
+\end{align*}
 
 \end_inset
 
@@ -905,6 +889,445 @@ The angle between
 \end_inset
 
 
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a smooth path-connected manifold with Riemannian metric 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Recall that 
+\begin_inset Formula $\ell_{a}^{b}\left(\gamma\right)$
+\end_inset
+
+ denotes the length of a smooth curve 
+\begin_inset Formula $\gamma:\left[a,b\right]\to M$
+\end_inset
+
+.
+ For any 
+\begin_inset Formula $p,q\in M$
+\end_inset
+
+, let 
+\begin_inset Formula 
+\[
+d\left(p,q\right)=\inf\left\{ \ell_{a}^{b}\left(\gamma\right)\mid\gamma:\left[a,b\right]\to M\text{ is piecewise smooth with }\gamma\left(a\right)=p\text{ and }\gamma\left(b\right)=q\right\} .
+\]
+
+\end_inset
+
+Prove that the pair 
+\begin_inset Formula $\left(M,d\right)$
+\end_inset
+
+ is a metric space.
+\end_layout
+
+\begin_layout Proof
+A metric 
+\begin_inset Formula $d:M\times M\to\mathbb{R}$
+\end_inset
+
+ must satisfy the following properties
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d\left(p,q\right)=d\left(q,p\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d\left(p,q\right)\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d\left(p,q\right)=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $x=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For all points 
+\begin_inset Formula $p,q,z\in M$
+\end_inset
+
+, 
+\begin_inset Formula $d\left(p,z\right)\leq d\left(p,q\right)+d\left(q,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The length of a smooth curve is defined as 
+\begin_inset Formula 
+\[
+\ell_{a}^{b}\left(\gamma\right)=\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt.
+\]
+
+\end_inset
+
+To prove the first property, suppose that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is the curve from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+ with minimum length, then 
+\begin_inset Formula 
+\begin{align*}
+d\left(p,q\right) & =\ell_{a}^{b}\left(\gamma\right)\\
+ & =\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt.
+\end{align*}
+
+\end_inset
+
+We can construct another curve that goes from 
+\begin_inset Formula $q$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+ as 
+\begin_inset Formula $\alpha\left(t\right)=\gamma\left(b-t\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $t\in\left[0,b-a\right]$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+d\left(q,p\right) & =\ell_{b}^{a}\left(\alpha\right)\\
+ & =\int_{0}^{b-a}g_{\alpha\left(t\right)}\left(\frac{d\alpha}{dt},\frac{d\alpha}{dt}\right)^{\frac{1}{2}}dt\\
+ & =\int_{0}^{b-a}g_{\gamma\left(b-t\right)}\left(-\frac{d\gamma}{dt},-\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt\\
+ & =\int_{0}^{b-a}g_{\gamma\left(b-t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt.
+\end{align*}
+
+\end_inset
+
+Since the integral is just a sum of positive numbers, the two integrals
+ are equivalent.
+ 
+\end_layout
+
+\begin_layout Standard
+The second and third property come from the fact that the Riemannian metric
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ is an inner product.
+ Thus 
+\begin_inset Formula 
+\[
+g\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)\geq0,
+\]
+
+\end_inset
+
+and is only equal to zero when 
+\begin_inset Formula $\frac{d\gamma}{dt}=0$
+\end_inset
+
+.
+ Thus the length of a curve is greater than or equal to zero, and is only
+ equal to zero when 
+\begin_inset Formula 
+\[
+\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt=0.
+\]
+
+\end_inset
+
+This implies that all of the velocities along the curve must be zero, thus
+ 
+\begin_inset Formula $p=q$
+\end_inset
+
+.
+ Also, if 
+\begin_inset Formula $p=q$
+\end_inset
+
+, then the shortest curve between them is the curve 
+\begin_inset Formula $\gamma\left(t\right)=p=q$
+\end_inset
+
+ which is constant; thus 
+\begin_inset Formula $\frac{d\gamma}{dt}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\int_{a}^{b}g_{\gamma\left(t\right)}\left(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\right)^{\frac{1}{2}}dt=0$
+\end_inset
+
+ which implies that 
+\begin_inset Formula $d\left(x,y\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the thrid property, let 
+\begin_inset Formula $\gamma_{i,j}$
+\end_inset
+
+ be the curve from 
+\begin_inset Formula $i\in\left\{ p,q,r\right\} $
+\end_inset
+
+ to 
+\begin_inset Formula $j\in\left\{ p,q,r\right\} $
+\end_inset
+
+ such that 
+\begin_inset Formula $d\left(i,j\right)=\ell_{a}^{b}\left(\gamma_{i,j}\right)$
+\end_inset
+
+.
+ We can construct a new curve 
+\begin_inset Formula $\beta:\left[a,2b-a\right]\to M$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\beta\left(t\right)=\begin{cases}
+\gamma_{p,q}\left(t\right) & \text{if }t\in\left[a,b\right]\\
+\gamma_{q,z}\left(t-b\right) & \text{else}
+\end{cases}.
+\]
+
+\end_inset
+
+which is the curve that goes from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+, then to 
+\begin_inset Formula $z$
+\end_inset
+
+ along the curves that are shortest distance from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+ and from 
+\begin_inset Formula $q$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ The length of 
+\begin_inset Formula $\beta$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\ell_{a}^{2b-a}\left(\beta\right) & =\ell_{a}^{b}\left(\gamma_{p,q}\right)+\ell_{a}^{b}\left(\gamma_{q,z}\right)\\
+ & =d\left(p,q\right)+d\left(q,z\right).
+\end{align*}
+
+\end_inset
+
+By definition of the metric, 
+\begin_inset Formula 
+\begin{align*}
+d\left(p,z\right) & =\ell_{a}^{b}\left(\gamma_{p,z}\right)\\
+ & \leq\ell_{a}^{2b-a}\left(\beta\right),
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $\gamma_{p,z}$
+\end_inset
+
+ is the shortest path between 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ and must be shorter than or equal to the curve 
+\begin_inset Formula $\beta$
+\end_inset
+
+, thus 
+\begin_inset Formula $d\left(p,z\right)\leq d\left(p,q\right)+d\left(q,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $F:M\to N$
+\end_inset
+
+ be a smooth immersion, and let 
+\begin_inset Formula $g_{N}$
+\end_inset
+
+ be a Riemannian metric on 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(V,\psi\right)$
+\end_inset
+
+ be charts on 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ with 
+\begin_inset Formula $F\left(U\right)\subset V$
+\end_inset
+
+,a nd let 
+\begin_inset Formula $\left(g_{N}\right)_{i,j}$
+\end_inset
+
+ be the local coordinate description of 
+\begin_inset Formula $g_{N}$
+\end_inset
+
+ under the chart 
+\begin_inset Formula $\left(V,\psi\right)$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $g_{M}$
+\end_inset
+
+ is the metric induced on 
+\begin_inset Formula $M$
+\end_inset
+
+ from the immersion 
+\begin_inset Formula $F$
+\end_inset
+
+, describe how the local coordinate description of 
+\begin_inset Formula $g_{M}$
+\end_inset
+
+ under 
+\begin_inset Formula $\left(U,\varphi\right)$
+\end_inset
+
+ denoted by 
+\begin_inset Formula $\left(g_{M}\right)_{i,j}$
+\end_inset
+
+ are related to functions 
+\begin_inset Formula $\left(g_{N}\right)_{i,j}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $u_{i}\in TU$
+\end_inset
+
+, then the differential 
+\begin_inset Formula $df:TU\to TM$
+\end_inset
+
+, thus we can let 
+\begin_inset Formula $v_{i}=dfu_{i}$
+\end_inset
+
+.
+ We can then use the metric 
+\begin_inset Formula $g_{N}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+g_{N}\left(v_{i},v_{j}\right)=g_{N}\left(dfv_{i},dfv_{j}\right).
+\]
+
+\end_inset
+
+ Let 
+\begin_inset Formula $\left[g_{N}\right]$
+\end_inset
+
+ be the matrix form of 
+\begin_inset Formula $g_{N}$
+\end_inset
+
+, then we can write the above equation in matrix notation as 
+\begin_inset Formula 
+\[
+v_{j}^{\top}df^{\top}\left[g_{N}\right]dfv_{i}.
+\]
+
+\end_inset
+
+Thus 
+\begin_inset Formula $\left[g_{M}\right]=df^{\top}\left[g_{N}\right]df$
+\end_inset
+
+.
 \end_layout
 
 \end_body
