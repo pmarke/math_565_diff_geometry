@@ -5,6 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass IEEEtran
+\options onecolumn
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -252,37 +253,29 @@ Let
 \end_inset
 
  denote the smooth curve in local coordinates.
- We define the tangent vectors of 
-\begin_inset Formula $S^{1}$
+ The tangent space 
+\begin_inset Formula $T_{p}M$
 \end_inset
 
- as the equivalence class of curves such that 
-\begin_inset Formula $\left(\varphi\circ\gamma_{1}\right)^{'}\left(0\right)=\left(\varphi\circ\gamma_{2}\right)^{'}\left(0\right)$
+ is defined as the set of equivalence class of curves such that 
+\begin_inset Formula $\tilde{\gamma}_{1}^{'}\left(0\right)=\tilde{\gamma}_{2}^{'}\left(0\right)$
 \end_inset
 
 .
  As stated in class, this is independent of the chart used, so we can define
- the equivalence class in local coordinates.
- In local coordinates 
+ the equivalence class in any chart.
+ The derivative of the curve 
+\begin_inset Formula $\tilde{\gamma}$
+\end_inset
+
+ at 
+\begin_inset Formula $p$
+\end_inset
+
+ is 
 \begin_inset Formula 
 \[
-\left(\varphi\circ\gamma\right)^{'}\left(0\right)=\left.\frac{d\tilde{\gamma}}{dt}\right|_{t=0},
-\]
-
-\end_inset
-
-where 
-\begin_inset Formula $\tilde{\gamma}:\left(-\epsilon,\epsilon\right)\to\mathbb{R}$
-\end_inset
-
-, thus the derivative at 
-\begin_inset Formula $t=0$
-\end_inset
-
- is a scalar can be represented as 
-\begin_inset Formula 
-\[
-\alpha\frac{\partial}{\partial x},
+\left.\frac{d\tilde{\gamma}}{dt}\right|_{t=0}=\alpha\frac{\partial}{\partial x},
 \]
 
 \end_inset
@@ -329,7 +322,7 @@ we can then create a map
  defined as
 \begin_inset Formula 
 \[
-f\left(p,\alpha\frac{\partial}{\partial x}\right)=\left(p,\alpha\right).
+f\left(p,\left[\gamma\right]\right)=\left(p,\alpha\right).
 \]
 
 \end_inset
@@ -343,46 +336,40 @@ which shows that
 \end_inset
 
  since the map is invertible and smooth in both directions.
- Let 
-\begin_inset Formula $X\in\mathcal{X}^{\infty}$
-\end_inset
-
- be a vector field.
- A vector field on 
-\begin_inset Formula $S^{1}$
-\end_inset
-
- can be defined by a congruence of curves on 
-\begin_inset Formula $S^{1}$
-\end_inset
-
-.
- Since 
-\begin_inset Formula $S^{1}$
-\end_inset
-
- is one dimension, any vector field on 
-\begin_inset Formula $S^{1}$
-\end_inset
-
- is defined by a single smooth curve.
- This allows us to extend 
-\begin_inset Formula $f$
-\end_inset
-
- to all of 
+ The tangent bundle is the disjoint union of the tangent spaces; therefore,
+ 
 \begin_inset Formula $TS^{1}$
 \end_inset
 
- such that 
-\begin_inset Formula 
-\[
-f:TS^{1}\to S^{1}\times\mathbb{R}.
-\]
-
+ is diffeomorphic to 
+\begin_inset Formula $S^{1}\times\mathbb{R}$
 \end_inset
 
+.
+ 
+\end_layout
 
+\begin_layout Proof
+Note: I know you mentioned in class that for 
+\begin_inset Formula $U$
+\end_inset
+
+ a neighborhood of 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $TU$
+\end_inset
+
+ is diffeomorphic to 
+\begin_inset Formula $U\times\mathbb{R}$
+\end_inset
+
+; but this is not always true on the global scale.
+ I don't understand it well enough to know when it holds globally and when
+ it doesn't.
+ 
 \end_layout
 
 \begin_layout Exercise
@@ -425,30 +412,131 @@ Since
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-Let 
-\begin_inset Formula $\left(U,\varphi\right)$
-\end_inset
-
- be a chart on 
-\begin_inset Formula $M$
-\end_inset
-
-, then we can define the differential of 
+ We denote the differential of 
 \begin_inset Formula $F$
 \end_inset
 
  as 
 \begin_inset Formula 
 \[
-dF=\frac{\partial}{\partial x}\left(F\circ\varphi^{-1}\right)
+dF=\frac{\partial}{\partial x}\left(F\circ\varphi^{-1}\right).
 \]
 
 \end_inset
 
 
+\begin_inset Formula $F$
+\end_inset
+
+ is a submersion if 
+\begin_inset Formula $\forall p\in M$
+\end_inset
+
+, 
+\begin_inset Formula $dF$
+\end_inset
+
+ is surjective.
+ Since 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ are of the same dimension, this requires that the rank of 
+\begin_inset Formula $dF=2$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in M$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ is an immersion if 
+\begin_inset Formula $\forall p\in M$
+\end_inset
+
+, 
+\begin_inset Formula $dF$
+\end_inset
+
+ is injective.
+ This also requires that the rank of 
+\begin_inset Formula $dF=2$
+\end_inset
+
+ for all 
+\begin_inset Formula $p\in M$
+\end_inset
+
+.
+ Now since 
+\begin_inset Formula $F$
+\end_inset
+
+ is smooth, it is continuous and thus 
+\begin_inset Formula $F\left(M\right)$
+\end_inset
+
+ is compact which means it is closed and bounded.
+ Let 
+\begin_inset Formula $\gamma:\left(-\epsilon,\epsilon\right)\to M$
+\end_inset
+
+ be a smooth curve such that 
+\begin_inset Formula $F\circ\gamma$
+\end_inset
+
+ is a curve that moves straight towards a boundary in 
+\begin_inset Formula $F\left(M\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{d\gamma}{dt}=\text{constant}$
+\end_inset
+
+ .
+ Then there is a 
+\begin_inset Formula $t\in\left(-\epsilon,\epsilon\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\frac{dF\circ\gamma}{dt}=0$
+\end_inset
+
+ since 
+\begin_inset Formula $F\circ\gamma$
+\end_inset
+
+ must stay inside 
+\begin_inset Formula $F\left(M\right)$
+\end_inset
+
+.
+ At this point 
+\begin_inset Formula $\gamma\left(p\right)$
+\end_inset
+
+, the differential 
+\begin_inset Formula $dF$
+\end_inset
+
+ is not rank 
+\begin_inset Formula $2$
+\end_inset
+
+; therefore, 
+\begin_inset Formula $F$
+\end_inset
+
+ cannot be a submersion nor an immersion.
+ 
 \end_layout
 
 \begin_layout Exercise
@@ -514,20 +602,50 @@ Let
 
 \end_inset
 
-The length of 
+
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is a diffeomorphism, it is a differentiable and a homeomorphism.
+ This means that 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is a curve that only moves 
+\begin_inset Quotes eld
+\end_inset
+
+forward
+\begin_inset Quotes erd
+\end_inset
+
+ from 
+\begin_inset Formula $a$
+\end_inset
+
+ to 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ The length of 
 \begin_inset Formula $\gamma$
 \end_inset
 
- is 
+ is defined as
 \begin_inset Formula 
 \[
-\ell\left(\gamma\right)=\int_{a}^{b}g\left(\frac{d\tilde{\gamma}}{dt},\frac{d\tilde{\gamma}}{dt}\right)^{1/2}dt,
+\ell\left(\gamma\right)=\int_{a}^{b}g\left(\left.\frac{d\tilde{\gamma}}{dt}\right|_{t},\left.\frac{d\tilde{\gamma}}{dt}\right|_{t}\right)^{1/2}dt,
 \]
 
 \end_inset
 
 and the length of 
-\begin_inset Formula $\gamma\circ\tau$
+\begin_inset Formula $\tilde{\tau}$
 \end_inset
 
  is 
@@ -839,6 +957,262 @@ Using this relation we get the last condition
 \end_layout
 
 \begin_layout Exercise
+Define the torus 
+\begin_inset Formula $\mathbb{T}^{2}$
+\end_inset
+
+ as the quotient 
+\begin_inset Formula 
+\[
+\mathbb{T}^{2}=\mathbb{R}^{2}/\mathbb{Z}^{2}=\mathbb{R}^{2}/\left\{ \left(x,y\right)\sim\left(x+n,y+m\right)\text{ for }m,n\in\mathbb{Z}\right\} .
+\]
+
+\end_inset
+
+Notice that any open square of the form 
+\begin_inset Formula $\left(a,a+1\right)\times\left(b,b+1\right)\subset\mathbb{R}^{2}$
+\end_inset
+
+ induces a coordinate chart 
+\begin_inset Formula $\left(U_{a,b},\varphi_{a,b}\right)$
+\end_inset
+
+ on 
+\begin_inset Formula $\mathbb{T}^{2}$
+\end_inset
+
+ in a natural way.
+ Notice that the map 
+\begin_inset Formula $\omega:\mathbb{R}^{2}\to\mathbb{R}^{3}$
+\end_inset
+
+ defined by 
+\begin_inset Formula 
+\[
+\omega\left(\alpha,\beta\right)\left(\left(\cos\left(2\pi\beta\right)+4\right)\cos\left(2\pi\alpha\right),\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\alpha\right),\sin\left(2\pi\beta\right)\right)
+\]
+
+\end_inset
+
+induces a well defined map 
+\begin_inset Formula $\tilde{\omega}:\mathbb{T}^{2}\to\mathbb{R}^{3}$
+\end_inset
+
+, which is a diffeomorphism onto its image 
+\begin_inset Formula $T_{2}=\tilde{\omega}\left(\mathbb{T}^{2}\right)$
+\end_inset
+
+.
+ Equip 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ with the metric induced by the standard metric on 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $S$
+\end_inset
+
+ is the open square 
+\begin_inset Formula $\left(0,1\right)\times\left(0,1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $S'=\omega\left(S\right)\subset T_{2}$
+\end_inset
+
+, then the restriction of 
+\begin_inset Formula $\omega^{-1}$
+\end_inset
+
+ to 
+\begin_inset Formula $S^{'}$
+\end_inset
+
+ is a coordinate chart 
+\begin_inset Formula $\omega^{-1}:S^{'}\to\mathbb{R}^{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+ Compute the coordinate representation of the metric on 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ in this chart, as well as the associated Christoffel symbols.
+ 
+\end_layout
+
+\begin_layout Exercise
+We begin by computing the derivative of 
+\begin_inset Formula $\omega$
+\end_inset
+
+ and representing it in matrix notation.
+ 
+\begin_inset Formula 
+\[
+\frac{\partial\omega}{\partial x}=\begin{bmatrix}-2\pi\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\alpha\right) & -2\pi\sin\left(2\pi\beta\right)\cos\left(2\pi\alpha\right)\\
+2\pi\left(\cos\left(2\pi\beta\right)+4\right)\cos\left(2\pi\alpha\right) & -2\pi\sin\left(2\pi\beta\right)\sin\left(2\pi\alpha\right)\\
+0 & 2\pi\cos\left(2\pi\beta\right)
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $v,w\in T\omega^{-1}\left(S'\right)$
+\end_inset
+
+, then the induced metric is 
+\begin_inset Formula 
+\begin{align*}
+\left\langle \frac{\partial\omega}{\partial x}v,\frac{\partial\omega}{\partial x}w\right\rangle  & =\begin{bmatrix}-2\pi\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\alpha\right) & 2\pi\left(\cos\left(2\pi\beta\right)+4\right)\cos\left(2\pi\alpha\right) & 0\\
+-2\pi\sin\left(2\pi\beta\right)\cos\left(2\pi\alpha\right) & -2\pi\sin\left(2\pi\beta\right)\sin\left(2\pi\alpha\right) & 2\pi\cos\left(2\pi\beta\right)
+\end{bmatrix}\cdot\\
+ & \begin{bmatrix}-2\pi\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\alpha\right) & -2\pi\sin\left(2\pi\beta\right)\cos\left(2\pi\alpha\right)\\
+2\pi\left(\cos\left(2\pi\beta\right)+4\right)\cos\left(2\pi\alpha\right) & -2\pi\sin\left(2\pi\beta\right)\sin\left(2\pi\alpha\right)\\
+0 & 2\pi\cos\left(2\pi\beta\right)
+\end{bmatrix}\\
+ & =\begin{bmatrix}g_{11} & 0\\
+0 & g_{22}
+\end{bmatrix}\\
+ & =\begin{bmatrix}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\\
+0 & 4\pi^{2}
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+with 
+\begin_inset Formula 
+\begin{align*}
+g_{11} & =4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\sin\left(2\pi\alpha\right)^{2}+4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\cos\left(2\pi\alpha\right)^{2}\\
+g_{22} & =4\pi^{2}\sin^{2}\left(2\pi\beta\right)\cos^{2}\left(2\pi\alpha\right)+4\pi^{2}\sin^{2}\left(2\pi\beta\right)\sin^{2}\left(2\pi\alpha\right)+4\pi^{2}\cos^{2}\left(2\pi\beta\right).
+\end{align*}
+
+\end_inset
+
+Simplifying we get that the induced metric is
+\begin_inset Formula 
+\[
+g=\begin{bmatrix}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\\
+0 & 4\pi^{2}
+\end{bmatrix}.
+\]
+
+\end_inset
+
+The Christoffel symbols are computed as 
+\begin_inset Formula 
+\[
+\Gamma_{ij}^{m}=\frac{1}{2}\sum_{k}\left(\frac{\partial}{\partial x_{i}}g_{jk}+\frac{\partial}{\partial x_{j}}g_{ki}-\frac{\partial}{\partial x_{k}}g_{ij}\right)g^{km}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+We note that when 
+\begin_inset Formula $k\neq m$
+\end_inset
+
+ the term 
+\begin_inset Formula $g^{km}=g_{km}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\Gamma_{ij}^{m}=\Gamma_{ji}^{m}$
+\end_inset
+
+.
+ We will use this to simplify our computations 
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{11}^{1} & =\frac{1}{2}\left(\frac{\partial}{\partial\alpha}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}+\frac{\partial}{\partial\alpha}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}-\frac{\partial}{\partial\alpha}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\right)\frac{1}{4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}}\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{12}^{1} & =\frac{1}{2}\left(\frac{\partial}{\partial\alpha}0+\frac{\partial}{\partial\beta}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}-\frac{\partial}{\partial\alpha}0\right)\frac{1}{4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}}\\
+ & =\frac{-8\pi^{3}\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\beta\right)}{4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}}\\
+ & =\frac{-2\pi\sin\left(2\pi\beta\right)}{\left(\cos\left(2\pi\beta\right)+4\right)}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{22}^{1} & =\frac{1}{2}\left(\frac{\partial}{\partial\beta}0+\frac{\partial}{\partial\beta}0-\frac{\partial}{\partial\alpha}4\pi^{2}\right)\frac{1}{4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}}\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{11}^{2} & =\frac{1}{2}\left(\frac{\partial}{\partial\alpha}0+\frac{\partial}{\partial\alpha}0-\frac{\partial}{\partial\beta}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\right)\frac{1}{4\pi^{2}}\\
+ & =\frac{-8\pi^{3}\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\beta\right)}{4\pi^{2}}\\
+ & =-2\pi\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\beta\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{12}^{2} & =\frac{1}{2}\left(\frac{\partial}{\partial\alpha}4\pi^{2}+\frac{\partial}{\partial\beta}0-\frac{\partial}{\partial\beta}0\right)\frac{1}{4\pi^{2}}\\
+ & =0
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{22}^{2} & =\frac{1}{2}\left(\frac{\partial}{\partial\beta}4\pi^{2}+\frac{\partial}{\partial\beta}4\pi^{2}-\frac{\partial}{\partial\beta}4\pi^{2}\right)\frac{1}{4\pi^{2}}\\
+ & =0
+\end{align*}
+
+\end_inset
+
+In summary, the induced metric is 
+\begin_inset Formula 
+\[
+g=\begin{bmatrix}4\pi^{2}\left(\cos\left(2\pi\beta\right)+4\right)^{2}\\
+0 & 4\pi^{2}
+\end{bmatrix},
+\]
+
+\end_inset
+
+and the Christoffel symbols are 
+\begin_inset Formula $\Gamma_{22}^{2}=\Gamma_{12}^{2}=\Gamma_{22}^{1}=\Gamma_{11}^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{11}^{2} & =-2\left(\cos\left(2\pi\beta\right)+4\right)\sin\left(2\pi\beta\right)\\
+\Gamma_{12}^{1} & =\frac{-2\sin\left(2\pi\beta\right)}{\left(\cos\left(2\pi\beta\right)+4\right)}
+\end{align*}
+
+\end_inset
+
 
 \end_layout
 
