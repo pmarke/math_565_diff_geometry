@@ -697,11 +697,22 @@ To prove the last part, let
 \begin_inset Formula 
 \begin{align*}
 \frac{d^{2}u}{dt^{2}}+\frac{2}{v}\frac{du}{dt}\frac{dv}{dt} & =0\\
-\frac{d^{2}v}{dt^{2}}-\frac{v}{4v^{2}}\left(\frac{du}{dt}\right)^{2}+\frac{4v}{4v^{2}}\left(\frac{dv}{dt}\right)^{2} & =0
+\frac{d^{2}v}{dt^{2}}-\frac{1}{4v}\left(\frac{du}{dt}\right)^{2}+\frac{1}{v}\left(\frac{dv}{dt}\right)^{2} & =0
 \end{align*}
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
 
 \end_layout
 
