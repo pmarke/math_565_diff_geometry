@@ -713,6 +713,206 @@ To prove the last part, let
 \end_layout
 
 \begin_layout Exercise
+It is possible to introduce a Riemannian metric in the tangent bundle 
+\begin_inset Formula $TM$
+\end_inset
+
+ of a Riemannian manifold 
+\begin_inset Formula $M$
+\end_inset
+
+ in the following manner.
+ Let 
+\begin_inset Formula $\left(p,v\right)\in TM$
+\end_inset
+
+ and 
+\begin_inset Formula $V,W$
+\end_inset
+
+ be tangent vectors in 
+\begin_inset Formula $TM$
+\end_inset
+
+ at 
+\begin_inset Formula $\left(p,v\right)$
+\end_inset
+
+.
+ Choose curves in 
+\begin_inset Formula $TM$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha:t\to\left(p\left(t\right),v\left(t\right)\right),\quad\beta:s\to\left(q\left(s\right),w\left(s\right)\right),
+\]
+
+\end_inset
+
+with 
+\begin_inset Formula $p\left(0\right)=q\left(0\right)=p$
+\end_inset
+
+, 
+\begin_inset Formula $v\left(0\right)=w\left(0\right)=v$
+\end_inset
+
+, and 
+\begin_inset Formula $V=\alpha'\left(0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $W=\beta'\left(0\right)$
+\end_inset
+
+.
+ Define an inner product on 
+\begin_inset Formula $TM$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\[
+\left\langle V,W\right\rangle _{\left(p,v\right)}=\left\langle d\pi\left(V\right),d\pi\left(W\right)\right\rangle _{p}+\left\langle \frac{Dv}{dt}\left(0\right),\frac{Dw}{ds}\left(0\right)\right\rangle _{p}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $d\pi$
+\end_inset
+
+ is the differential of 
+\begin_inset Formula $\pi:TM\to M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the inner product is well defined and introduces a Riemannian
+ metric on 
+\begin_inset Formula $TM$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+A vector at 
+\begin_inset Formula $\left(p,v\right)\in TM$
+\end_inset
+
+ that is orthogonal (for the metric above) to the fiber 
+\begin_inset Formula $\pi^{-1}\left(p\right)\approx T_{p}M$
+\end_inset
+
+ is called a horizontal vector.
+ A curve
+\begin_inset Formula 
+\[
+t\to\left(p\left(t\right),v\left(t\right)\right)
+\]
+
+\end_inset
+
+in 
+\begin_inset Formula $TM$
+\end_inset
+
+ is horizontal if its tangent vector is horizontal for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Prove that the curve 
+\begin_inset Formula 
+\[
+t\to\left(p\left(t\right),v\left(t\right)\right)
+\]
+
+\end_inset
+
+is horizontal if and only if the vector field 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ is parallel along 
+\begin_inset Formula $p\left(t\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the geodesic field is a horizonal vector field.
+\end_layout
+
+\begin_layout Enumerate
+Prove that the trajectories of the geodesic field are geodesics on 
+\begin_inset Formula $TM$
+\end_inset
+
+ in the metric above.
+\end_layout
+
+\begin_layout Proof
+We will prove them in order.
+ 
+\end_layout
+
+\begin_layout Enumerate
+The vectors 
+\begin_inset Formula $V,W\in T\left(TM\right)$
+\end_inset
+
+ can be represented as the tuples 
+\begin_inset Formula $V=\left(p\left(t\right),v\left(t\right),v'\left(t\right)\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $W=\left(q\left(s\right),w\left(s\right),w'\left(s\right)\right)$
+\end_inset
+
+.
+ The function 
+\begin_inset Formula $d\pi:T\left(TM\right)\to TM$
+\end_inset
+
+ are defined as 
+\begin_inset Formula 
+\[
+d\pi\left(V\right)=\left(p\left(t\right),v\left(t\right)\right)
+\]
+
+\end_inset
+
+and the inner product 
+\begin_inset Formula $\left\langle d\pi\left(V\right),d\pi\left(W\right)\right\rangle _{p}$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+\left.\left\langle v\left(t\right),w\left(t\right)\right\rangle _{p\left(t\right)}\right|_{t=0}.
+\]
+
+\end_inset
+
+An inner product is bilinear, symmetric and positive definite.
+ A Riemannian metric is an inner product that is smooth.
+ Under the assumption that the defined inner product is the standard inner
+ product, then it is smooth; hence a Riemannian metric.
+ 
+\end_layout
+
+\begin_layout Enumerate
 
 \end_layout
 

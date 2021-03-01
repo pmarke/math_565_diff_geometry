@@ -900,16 +900,12 @@ and the inner product
  is defined as 
 \begin_inset Formula 
 \[
-\left.\left\langle v\left(t\right),w\left(t\right)\right\rangle _{p\left(t\right)}\right|_{t=0}.
+\left\langle v\left(t\right),w\left(t\right)\right\rangle _{p\left(t\right)}
 \]
 
 \end_inset
 
-An inner product is bilinear, symmetric and positive definite.
- A Riemannian metric is an inner product that is smooth.
- Under the assumption that the defined inner product is the standard inner
- product, then it is smooth; hence a Riemannian metric.
- 
+
 \end_layout
 
 \end_body
