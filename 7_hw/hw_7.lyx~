@@ -862,58 +862,405 @@ Prove that the trajectories of the geodesic field are geodesics on
  in the metric above.
 \end_layout
 
+\begin_layout Enumerate
+A vector at 
+\begin_inset Formula $\left(p,v\right)\in TM$
+\end_inset
+
+ is called vertical if it is tangent to the fiber 
+\begin_inset Formula $\pi^{-1}\left(p\right)\approx T_{p}M$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula 
+\begin{align*}
+\left\langle W,W\right\rangle _{\left(p,v\right)} & =\left\langle d\pi\left(W\right),d\pi\left(W\right)\right\rangle _{p}\quad\text{if W is horizontal,}\\
+\left\langle W,W\right\rangle _{\left(p,v\right)} & =\left\langle W,W\right\rangle _{p}\quad\text{if W is vertical,}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Proof
 We will prove them in order.
  
 \end_layout
 
 \begin_layout Enumerate
-The vectors 
-\begin_inset Formula $V,W\in T\left(TM\right)$
+Since the original Riemannian metric is smooth, bilinear and symmetric,
+ the defined inner product is also smooth, biliear and symmetric.
+ All that is left to check is that it is positive definite.
+ Let 
+\begin_inset Formula $\gamma:I\to TM$
 \end_inset
 
- can be represented as the tuples 
-\begin_inset Formula $V=\left(p\left(t\right),v\left(t\right),v'\left(t\right)\right)$
+ be smooth curves as defined above, and let 
+\begin_inset Formula $\left(U,\varphi\right)$
 \end_inset
 
- and 
-\begin_inset Formula $W=\left(q\left(s\right),w\left(s\right),w'\left(s\right)\right)$
+ be a chart on 
+\begin_inset Formula $M$
+\end_inset
+
+ which can be lifted to a chart on 
+\begin_inset Formula $TM$
 \end_inset
 
 .
- The function 
-\begin_inset Formula $d\pi:T\left(TM\right)\to TM$
-\end_inset
-
- are defined as 
+ In local coordinates, the curve can be defined as 
 \begin_inset Formula 
 \[
-d\pi\left(V\right)=\left(p\left(t\right),v\left(t\right)\right)
+\tilde{\gamma}\triangleq\varphi\circ\gamma=\left(p_{1},\ldots,p_{n},v_{1},\ldots v_{n}\right)
 \]
 
 \end_inset
 
-and the inner product 
-\begin_inset Formula $\left\langle d\pi\left(V\right),d\pi\left(W\right)\right\rangle _{p}$
+where 
+\begin_inset Formula $\pi\left(\tilde{\gamma}\right)=\left(p_{1},\ldots,p_{n}\right)$
 \end_inset
 
- is defined as 
+.
+ The tangent vector of 
+\begin_inset Formula $\tilde{\gamma}$
+\end_inset
+
+ is 
 \begin_inset Formula 
 \[
-\left.\left\langle v\left(t\right),w\left(t\right)\right\rangle _{p\left(t\right)}\right|_{t=0}.
+\tilde{\gamma}^{'}=\left(p_{1}'\frac{\partial}{\partial x_{1}},\ldots,p'_{n}\frac{\partial}{\partial x_{n}},v'_{1}\frac{\partial}{\partial x_{1}},\ldots v_{n}\frac{\partial}{\partial x_{n}}\right).
 \]
 
 \end_inset
 
-An inner product is bilinear, symmetric and positive definite.
- A Riemannian metric is an inner product that is smooth.
- Under the assumption that the defined inner product is the standard inner
- product, then it is smooth; hence a Riemannian metric.
+The covariant in local coordinates is 
+\begin_inset Formula 
+\[
+\frac{Dv}{dt}=v_{i}'\frac{\partial}{\partial x_{i}}+v_{i}p_{j}'\Gamma_{ij}^{k}\frac{\partial}{\partial x_{k}}.
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula 
+\begin{align*}
+\left\langle \alpha',\beta'\right\rangle  & =\left\langle p',q'\right\rangle +\left\langle \frac{Dv}{dt},\frac{Dw}{dt}\right\rangle \\
+ & =p'_{i}q'_{j}g_{ij}+\left(v_{k}'+v_{i}p_{j}'\Gamma_{ij}^{k}\right)\left(w_{\ell}'+w_{i}q_{j}'\Gamma_{ij}^{\ell}\right)g_{k\ell}.
+\end{align*}
+
+\end_inset
+
+Note that if 
+\begin_inset Formula $p_{i}'=0$
+\end_inset
+
+, 
+\begin_inset Formula $q_{i}'=0$
+\end_inset
+
+ or 
+\begin_inset Formula $p_{i}'=q_{i}'=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ then it simplifies to 
+\begin_inset Formula 
+\begin{align*}
+ & \left(v_{k}'\right)\left(w_{\ell}'+w_{i}q_{j}'\Gamma_{ij}^{\ell}\right)g_{k\ell}\\
+ & \left(v_{k}'+v_{i}p_{j}'\Gamma_{ij}^{k}\right)\left(w_{\ell}'\right)g_{k\ell}\\
+ & \text{and}\\
+ & v_{k}'w_{\ell}'g_{k\ell}.
+\end{align*}
+
+\end_inset
+
+From this we can easily see that it is positive definite.
  
 \end_layout
 
 \begin_layout Enumerate
+This proof is biconditional so we must prove both ways.
+\end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(\implies\right)$
+\end_inset
+
+: We suppose directly that 
+\begin_inset Formula $\beta=\left(p,w\left(t\right)\right)$
+\end_inset
+
+ is horizontal to 
+\begin_inset Formula $\alpha\left(p\left(t\right),v\left(t\right)\right)$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\left\langle \alpha',\beta'\right\rangle =0.
+\]
+
+\end_inset
+
+We can reduces the inner product in local coordinates to 
+\begin_inset Formula 
+\[
+\left\langle \alpha',\beta'\right\rangle =\left(v_{k}'+v_{i}p_{j}'\Gamma_{ij}^{k}\right)\left(w_{\ell}'\right)g_{k\ell},
+\]
+
+\end_inset
+
+which can only be zero if 
+\begin_inset Formula $\left(v_{k}'+v_{i}p_{j}'\Gamma_{ij}^{k}\right)=0$
+\end_inset
+
+, thus 
+\begin_inset Formula $\frac{Dv}{dt}=0$
+\end_inset
+
+ implies that 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ is parallel to 
+\begin_inset Formula $p\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\impliedby\right):$
+\end_inset
+
+We suppose directly that 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ is parallel to 
+\begin_inset Formula $p\left(t\right)$
+\end_inset
+
+, then 
+\begin_inset Formula $\frac{Dv}{dt}=0$
+\end_inset
+
+, and let 
+\begin_inset Formula $\beta=\frac{d}{dt}\left(p,w\left(t\right)\right)$
+\end_inset
+
+ be a vector at 
+\begin_inset Formula $\alpha\left(0\right)$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\left\langle \alpha,\beta\right\rangle =0.
+\]
+
+\end_inset
+
+Therefore, if 
+\begin_inset Formula $v\left(t\right)$
+\end_inset
+
+ is parallel to 
+\begin_inset Formula $p\left(t\right)$
+\end_inset
+
+, then 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a horizontal.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\gamma\left(t\right)$
+\end_inset
+
+ be a Geodesic as defined by the metric.
+ We define a curve in 
+\begin_inset Formula $TM$
+\end_inset
+
+ as 
+\begin_inset Formula $\bar{\gamma}=\left(\gamma,\gamma'\right)$
+\end_inset
+
+.
+ By the definition of a geodesic, we get that 
+\begin_inset Formula $\frac{D\gamma'}{dt}=0$
+\end_inset
+
+.
+ In other words, 
+\begin_inset Formula $\gamma'$
+\end_inset
+
+ is parallel to 
+\begin_inset Formula $\gamma$
+\end_inset
+
+; therefore, it is horizontal.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\bar{\gamma}\left(t\right)=\left(\gamma\left(t\right),\gamma'\left(t\right)\right)$
+\end_inset
+
+ define a Geodesic field, the length of 
+\begin_inset Formula $\bar{\gamma}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\int\left\langle \bar{\gamma},\bar{\gamma}\right\rangle  & =\int\left(\left\langle \gamma',\gamma'\right\rangle +\left\langle \frac{D\gamma'}{dt},\frac{D\gamma'}{dt}\right\rangle \right)^{\frac{1}{2}}dt\\
+ & =\int\left\langle \gamma',\gamma'\right\rangle dt
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $\int\left\langle \gamma',\gamma'\right\rangle dt=\ell\left(\gamma\right)$
+\end_inset
+
+ is the minimum length between the two connecting points, 
+\begin_inset Formula $\bar{\gamma}$
+\end_inset
+
+ is the minimum length for joining any two points in 
+\begin_inset Formula $TM$
+\end_inset
+
+.
+ Therefore, it is a Geodesic.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $W=\left(p',v'\right)$
+\end_inset
+
+ be a horizontal vector, then 
+\begin_inset Formula $\frac{Dv}{dt}=0$
+\end_inset
+
+, thus the metric reduces to 
+\begin_inset Formula 
+\begin{align*}
+\left\langle W,W\right\rangle  & =\left\langle p',p'\right\rangle +\left\langle \frac{Dv}{dt},\frac{Dv}{dt}\right\rangle \\
+ & =\left\langle p',p'\right\rangle .
+\end{align*}
+
+\end_inset
+
+Now suppose that 
+\begin_inset Formula $W$
+\end_inset
+
+ is tangent, then 
+\begin_inset Formula $W=\left(0,v'\right)$
+\end_inset
+
+.
+ In local coordinates, the metric reduces to 
+\begin_inset Formula 
+\begin{align*}
+\left\langle W,W\right\rangle  & =\left(v_{k}'+v_{i}p_{j}'\Gamma_{ij}^{k}\right)\left(v_{\ell}'+v_{i}p_{j}'\Gamma_{ij}^{\ell}\right)g_{k\ell}\\
+ & =v_{k}'v_{\ell}'g_{k\ell}\\
+ & =\left\langle v',v'\right\rangle .
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+Let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a Lie group, 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ its Lie algebra and let 
+\begin_inset Formula $X\in\mathcal{G}$
+\end_inset
+
+.
+ The trajectoris of 
+\begin_inset Formula $X$
+\end_inset
+
+ determine a mapping 
+\begin_inset Formula $\varphi:\left(-\epsilon,\epsilon\right)\to G$
+\end_inset
+
+ with 
+\begin_inset Formula $\varphi\left(0\right)=e$
+\end_inset
+
+, 
+\begin_inset Formula $\varphi'\left(t\right)=X\left(\varphi\left(t\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $\varphi\left(t\right)$
+\end_inset
+
+ is defined for all 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+ and that 
+\begin_inset Formula $\varphi\left(t+s\right)=\varphi\left(t\right)\bullet\varphi\left(s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Prove that if 
+\begin_inset Formula $G$
+\end_inset
+
+ has bi-invariant metric 
+\begin_inset Formula $\left\langle \cdot,\cdot\right\rangle $
+\end_inset
+
+, then the geodesics of 
+\begin_inset Formula $G$
+\end_inset
+
+ that start from 
+\begin_inset Formula $e$
+\end_inset
+
+ are 1-parameter subgroups of 
+\begin_inset Formula $G$
+\end_inset
+
+.
 \end_layout
 
 \end_body
