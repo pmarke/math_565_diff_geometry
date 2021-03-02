@@ -1263,5 +1263,363 @@ Prove that if
 .
 \end_layout
 
+\begin_layout Proof
+We begin by proving the first statement.
+ Let 
+\begin_inset Formula $y=\varphi\left(t_{0}\right)$
+\end_inset
+
+ for some 
+\begin_inset Formula $t_{0}\in\left(-\epsilon,\epsilon\right)$
+\end_inset
+
+.
+ The vector of 
+\begin_inset Formula $X$
+\end_inset
+
+ at 
+\begin_inset Formula $y^{-1}\varphi\left(t\right)$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+X\left(L_{y^{-1}}\varphi\left(t\right)\right) & =X\left(y^{-1}\varphi\left(t\right)\right)\\
+ & =X\left(\varphi\left(t_{0}\right)^{-1}\varphi\left(t\right)\right)\\
+ & =X\left(\varphi\left(t-t_{0}\right)\right),
+\end{align*}
+
+\end_inset
+
+which shows that 
+\begin_inset Formula $X$
+\end_inset
+
+ is an integral curve of 
+\begin_inset Formula $y^{-1}\varphi\left(t\right)$
+\end_inset
+
+ since 
+\begin_inset Formula $X$
+\end_inset
+
+ is an integral of 
+\begin_inset Formula $\varphi\left(t\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $t-t_{0}\in\left(-\epsilon,\epsilon\right)$
+\end_inset
+
+.
+ We can continue the process as 
+\begin_inset Formula $y^{-1}y^{-1}\varphi\left(t\right)=\varphi\left(t-2*t\right)$
+\end_inset
+
+ to show that 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is defined for all 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ ??
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Supoose that 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ are Riemannian manifolds and 
+\begin_inset Formula $f:M\to N$
+\end_inset
+
+ is a diffeomorphism.
+ Prove that 
+\begin_inset Formula $f$
+\end_inset
+
+ is distance preserving if and only if 
+\begin_inset Formula $f$
+\end_inset
+
+ is an isometry.
+ 
+\end_layout
+
+\begin_layout Proof
+This is a biconditional statement so we must show both ways
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left(\implies\right):$
+\end_inset
+
+ We suppose directly that 
+\begin_inset Formula $f$
+\end_inset
+
+ is distance perserving.
+ Let 
+\begin_inset Formula $\gamma:I\to M$
+\end_inset
+
+ be a smooth curve with 
+\begin_inset Formula $\gamma\left(0\right)=p$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{align*}
+\ell\left(\gamma\right) & =\ell\left(f\circ\gamma\right)\\
+ & =\int\left(\left\langle df\frac{d\gamma}{dt},df\frac{d\gamma}{dt}\right\rangle \right)^{\frac{1}{2}}dt,
+\end{align*}
+
+\end_inset
+
+which can only be true if 
+\begin_inset Formula 
+\[
+\left\langle \frac{d\gamma}{dt},\frac{d\gamma}{dt}\right\rangle =\left\langle df\frac{d\gamma}{dt},df\frac{d\gamma}{dt}\right\rangle 
+\]
+
+\end_inset
+
+for all time, therefore, 
+\begin_inset Formula $f$
+\end_inset
+
+ is an isometry.
+ 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left(\impliedby\right):$
+\end_inset
+
+ We suppose directly that 
+\begin_inset Formula $f$
+\end_inset
+
+ is an isometry.
+ Let 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ be defined above.
+ Then 
+\begin_inset Formula 
+\[
+\left\langle \frac{d\gamma}{dt},\frac{d\gamma}{dt}\right\rangle _{p}=\left\langle df\frac{d\gamma}{dt},df\frac{d\gamma}{dt}\right\rangle _{f\left(p\right)}.
+\]
+
+\end_inset
+
+Since the metric is positive definite, we get that 
+\begin_inset Formula 
+\[
+\int\left(\left\langle \frac{d\gamma}{dt},\frac{d\gamma}{dt}\right\rangle \right)^{\frac{1}{2}}dt=\int\left(\left\langle df\frac{d\gamma}{dt},df\frac{d\gamma}{dt}\right\rangle \right)^{\frac{1}{2}}dt,
+\]
+
+\end_inset
+
+therefore, 
+\begin_inset Formula $f$
+\end_inset
+
+ preserves length.
+\end_layout
+
+\begin_layout Exercise
+Consider the upper half-plane 
+\begin_inset Formula $\mathbb{R}_{+}^{2}$
+\end_inset
+
+ with the Lobatchevski metric
+\begin_inset Formula 
+\[
+g_{11}=g_{22}=\frac{1}{y^{2}},\,g_{12}=0.
+\]
+
+\end_inset
+
+Show that the line segment 
+\begin_inset Formula $x=0$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon\leq y\leq1$
+\end_inset
+
+ with 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ has length tending to 
+\begin_inset Formula $\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $\epsilon\to\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\gamma\left(t\right):\left[1,\epsilon\right]\to\mathbb{R}_{+}^{2}$
+\end_inset
+
+ be defined as the curve 
+\begin_inset Formula $\gamma\left(t\right)=\left(0,t\right)$
+\end_inset
+
+.
+ The length of the curve is 
+\begin_inset Formula 
+\begin{align*}
+\ell\left(\gamma\right) & =\lim_{\epsilon\to0}\int_{\epsilon}^{1}\left\langle \frac{d\gamma}{dt},\frac{d\gamma}{dt}\right\rangle ^{\frac{1}{2}}dt\\
+ & =\lim_{\epsilon\to0}\left.\ln\left(x\right)\right|_{\epsilon}^{1}\\
+ & =\ln\left(1\right)-\lim_{\epsilon\to0}\ln\left(\epsilon\right)\\
+ & =-\lim_{\epsilon\to0}\ln\left(\epsilon\right)
+\end{align*}
+
+\end_inset
+
+which will go to infinity.
+ 
+\end_layout
+
+\begin_layout Exercise
+A geodesic 
+\begin_inset Formula $\gamma:\left[0,\infty\right)\to M$
+\end_inset
+
+ in a Riemannian manifold 
+\begin_inset Formula $M$
+\end_inset
+
+ is called a ray starting from 
+\begin_inset Formula $\gamma\left(0\right)$
+\end_inset
+
+ if it minimizes the distance between 
+\begin_inset Formula $\gamma\left(0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma\left(s\right)$
+\end_inset
+
+, for any 
+\begin_inset Formula $s\in\left(0,\infty\right)$
+\end_inset
+
+.
+ Assume that 
+\begin_inset Formula $M$
+\end_inset
+
+ is complete, non-compact, and let 
+\begin_inset Formula $p\in M$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $M$
+\end_inset
+
+ contains a ray starting from 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is non-compact but complete, there exists a sequence of points 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ whose distance from 
+\begin_inset Formula $p$
+\end_inset
+
+ tends to infinity such that 
+\begin_inset Formula $d\left(y_{i},p\right)\geq i$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is complete, we can connect each 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ to 
+\begin_inset Formula $p$
+\end_inset
+
+ by a minimizing geodesic defined by 
+\begin_inset Formula $\gamma_{i}\left(s\right)=\exp\left(s\gamma_{i}'\left(0\right)\right)$
+\end_inset
+
+ with unit speed.
+ The set of vectors 
+\begin_inset Formula $\left\{ \gamma_{i}'\right\} $
+\end_inset
+
+ for a unit sphere in 
+\begin_inset Formula $T_{p}M$
+\end_inset
+
+ is compact, thus the sequence must have some convergent subsequence with
+ a limit say 
+\begin_inset Formula $\gamma\left(t\right)=\exp_{p}\left(tv\right)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\lim_{i\to\infty}d\left(\gamma\left(t\right),\gamma_{i}\left(t\right)\right)=0$
+\end_inset
+
+.
+ Thus the ray is 
+\begin_inset Formula $\gamma\left(t\right)$
+\end_inset
+
+, and it exists.
+ 
+\end_layout
+
 \end_body
 \end_document
