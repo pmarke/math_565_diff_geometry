@@ -5,6 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass IEEEtran
+\options onecolumn
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -575,15 +576,15 @@ We can map the derivative of
  to get 
 \begin_inset Formula 
 \begin{align*}
-d\varphi\circ\frac{d\gamma}{dt} & =\begin{bmatrix}-f\left(v_{0}\right)\sin\left(u\right) & f'\left(v_{0}\right)\cos\left(u\right)\\
-f\left(v_{0}\right)\cos\left(u\right) & f'\left(v_{0}\right)\sin\left(u\right)\\
-0 & g'\left(v_{0}\right)
+d\varphi\circ\frac{d\gamma}{dt} & =\begin{bmatrix}-f\left(v\right)\sin\left(u\right) & f'\left(v\right)\cos\left(u\right)\\
+f\left(v\right)\cos\left(u\right) & f'\left(v\right)\sin\left(u\right)\\
+0 & g'\left(v\right)
 \end{bmatrix}\begin{bmatrix}\frac{du}{dt}\\
 \frac{dv}{dt}
 \end{bmatrix}\\
- & =\begin{bmatrix}-f\left(v_{0}\right)\sin\left(u\right)\frac{du}{dt}+f'\left(v_{0}\right)\cos\left(u\right)\frac{dv}{dt}\\
-f\left(v_{0}\right)\cos\left(u\right)\frac{du}{dt}+f'\left(v_{0}\right)\sin\left(u\right)\frac{dv}{dt}\\
-g'\left(v_{0}\right)\frac{dv}{dt}.
+ & =\begin{bmatrix}-f\left(v\right)\sin\left(u\right)\frac{du}{dt}+f'\left(v\right)\cos\left(u\right)\frac{dv}{dt}\\
+f\left(v\right)\cos\left(u\right)\frac{du}{dt}+f'\left(v\right)\sin\left(u\right)\frac{dv}{dt}\\
+g'\left(v\right)\frac{dv}{dt}.
 \end{bmatrix}
 \end{align*}
 
@@ -597,7 +598,7 @@ Calculating the angle between
 \begin_inset Formula $d\varphi\circ\frac{d\gamma}{dt}$
 \end_inset
 
- is 
+ at the point of their intersection is
 \begin_inset Formula 
 \[
 \cos\beta\left(t\right)=\frac{\left\langle \frac{dh}{dt},d\varphi\circ\frac{d\gamma}{dt}\right\rangle }{\left\Vert \frac{dh}{dt}\right\Vert \left\Vert d\varphi\circ\frac{d\gamma}{dt}\right\Vert }.
@@ -610,7 +611,7 @@ We compute this quantity by looking at each component.
 \begin_inset Formula 
 \begin{align*}
 \left\Vert \frac{dh}{dt}\right\Vert  & =\left\langle \frac{dh}{dt},\frac{dh}{dt}\right\rangle ^{\frac{1}{2}}\\
- & =\left|f\left(v_{0}\right)\frac{du}{dt}\right|=\text{const}
+ & =\left|f\left(v_{0}\right)\frac{du}{dt}\right|,
 \end{align*}
 
 \end_inset
@@ -620,19 +621,34 @@ We compute this quantity by looking at each component.
 \begin{align*}
 \left\langle \frac{dh}{dt},d\varphi\circ\frac{d\gamma}{dt}\right\rangle  & =f\left(v_{0}\right)f\left(v_{0}\right)\sin^{2}\left(u\right)\left(\frac{du}{dt}\right)^{2}-f\left(v_{0}\right)f'\left(v_{0}\right)\sin\left(u\right)\cos\left(u\right)\frac{du}{dt}\frac{dv}{dt}\\
  & +f\left(v_{0}\right)f\left(v\right)\cos^{2}\left(u\right)\left(\frac{du}{dt}\right)^{2}+f\left(v_{0}\right)f'\left(v_{0}\right)\cos\left(u\right)\sin\left(u\right)\frac{du}{dt}\frac{dv}{dt}\\
- & =f\left(v_{0}\right)f\left(v_{0}\right)\left(\frac{du}{dt}\right)^{2}.
+ & =f^{2}\left(v_{0}\right)\left(\frac{du}{dt}\right)^{2},
 \end{align*}
 
 \end_inset
 
-As we have shown before, 
-\begin_inset Formula $\left|\gamma'\left(t\right)\right|=\text{const }$
-\end_inset
 
-; thus, 
 \begin_inset Formula 
 \begin{align*}
-\cos\beta\left(t\right) & =\frac{f\left(v_{0}\right)f\left(v_{0}\right)\left(\frac{du}{dt}\right)^{2}}{f\left(v_{0}\right)\frac{du}{dt}\alpha},\\
+\left\Vert d\varphi\circ\frac{d\gamma}{dt}\right\Vert  & =\left\langle d\varphi\circ\frac{d\gamma}{dt},d\varphi\circ\frac{d\gamma}{dt}\right\rangle ^{\frac{1}{2}}\\
+ & =\left(f\left(v_{0}\right)^{2}\left(\frac{du}{dt}\right)^{2}+\left(f'\left(v_{0}\right)\right)^{2}+\left(g'\left(v_{0}\right)\right)^{2}\left(\frac{dv}{dt}\right)^{2}\right)^{\frac{1}{2}}\\
+ & =\alpha.
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ is a constant since 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a geodesic.
+ Thus we have, 
+\begin_inset Formula 
+\begin{align*}
+\cos\beta\left(t\right) & =\frac{f^{2}\left(v_{0}\right)\left(\frac{du}{dt}\right)^{2}}{\left|f\left(v_{0}\right)\frac{du}{dt}\right|\alpha},\\
  & =\frac{f\left(v_{0}\right)\frac{du}{dt}}{\alpha}
 \end{align*}
 
@@ -643,20 +659,40 @@ where
 \end_inset
 
  is a constant.
- We can simplify it to get 
+ Multiplying both sides by 
+\begin_inset Formula $f\left(v_{0}\right)$
+\end_inset
+
+, we get 
 \begin_inset Formula 
 \[
-\cos\beta\left(t\right)=\frac{\delta}{\alpha},
+f\left(v_{0}\right)\cos\left(\beta\left(t\right)\right)=\frac{f^{2}\left(v_{0}\right)\frac{du}{dt}}{\alpha}.
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $\delta\in\mathbb{R}$
+We can show that the term 
+\begin_inset Formula $f^{2}\left(v_{0}\right)\frac{du}{dt}$
 \end_inset
 
- is a constant.
- 
+ is a constant, by taking its derivative w.r.t.
+ to time to get 
+\begin_inset Formula 
+\[
+\frac{df^{2}\left(v_{0}\right)\frac{du}{dt}}{dt}=f^{2}\frac{d^{2}u}{dt^{2}}+2ff'\frac{du}{dt}\frac{dv}{dt}=0.
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula 
+\[
+f\left(v\right)\cos\left(\beta\left(t\right)\right)=\text{const}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -680,16 +716,51 @@ To prove the last part, let
 \begin_inset Formula $-\epsilon<u<2\pi+\epsilon$
 \end_inset
 
-, then the local equations fo a geodesic are 
+, then the angle according to Clairaut's relation we have 
 \begin_inset Formula 
-\begin{align*}
-\frac{d^{2}u}{dt^{2}}+\frac{2}{v}\frac{du}{dt}\frac{dv}{dt} & =0\\
-\frac{d^{2}v}{dt^{2}}-\frac{1}{4v}\left(\frac{du}{dt}\right)^{2}+\frac{1}{v}\left(\frac{dv}{dt}\right)^{2} & =0
-\end{align*}
+\[
+v\cos\left(\beta\left(t\right)\right)=\text{const}.
+\]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Proof
+which shows that 
+\begin_inset Formula $v$
+\end_inset
+
+ cannot tend towards 
+\begin_inset Formula $0$
+\end_inset
+
+ since 
+\begin_inset Formula $\cos\left(\beta\left(t\right)\right)$
+\end_inset
+
+ cannot tend towards zero.
+ This means if the geodesic curve 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is heading down the parabaloid, it must eventually come back up.
+ Note that as 
+\begin_inset Formula $v\to\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(\beta\right)\to0$
+\end_inset
+
+, thus the angle is getting smaller.
+ So, as the radius 
+\begin_inset Formula $v$
+\end_inset
+
+ increases, the geodesic approaches a parallel and wraps itself around alot.
+ Yeah, I don't know how to prove this.
 \end_layout
 
 \begin_layout Standard
@@ -1178,142 +1249,260 @@ Now suppose that
 
 \end_deeper
 \begin_layout Exercise
-Let 
-\begin_inset Formula $G$
+A subset 
+\begin_inset Formula $A$
 \end_inset
 
- be a Lie group, 
-\begin_inset Formula $\mathcal{G}$
+ of a differentiable manifold 
+\begin_inset Formula $M$
 \end_inset
 
- its Lie algebra and let 
-\begin_inset Formula $X\in\mathcal{G}$
+ is contractible to a point 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ when the mapping 
+\begin_inset Formula $id_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{a}:x\in A\to a\in A$
+\end_inset
+
+ are homotopic with base point 
+\begin_inset Formula $a$
 \end_inset
 
 .
- The trajectoris of 
-\begin_inset Formula $X$
+ 
+\begin_inset Formula $A$
 \end_inset
 
- determine a mapping 
-\begin_inset Formula $\varphi:\left(-\epsilon,\epsilon\right)\to G$
+ is contractible if it is contractible to one of its points.
+\end_layout
+
+\begin_layout Enumerate
+Show that a convex neighborhood in a Riemannian manifold 
+\begin_inset Formula $M$
 \end_inset
 
- with 
-\begin_inset Formula $\varphi\left(0\right)=e$
+ is a contractible subset w.r.t any of its points.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a differentiable manifold.
+ Show that there exists a covering 
+\begin_inset Formula $\left\{ U_{\alpha}\right\} $
+\end_inset
+
+ of 
+\begin_inset Formula $M$
+\end_inset
+
+ with the following properties:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $U_{\alpha}$
+\end_inset
+
+ is open and contractible, for each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $U_{\alpha_{1},\ldots,}U_{\alpha_{n}}$
+\end_inset
+
+ are elements of the covering, then 
+\begin_inset Formula $\cap_{1}^{n}U_{\alpha_{i}}$
+\end_inset
+
+ is contractible.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+We begin by proving the first statement.
+ We suppose directly that 
+\begin_inset Formula $A\subset M$
+\end_inset
+
+ is convex neighborhood and 
+\begin_inset Formula $x,a\in A$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $A$
+\end_inset
+
+ is a convex neigborhood, there exists a geodesic 
+\begin_inset Formula $\gamma:I\to M$
+\end_inset
+
+ that connects the points 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula $\gamma\left(I\right)\subset A$
 \end_inset
 
 , 
-\begin_inset Formula $\varphi'\left(t\right)=X\left(\varphi\left(t\right)\right)$
+\begin_inset Formula $\gamma'=v$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma\left(0\right)=a$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma\left(1\right)=x$
+\end_inset
+
+ where 
+\begin_inset Formula $0,1\in I$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Enumerate
-Prove that 
-\begin_inset Formula $\varphi\left(t\right)$
+ Since the geodesic is smooth, we can shrink the geodesic by assigning it
+ a new tangent vector 
+\begin_inset Formula $v'=\delta v$
 \end_inset
 
- is defined for all 
-\begin_inset Formula $t\in\mathbb{R}$
-\end_inset
-
- and that 
-\begin_inset Formula $\varphi\left(t+s\right)=\varphi\left(t\right)\bullet\varphi\left(s\right)$
+ where 
+\begin_inset Formula $\delta=\mathbb{R}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Enumerate
-Prove that if 
-\begin_inset Formula $G$
+ As 
+\begin_inset Formula $\delta\to0$
 \end_inset
 
- has bi-invariant metric 
-\begin_inset Formula $\left\langle \cdot,\cdot\right\rangle $
+, 
+\begin_inset Formula $\gamma\left(1\right)\to\gamma\left(0\right)$
 \end_inset
 
-, then the geodesics of 
-\begin_inset Formula $G$
+.
+ Therefore; any geodesic in 
+\begin_inset Formula $A$
 \end_inset
 
- that start from 
-\begin_inset Formula $e$
+ starting at 
+\begin_inset Formula $a$
 \end_inset
 
- are 1-parameter subgroups of 
-\begin_inset Formula $G$
+ is homotopic with the identity mapping.
+ This means that we can shrink 
+\begin_inset Formula $A$
+\end_inset
+
+ to the point 
+\begin_inset Formula $a$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Proof
-We begin by proving the first statement.
+For the second property, we suppose directly that 
+\begin_inset Formula $M$
+\end_inset
+
+ is a differentiable manifold, then 
+\begin_inset Formula $M$
+\end_inset
+
+ has a countable basis 
+\begin_inset Formula $\left\{ V_{i}\right\} $
+\end_inset
+
+.
  Let 
-\begin_inset Formula $y=\varphi\left(t_{0}\right)$
+\begin_inset Formula $p_{i}\in V_{i}$
 \end_inset
 
- for some 
-\begin_inset Formula $t_{0}\in\left(-\epsilon,\epsilon\right)$
+ be a point, then there exists a geodesic ball 
+\begin_inset Formula $B_{\beta}\left(p_{i}\right)$
 \end_inset
 
-.
- The vector of 
-\begin_inset Formula $X$
+ which is strongly convex.
+ If 
+\begin_inset Formula $V_{i}\subset B_{\beta}\left(i\right)$
 \end_inset
 
- at 
-\begin_inset Formula $y^{-1}\varphi\left(t\right)$
+, then were done.
+ Otherwise, we can pick a point 
+\begin_inset Formula $p_{i,k}\in B_{\beta}\left(p_{i}\right)$
 \end_inset
 
- is 
-\begin_inset Formula 
-\begin{align*}
-X\left(L_{y^{-1}}\varphi\left(t\right)\right) & =X\left(y^{-1}\varphi\left(t\right)\right)\\
- & =X\left(\varphi\left(t_{0}\right)^{-1}\varphi\left(t\right)\right)\\
- & =X\left(\varphi\left(t-t_{0}\right)\right),
-\end{align*}
-
-\end_inset
-
-which shows that 
-\begin_inset Formula $X$
-\end_inset
-
- is an integral curve of 
-\begin_inset Formula $y^{-1}\varphi\left(t\right)$
-\end_inset
-
- since 
-\begin_inset Formula $X$
-\end_inset
-
- is an integral of 
-\begin_inset Formula $\varphi\left(t\right)$
-\end_inset
-
- and 
-\begin_inset Formula $t-t_{0}\in\left(-\epsilon,\epsilon\right)$
+ and form another convex set 
+\begin_inset Formula $B_{\beta}\left(p_{i,k}\right)$
 \end_inset
 
 .
- We can continue the process as 
-\begin_inset Formula $y^{-1}y^{-1}\varphi\left(t\right)=\varphi\left(t-2*t\right)$
-\end_inset
-
- to show that 
-\begin_inset Formula $\varphi$
-\end_inset
-
- is defined for all 
-\begin_inset Formula $t$
+ We can repeat this process until 
+\begin_inset Formula $V_{i}\cup_{k=0}^{n}B_{\beta}\left(p_{i,k}\right)$
 \end_inset
 
 .
- ??
+ Using this process, we can form the covering 
+\begin_inset Formula $\left\{ U_{\alpha}\right\} $
+\end_inset
+
+.
+ For the second part, let 
+\begin_inset Formula $G=\cap_{1}^{n}U_{\alpha_{i}}$
+\end_inset
+
+, then 
+\begin_inset Formula $G\subset U_{\alpha_{j}}$
+\end_inset
+
+ where 
+\begin_inset Formula $U_{\alpha_{j}}$
+\end_inset
+
+ is one of the open and contractible sets used in the intersection.
+ The open set 
+\begin_inset Formula $G$
+\end_inset
+
+ may no longer be convex; however, since 
+\begin_inset Formula $G\subset U_{\alpha_{j}}$
+\end_inset
+
+, there exists a minimizing geodesic between any two points in 
+\begin_inset Formula $G$
+\end_inset
+
+ that can contract to a single point.
+ This geodesic may leave 
+\begin_inset Formula $G$
+\end_inset
+
+ at times, but will eventually contract to stay within 
+\begin_inset Formula $G$
+\end_inset
+
+ and eventually to one of the points.
+ 
 \end_layout
 
 \begin_layout Standard
