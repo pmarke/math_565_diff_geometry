@@ -1,0 +1,385 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 8
+\end_layout
+
+\begin_layout Title
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Prove part 
+\begin_inset Formula $(i)$
+\end_inset
+
+ of Proposition 2.2 on pg.
+ 90 of do Carmo.
+ The proposition states: let 
+\begin_inset Formula $f,g\in\mathcal{D}\left(M\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{1},X_{2},Y_{1},Y_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ is bilinear in 
+\begin_inset Formula $\mathcal{X}\left(M\right)\times\mathcal{X}\left(M\right)$
+\end_inset
+
+, that is, 
+\begin_inset Formula 
+\begin{align*}
+R\left(fX_{1}+gX_{2},Y_{1}\right) & =fR\left(X_{1},Y_{1}\right)+gR\left(X_{2},Y_{1}\right)\\
+R\left(X_{1},fY_{1}+gY_{2}\right) & =fR\left(X_{1},Y_{1}\right)+gR\left(X_{1},Y_{2}\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Proof let 
+\begin_inset Formula $Z\in\mathcal{X}\left(M\right)$
+\end_inset
+
+.
+ The first one can be shown as
+\begin_inset Formula 
+\begin{align*}
+R\left(fX_{1}+gX_{2},Y_{1}\right)Z & =\nabla_{Y_{1}}\nabla_{fX_{1}+gX_{2}}Z-\nabla_{fX_{1}+gX_{2}}\nabla_{Y_{1}}Z+\nabla_{\left[fX_{1}+gX_{2},Y_{1}\right]}Z\\
+ & =\nabla_{Y_{1}}\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)Z-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}Z+\nabla_{\left[fX_{1},y_{1}\right]}Z+\nabla_{\left[gX_{2},Y_{1}\right]}Z\\
+ & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}+\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+\nabla_{f\left[X_{1},Y_{1}\right]-Y_{1}\left(f\right)X_{1}}+\nabla_{g\left[X_{2},Y_{1}\right]-Y_{1}\left(g\right)X_{2}}\right)Z\\
+ & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{2},Y_{2}\right]}+\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}+\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}-\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}-\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}\right)Z\\
+ & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{2},Y_{2}\right]}\right)Z\\
+ & =fR\left(X_{1},Y_{1}\right)Z+gR\left(X_{2},Y_{1}\right)Z.
+\end{align*}
+
+\end_inset
+
+Similarly the second one is, omitting the vector field 
+\begin_inset Formula $Z$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+R\left(X_{1},fY_{1}+gY_{2}\right) & =\nabla_{fY_{1}+gY_{2}}\nabla_{X_{1}}-\nabla_{X_{1}}\nabla_{fY_{1}+gY_{2}}+\nabla_{\left[X_{1},fY_{1}+gY_{2}\right]}\\
+ & =\left(f\nabla_{Y_{1}}+g\nabla_{Y_{2}}\right)\nabla_{X_{1}}-f\nabla_{X_{1}}\nabla_{Y_{1}}-g\nabla_{X_{1}}\nabla_{Y_{2}}-\nabla_{X_{1}}\left(f\right)\nabla_{Y_{1}}-\nabla_{X_{1}}\left(g\right)\nabla_{Y_{2}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{1},Y_{2}\right]}+\nabla_{X_{1}}\left(f\right)\nabla_{Y_{1}}+\nabla_{X_{1}}\left(g\right)\nabla_{Y_{2}}\\
+ & =\left(f\nabla_{Y_{1}}+g\nabla_{Y_{2}}\right)\nabla_{X_{1}}-f\nabla_{X_{1}}\nabla_{Y_{1}}-g\nabla_{X_{1}}\nabla_{Y_{2}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{1},Y_{2}\right]}\\
+ & =fR\left(X_{1},Y_{1}\right)+gR\left(X_{1},Y_{2}\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $S_{r}^{2}$
+\end_inset
+
+ be the sphere of radius 
+\begin_inset Formula $r$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ centered at the origin.
+ Equip 
+\begin_inset Formula $S_{r}^{2}$
+\end_inset
+
+ with the metric induced by Euclidean space.
+ Consider the coordinate charts obtained by restricting the orthogonal projectio
+n of 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ to the coordinate planes.
+\end_layout
+
+\begin_layout Enumerate
+Compute the components of the Riemann curvature 
+\begin_inset Formula $R_{ijk}^{s}$
+\end_inset
+
+ in these coordinates.
+\end_layout
+
+\begin_layout Enumerate
+Use this to compute the sectional curvature 
+\begin_inset Formula $K\left(\sigma\right)$
+\end_inset
+
+ at a point 
+\begin_inset Formula $p\in S_{r}^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Prove that 
+\begin_inset Formula $K\left(\sigma\right)$
+\end_inset
+
+ is constant.
+ 
+\end_layout
+
+\begin_layout Standard
+We will use the charts 
+\begin_inset Formula $\left\{ \left(U_{i}^{\pm},\varphi_{i}^{\pm}\right)\right\} $
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\begin{align*}
+U_{j}^{\pm} & =\left\{ \left(x_{1},x_{2},x_{3}\right)\in S_{r}^{2}:\pm x_{j}>0\right\} \\
+\varphi_{1}^{\pm}\left(x_{1},x_{2},x_{3}\right) & =\left(x_{2},x_{3}\right)\\
+\left(\varphi_{1}^{\pm}\right)^{-1}\left(y_{1},y_{2}\right) & =\left(\pm\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}},y_{1},y_{2}\right).
+\end{align*}
+
+\end_inset
+
+Since 
+\begin_inset Formula $S_{r}^{2}$
+\end_inset
+
+ is embedded in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, the derivative of 
+\begin_inset Formula $\left(\varphi_{j}^{\pm}\right)^{-1}$
+\end_inset
+
+ is injective.
+ 
+\begin_inset Formula 
+\begin{align*}
+d\left(\varphi_{1}^{\pm}\right)^{-1} & =\begin{bmatrix}-\pm\frac{y_{1}}{\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}}} & -\pm\frac{y_{2}}{\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}}}\\
+1 & 0\\
+0 & 1
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+Let 
+\begin_inset Formula $v_{1},v_{2}\in T_{p}S_{r}^{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $p\in\varphi_{1}^{\pm}$
+\end_inset
+
+, then using the induced metric we have 
+\begin_inset Formula 
+\[
+\left\langle d\left(\varphi_{1}^{\pm}\right)^{-1}v_{1},d\left(\varphi_{1}^{\pm}\right)^{-1}v_{2}\right\rangle .
+\]
+
+\end_inset
+
+Thus the induced metric 
+\begin_inset Formula $g$
+\end_inset
+
+ in matrix form is 
+\begin_inset Formula 
+\begin{align*}
+\left(d\left(\varphi_{1}^{\pm}\right)^{-1}\right)^{\top}d\left(\varphi_{1}^{\pm}\right)^{-1} & =\begin{bmatrix}-\pm\frac{y_{1}}{\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}}} & 1 & 0\\
+-\pm\frac{y_{2}}{\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}}} & 0 & 1
+\end{bmatrix}\begin{bmatrix}-\pm\frac{y_{1}}{\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}}} & -\pm\frac{y_{2}}{\sqrt{r^{2}-y_{1}^{2}-y_{2}^{2}}}\\
+1 & 0\\
+0 & 1
+\end{bmatrix}\\
+ & =\begin{bmatrix}\frac{y_{1}^{2}}{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)}+1 & \frac{y_{1}y_{2}}{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)}\\
+\frac{y_{1}y_{2}}{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)} & \frac{y_{2}^{2}}{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)}+1
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The computation of the Christoffel symobls is tedius, so we employed MATLAB
+ to compute them.
+ The Christoffel symbols are 
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{11}^{1} & =\frac{y_{1}\left(r^{2}-y_{2}^{2}\right)}{\alpha}\\
+\Gamma_{12}^{1} & =\Gamma_{21}^{1}=\frac{y_{1}^{2}y_{2}}{\alpha}\\
+\Gamma_{22}^{1} & =\frac{y_{1}\left(r^{2}-y_{1}^{2}\right)}{\alpha}\\
+\Gamma_{11}^{2} & =\frac{y_{2}\left(r^{2}-y_{2}^{2}\right)}{\alpha}\\
+\Gamma_{12}^{2}=\Gamma_{21}^{2} & =\frac{y_{1}y_{2}^{2}}{\alpha}\\
+\Gamma_{22}^{2} & =\frac{y_{2}\left(r^{2}-y_{1}^{2}\right)}{\alpha}\\
+\alpha & =r^{2}\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once again using MATLAB, the coefficients of the curvature are
+\begin_inset Formula 
+\begin{align*}
+R_{111}^{1} & =R_{221}^{1}=R_{112}^{1}=R_{222}^{1}=R_{111}^{2}=R_{221}^{2}=R_{112}^{2}=R_{222}^{1}=0\\
+R_{121}^{1} & =\frac{-y_{1}y_{2}}{\alpha}\\
+R_{211}^{1} & =\frac{y_{1}y_{2}}{\alpha}\\
+R_{122}^{1} & =\frac{2y_{1}^{2}-r^{2}}{\alpha}\\
+R_{212}^{1} & =\frac{r^{2}-2y_{1}^{2}}{\alpha}\\
+R_{121}^{2} & =\frac{r^{2}-y_{2}^{2}}{\alpha}\\
+R_{211}^{2} & =\frac{y_{2}^{2}-r^{2}}{\alpha}\\
+R_{122}^{2} & =\frac{2y_{1}y_{2}}{\alpha}\\
+R_{212}^{2} & =\frac{-2y_{1}y^{2}}{\alpha}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ has been previously defined.
+ 
+\end_layout
+
+\begin_layout Standard
+Now we proceed to compute the sectional curvature 
+\begin_inset Formula $K\left(\sigma\right)$
+\end_inset
+
+ at point 
+\begin_inset Formula $p\in S_{r}^{2}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $S_{r}^{2}$
+\end_inset
+
+ is two dimensional, any two linearlly independent vectors in 
+\begin_inset Formula $T_{p}S_{r}^{2}$
+\end_inset
+
+ will span 
+\begin_inset Formula $T_{p}S_{r}^{2}$
+\end_inset
+
+.
+ So we will use 
+\begin_inset Formula $v_{1}=\frac{\partial}{\partial y_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=\frac{\partial}{\partial y_{2}}$
+\end_inset
+
+.
+ The sectional curvature is then 
+\begin_inset Formula 
+\[
+K\left(\sigma\right)=\frac{\left(v_{1},v_{2},v_{1},v_{2}\right)}{\left|v_{1}\wedge v_{2}\right|^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
