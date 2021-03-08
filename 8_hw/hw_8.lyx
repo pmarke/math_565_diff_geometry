@@ -370,17 +370,961 @@ Now we proceed to compute the sectional curvature
 \end_inset
 
 .
- The sectional curvature is then 
+ The sectional curvature is then.
 \begin_inset Formula 
 \begin{align*}
 K\left(\sigma\right) & =\frac{\left(v_{1},v_{2},v_{1},v_{2}\right)}{\left|v_{1}\wedge v_{2}\right|^{2}}\\
  & =\frac{R_{121}^{1}g_{12}+R_{121}^{2}g_{22}}{\left\langle v_{1},v_{1}\right\rangle \left\langle v_{2},v_{2}\right\rangle -\left\langle v_{1},v_{2}\right\rangle ^{2}}\\
- & =\frac{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)}{\left(2r^{4}-3r^{2}y_{1}^{2}-3r^{2}y_{2}^{2}+y_{1}^{4}+y_{2}^{4}+y_{1}^{2}y_{2}^{2}\right)}
+ & =\frac{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)}{\left(2r^{4}-3r^{2}y_{1}^{2}-3r^{2}y_{2}^{2}+y_{1}^{4}+y_{2}^{4}+y_{1}^{2}y_{2}^{2}\right)}.
+\end{align*}
+
+\end_inset
+
+We now proceed to prove that the sectional curvature is constant.
+ According to Lemma 3.4 in do Carmo, the manifold 
+\begin_inset Formula $M$
+\end_inset
+
+ has constant sectional curvature equal to 
+\begin_inset Formula $K_{0}$
+\end_inset
+
+ if an only if 
+\begin_inset Formula $R=K_{0}R'$
+\end_inset
+
+ where 
+\begin_inset Formula $R$
+\end_inset
+
+ is the curvature of 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+\left\langle R'\left(X,Y,W\right),Z\right\rangle =\left\langle X,W\right\rangle \left\langle Y,Z\right\rangle -\left\langle Y,W\right\rangle \left\langle X,Z\right\rangle ,
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $X,Y,W,Z\in T_{p}M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The curvature is 
+\begin_inset Formula 
+\begin{align*}
+\left\langle R\left(\frac{\partial}{\partial y_{1}},\frac{\partial}{\partial y_{2}}\right)\frac{\partial}{\partial y_{1}},\frac{\partial}{\partial y_{2}}\right\rangle  & =\sum_{\ell}R_{121}^{\ell}g_{\ell2}\\
+ & =\frac{1}{r^{2}-y_{1}^{2}-y_{2}^{2}},
+\end{align*}
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{align*}
+\left\langle R'\left(\frac{\partial}{\partial y_{1}},\frac{\partial}{\partial y_{2}},\frac{\partial}{\partial y_{1}}\right),\frac{\partial}{\partial y_{2}}\right\rangle  & =\left\langle \frac{\partial}{\partial y_{1}},\frac{\partial}{\partial y_{1}}\right\rangle \left\langle \frac{\partial}{\partial y_{2}},\frac{\partial}{\partial y_{2}}\right\rangle -\left\langle \frac{\partial}{\partial y_{1}},\frac{\partial}{\partial y_{2}}\right\rangle \left\langle \frac{\partial}{\partial y_{1}},\frac{\partial}{\partial y_{2}}\right\rangle \\
+ & =\frac{\left(2r^{4}-3r^{2}y_{1}^{2}-3r^{2}y_{2}^{2}+y_{1}^{4}+y_{2}^{4}+y_{1}^{2}y_{2}^{2}\right)}{\left(r^{2}-y_{1}^{2}-y_{2}^{2}\right)^{2}}.
+\end{align*}
+
+\end_inset
+
+From which we can see that 
+\begin_inset Formula $R=K_{0}R'$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $M$
+\end_inset
+
+ has constant sectional curvature.
+ 
+\end_layout
+
+\begin_layout Exercise
+Recall the embeddings of the torus 
+\begin_inset Formula $T=\mathbb{R}/2\pi\mathbb{Z}$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ given by the maps 
+\begin_inset Formula 
+\[
+\omega\left(\alpha,\beta\right)=\left(\left(\cos\left(\beta\right)+4\right)\cos\left(\alpha\right),\left(\cos\left(\beta\right)+4\right)\sin\left(\alpha\right),\sin\left(\beta\right)\right)
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\psi\left(\alpha,\beta\right)=\left(\cos\left(\alpha\right),\sin\left(\alpha\right),\cos\left(\beta\right),\sin\left(\beta\right)\right)
+\]
+
+\end_inset
+
+respectively.
+ Let 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ be the torus equipped with the metric induced from 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ by the map 
+\begin_inset Formula $\omega$
+\end_inset
+
+, and let 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ denote the torus equipped with the metric induced from 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ by the map 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ Compute the components 
+\begin_inset Formula $R_{ijk}^{s}$
+\end_inset
+
+ of the curvature of 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ (in the coordinates induced by 
+\begin_inset Formula $\omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Exercise
+With the help of MATLAB, I get that the components 
+\begin_inset Formula $R_{ijk}^{s}$
+\end_inset
+
+ of 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ are all zero except
+\begin_inset Formula 
+\begin{align*}
+R_{122}^{1} & =\frac{-\left(4\cos\left(\beta\right)+1\right)}{\left(\cos\left(\beta\right)+4\right)^{2}}\\
+R_{212}^{1} & =-R_{122}^{1}\\
+R_{121}^{2} & =4\cos\left(\beta\right)+2\cos\left(\beta\right)^{2}-1\\
+R_{211}^{2} & =-R_{121}^{2}
 \end{align*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Exercise
+The components 
+\begin_inset Formula $R_{ijk}^{s}$
+\end_inset
+
+ of 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ are all zero.
+ This means that the torus in 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ with the chosen embedding is flat.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+For a parameterized surface 
+\begin_inset Formula $S$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ given by 
+\begin_inset Formula $r\left(u,v\right)$
+\end_inset
+
+ we can find a unit normal at 
+\begin_inset Formula $p\in S$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\[
+N\left(p\right)=\frac{r_{u}\times r_{v}}{\left\Vert r_{u}\times r_{v}\right\Vert }.
+\]
+
+\end_inset
+
+The Gauss map is 
+\begin_inset Formula $N:S\to S^{2}$
+\end_inset
+
+ defined by the equation above.
+ The derivative of the map is 
+\begin_inset Formula $dN_{p}:T_{p}S\to T_{N\left(p\right)}S^{2}$
+\end_inset
+
+.
+ However, by construction we know that 
+\begin_inset Formula $T_{p}S$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{N\left(P\right)}S^{2}$
+\end_inset
+
+ have parallel tangent planes in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ so we can think of 
+\begin_inset Formula $dN_{p}$
+\end_inset
+
+ as a map from 
+\begin_inset Formula $T_{p}S\to T_{p}S$
+\end_inset
+
+.
+ The idea is the following: For a parameterized curve 
+\begin_inset Formula $\alpha\left(t\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha\left(0\right)=p$
+\end_inset
+
+ we consider the curve 
+\begin_inset Formula $N\left(\alpha\left(t\right)\right)=N\left(t\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+.
+ The tangent vector 
+\begin_inset Formula $N'\left(0\right)=dN_{p}\left(\alpha'\left(0\right)\right)$
+\end_inset
+
+ is a vector in 
+\begin_inset Formula $T_{p}S$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $dN_{p}$
+\end_inset
+
+ measures how 
+\begin_inset Formula $N$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+pulls away from
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $N\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For a plane 
+\begin_inset Formula $ax+by+cz=d$
+\end_inset
+
+ show that 
+\begin_inset Formula $dN\equiv0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For the unit sphere with inward pointing normals show that 
+\begin_inset Formula $dN_{p}v=-v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Find 
+\begin_inset Formula $dN_{p}$
+\end_inset
+
+ for the cynlider with 
+\begin_inset Formula $r\left(u,v\right)=\left(\cos u,\sin u,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For the hyperbolic paraboloid 
+\begin_inset Formula $r\left(u,v\right)=\left(u,v,v^{2}-u^{2}\right)$
+\end_inset
+
+ compute the unit normal vectors.
+ At 
+\begin_inset Formula $p=\left(0,0,0\right)$
+\end_inset
+
+ show that 
+\begin_inset Formula 
+\[
+dN_{p}\left(u'\left(0\right),v'\left(0\right),0\right)=\left(2u'\left(0\right),-2v'\left(0\right),0\right).
+\]
+
+\end_inset
+
+So the vectors 
+\begin_inset Formula $\left(1,0,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(0,1,0\right)$
+\end_inset
+
+ are eigenvectors 
+\begin_inset Formula $dN_{p}$
+\end_inset
+
+ with eigenvalues 
+\begin_inset Formula $2$
+\end_inset
+
+ and 
+\begin_inset Formula $-2$
+\end_inset
+
+ repectfully.
+ 
+\end_layout
+
+\begin_layout Standard
+For part 1) we can parameterize the plane as
+\begin_inset Formula 
+\[
+r\left(x,y\right)=\left(ax,by,d-ax-by\right),
+\]
+
+\end_inset
+
+which implies that 
+\begin_inset Formula 
+\[
+r_{x}=\begin{bmatrix}a\\
+0\\
+-a
+\end{bmatrix},\quad r_{y}=\begin{bmatrix}0\\
+b\\
+-b
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Therefore 
+\begin_inset Formula 
+\[
+N\left(p\right)=\frac{r_{x}\times r_{y}}{\left\Vert r_{x}\times r_{y}\right\Vert }=\frac{ab}{\sqrt{3}\left|ab\right|}\begin{bmatrix}1\\
+1\\
+1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $N\left(p\right)$
+\end_inset
+
+ is a constant, its derivative 
+\begin_inset Formula $dN\equiv0$
+\end_inset
+
+.
+ This is what we would expect since a plane is flat.
+ We could've parameterized the plane differently, but the result is the
+ same.
+ 
+\end_layout
+
+\begin_layout Standard
+For part 2) we can parameterize the unit spere as 
+\begin_inset Formula 
+\[
+r\left(\phi,\theta\right)=\left(\sin\left(\phi\right)\cos\left(\theta\right),\sin\left(\phi\right)\sin\left(\theta\right),\cos\left(\phi\right)\right)
+\]
+
+\end_inset
+
+ which implies that 
+\begin_inset Formula 
+\[
+r_{\phi}=\begin{bmatrix}\cos\left(\phi\right)\cos\left(\theta\right)\\
+\cos\left(\phi\right)\sin\left(\theta\right)\\
+-\sin\left(\phi\right)
+\end{bmatrix},\quad r_{\theta}=\begin{bmatrix}-\sin\left(\phi\right)\sin\left(\theta\right)\\
+\sin\left(\phi\right)\cos\left(\theta\right)\\
+0
+\end{bmatrix},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+dr=\left[r_{\phi},r_{\theta}\right]:T_{p}S\to T_{p}\mathbb{R}^{3}.
+\]
+
+\end_inset
+
+Therefore the normal vector is
+\begin_inset Formula 
+\[
+N\left(p\right)=\frac{r_{\phi}\times r_{\theta}}{\left\Vert r_{\phi}\times r_{\theta}\right\Vert }=\begin{bmatrix}\cos\left(\theta\right)\sin\left(\phi\right)\\
+\sin\left(\theta\right)\sin\left(\phi\right)\\
+\cos\left(\phi\right)
+\end{bmatrix}.
+\]
+
+\end_inset
+
+However, 
+\begin_inset Formula $N\left(p\right)$
+\end_inset
+
+ is outward pointing.
+ To get inward pointing we negate it to get 
+\begin_inset Formula 
+\[
+N'\left(p\right)=-N\left(p\right)=\begin{bmatrix}-\cos\left(\theta\right)\sin\left(\phi\right)\\
+-\sin\left(\theta\right)\sin\left(\phi\right)\\
+-\cos\left(\phi\right)
+\end{bmatrix}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Taking the partial derivative, we get the differential 
+\begin_inset Formula 
+\[
+dN'\left(p\right)=\begin{bmatrix}-\cos\left(\phi\right)\cos\left(\theta\right) & -\sin\left(\phi\right)\sin\left(\theta\right)\\
+-\cos\left(\phi\right)\sin\left(\theta\right) & -\sin\left(\phi\right)\cos\left(\theta\right)\\
+\sin\left(\phi\right) & 0
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $v=v_{i}\frac{\partial}{\partial x_{i}}$
+\end_inset
+
+, we want to show that 
+\begin_inset Formula $dr\left(v\right)=-dN'\left(p\right)\left(v\right).$
+\end_inset
+
+ Since 
+\begin_inset Formula $dr$
+\end_inset
+
+ and 
+\begin_inset Formula $dN'\left(p\right)$
+\end_inset
+
+ are linear maps we see that 
+\begin_inset Formula $dr=-dN'\left(p\right)$
+\end_inset
+
+; thus 
+\begin_inset Formula 
+\[
+dr\left(v\right)=-dN'\left(p\right)\left(v\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For part 3), let the surface be parameterized by 
+\begin_inset Formula $r\left(u,v\right)=\left(\cos\left(u\right),\sin\left(u\right),v\right)$
+\end_inset
+
+.
+ The differential is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}-\sin\left(u\right) & 0\\
+\cos\left(u\right) & 0\\
+0 & 1
+\end{bmatrix},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+N\left(p\right)=\begin{bmatrix}\cos\left(u\right)\\
+\sin\left(u\right)\\
+0
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Computing the differential of 
+\begin_inset Formula $N\left(p\right)$
+\end_inset
+
+ we get
+\begin_inset Formula 
+\[
+dN\left(p\right)=\begin{bmatrix}-\sin\left(u\right) & 0\\
+\cos\left(u\right) & 0\\
+0 & 0
+\end{bmatrix}.
+\]
+
+\end_inset
+
+This shows that there is no curve along the 
+\begin_inset Formula $z$
+\end_inset
+
+ axis which is what we would expect for a cylinder that is oriented along
+ the 
+\begin_inset Formula $z$
+\end_inset
+
+-axis.
+ 
+\end_layout
+
+\begin_layout Standard
+For part 4), let the hyperbolid paraboloid be parameterized by 
+\begin_inset Formula 
+\[
+r\left(u,v\right)=\left(u,v,v^{2}-u^{2}\right).
+\]
+
+\end_inset
+
+The differential is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}1 & 0\\
+0 & 1\\
+-2u & 2v
+\end{bmatrix},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+N\left(p\right)=\frac{1}{\left(4u^{2}+4v^{2}+1\right)^{1/2}}\begin{bmatrix}2u\\
+-2v\\
+1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+The differential of 
+\begin_inset Formula $N\left(p\right)$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+dN\left(p\right)=\frac{1}{\left(4u^{2}+4v^{2}+1\right)^{3/2}}\begin{bmatrix}2\left(4v^{2}+1\right) & -8uv\\
+8uv & -2\left(3u^{2}+1\right)\\
+-4u & -4v
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Evaulating 
+\begin_inset Formula $dN\left(p\right)$
+\end_inset
+
+ at 
+\begin_inset Formula $p_{0}=\left(0,0,0\right)$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\[
+dN\left(p_{0}\right)=\begin{bmatrix}2 & 0\\
+0 & -2\\
+0 & 0
+\end{bmatrix}.
+\]
+
+\end_inset
+
+From 
+\begin_inset Formula $dN\left(p_{_{0}}\right)$
+\end_inset
+
+ we can see that the eigen values and vectors are 
+\begin_inset Formula $\lambda\pm2$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{1}=\left(1,0,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=\left(0,-1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+The eigenvalues of 
+\begin_inset Formula $dN_{p}$
+\end_inset
+
+ give the maximum and the minimum curvature of curves at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ These are called the principle curvatures of 
+\begin_inset Formula $S$
+\end_inset
+
+ at 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ What are the principle curvatures for parts a), b), c) and d) above.
+ 
+\end_layout
+
+\begin_layout Exercise
+For part a) we got that 
+\begin_inset Formula $dN_{p}\equiv0$
+\end_inset
+
+, so that maximum and minimum eigen values are zero as they should be since
+ a plane is flat.
+ 
+\end_layout
+
+\begin_layout Exercise
+For part b) we got that 
+\begin_inset Formula 
+\[
+dN\left(p\right)=\begin{bmatrix}-\cos\left(\phi\right)\cos\left(\theta\right) & -\sin\left(\phi\right)\sin\left(\theta\right)\\
+-\cos\left(\phi\right)\sin\left(\theta\right) & -\sin\left(\phi\right)\cos\left(\theta\right)\\
+\sin\left(\phi\right) & 0
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Evaluating it at 
+\begin_inset Formula $p_{0}=\left(0,0,0\right)$
+\end_inset
+
+ we get 
+\begin_inset Formula 
+\[
+dN\left(p_{0}\right)=\begin{bmatrix}0 & 0\\
+0 & -1\\
+1 & 0
+\end{bmatrix},
+\]
+
+\end_inset
+
+thus we get eigenvalues 
+\begin_inset Formula $\lambda\pm1$
+\end_inset
+
+ with eigenvectors 
+\begin_inset Formula $v_{1}=\left(0,0,1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=\left(0,1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+For part c) we got that 
+\begin_inset Formula 
+\[
+dN\left(p\right)=\begin{bmatrix}-\sin\left(u\right) & 0\\
+\cos\left(u\right) & 0\\
+0 & 0
+\end{bmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Evaluating it at 
+\begin_inset Formula $p_{0}=\left(0,0,0\right)$
+\end_inset
+
+ we get 
+\begin_inset Formula 
+\[
+dN\left(p_{0}\right)=\begin{bmatrix}0 & 0\\
+1 & 0\\
+0 & 0
+\end{bmatrix},
+\]
+
+\end_inset
+
+thus we get eigenvalue 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+ with eigenvector 
+\begin_inset Formula $v=\left(0,1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+Part d) was done in the previous problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $S$
+\end_inset
+
+ be a parameterized surface in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $p\in S$
+\end_inset
+
+, and 
+\begin_inset Formula $dN_{p}:T_{p}S\to T_{p}S$
+\end_inset
+
+ be the Gauss map.
+ The Gaussian curvature of 
+\begin_inset Formula $S$
+\end_inset
+
+ at p is 
+\begin_inset Formula $\det\left(dN_{p}\right)$
+\end_inset
+
+.
+ A point in 
+\begin_inset Formula $S$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Enumerate
+elliptic if 
+\begin_inset Formula $\det\left(dN_{p}\right)>0,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+hyperbolic if 
+\begin_inset Formula $\det\left(dN_{p}\right)<0,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+parabolic if 
+\begin_inset Formula $\det\left(dN_{p}\right)=0,$
+\end_inset
+
+ but 
+\begin_inset Formula $dN_{p}\neq0,$
+\end_inset
+
+and 
+\end_layout
+
+\begin_layout Enumerate
+planar if 
+\begin_inset Formula $dN_{p}=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Classify the curvature of the plane, sphere, cylindar, and the point 
+\begin_inset Formula $\left(0,0,0\right)$
+\end_inset
+
+ on the hyperbolic paraboloid.
+ 
+\end_layout
+
+\begin_layout Standard
+In part a) of exercise 4 we found that for the plane 
+\begin_inset Formula $dN_{p}=0$
+\end_inset
+
+, thus it is planar.
+\end_layout
+
+\begin_layout Standard
+In part b) of exercise 4 we found that for the sphere 
+\begin_inset Formula 
+\[
+dN\left(p_{0}\right)=\begin{bmatrix}0 & 0\\
+0 & -1\\
+1 & 0
+\end{bmatrix},
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $\det\left(dN_{p_{0}}\right)=1$
+\end_inset
+
+, thus the sphere is elliptic.
+ 
+\end_layout
+
+\begin_layout Standard
+In part c) of exercise 4 we found that for the cylinder
+\begin_inset Formula 
+\[
+dN_{p_{0}}=\begin{bmatrix}0 & 0\\
+1 & 0\\
+0 & 0
+\end{bmatrix}
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula $\det\left(dN_{p_{0}}\right)=0$
+\end_inset
+
+.
+ Therefore, the cynlinder is parabolic.
+ 
+\end_layout
+
+\begin_layout Standard
+In part d) of exercise 4 we found that for the hyperbolic plane we got 
+\begin_inset Formula 
+\[
+dN_{p_{0}}=\begin{bmatrix}2 & 0\\
+0 & -2\\
+0 & 0
+\end{bmatrix},
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula $\det\left(dN_{p_{0}}\right)=-4$
+\end_inset
+
+.
+ Therefor the hyperbolic plane is byperbolic.
+ 
 \end_layout
 
 \end_body

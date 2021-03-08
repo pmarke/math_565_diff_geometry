@@ -1,14 +1,12 @@
 syms y1 y2 r 'real'
 y = [y1,y2];
 dphi = [-y1/sqrt(r^2-y1^2-y2^2), -y2/sqrt(r^2-y1^2-y2^2); 1,0; 0,1];
-
-% commpute metric
 g = simplify(dphi.'*dphi);
 gi = simplify(inv(g));
-
+L = sym(zeros(2,2,2));
 
 %% compute christoffel symbols
-L = sym(zeros(2,2,2));
+
 for mm=1:2
    for ii = 1:2 
        for jj=1:2
@@ -41,8 +39,8 @@ R = simplify(R)
 %% compute sectional curvature
 v1 = sym([1;0]);
 v2 = sym([0;1]);
-r = simplify((R(1,2,1,1)*g(1,2) + R(1,2,1,2)*g(2,2)));
-K=r/ (v1'*g*v1 + v2'*g*v2-(v1'*g*v2)^2);
+
+K=(R(1,2,1,1)*g(1,2) + R(1,2,1,2)*g(2,2))/ (v1'*g*v1 + v2'*g*v2-(v1'*g*v2)^2);
 
 K = simplify(K)
 

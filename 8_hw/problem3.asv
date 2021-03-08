@@ -1,14 +1,18 @@
-syms y1 y2 r 'real'
-y = [y1,y2];
-dphi = [-y1/sqrt(r^2-y1^2-y2^2), -y2/sqrt(r^2-y1^2-y2^2); 1,0; 0,1];
+syms a b 'real'
 
-% commpute metric
-g = simplify(dphi.'*dphi);
-gi = simplify(inv(g));
+w = [ (cos(b)+4)*cos(a); (cos(b)+4)*sin(a); sin(b)];
+psi = [cos(a);sin(a);cos(b);sin(b)];
+dw = [diff(w,a), diff(w,b)];
+dpsi = [diff(psi,a), diff(psi,b)];
 
+gw = simplify(dw'*dw);
+gpsi = simplify(dpsi'*dpsi);
+
+Lw = sym(zeros(2,2,2));
+Lpsi = sym(zeros(2,2,2));
 
 %% compute christoffel symbols
-L = sym(zeros(2,2,2));
+
 for mm=1:2
    for ii = 1:2 
        for jj=1:2
@@ -38,15 +42,22 @@ end
 
 R = simplify(R)
 
-%% compute sectional curvature
-v1 = sym([1;0]);
-v2 = sym([0;1]);
-r = simplify((R(1,2,1,1)*g(1,2) + R(1,2,1,2)*g(2,2)));
-K=r/ (v1'*g*v1 + v2'*g*v2-(v1'*g*v2)^2);
 
-K = simplify(K)
 
-%% simplified curvatuve
 
-rp=(v1'*g*v1 + v2'*g*v2-(v1'*g*v2)^2);
-rp = simplify(rp)
+
+function L = computeChristoffel(g)
+g
+L = zeros(2,2,2);
+
+for mm=1:2
+   for ii = 1:2 
+       for jj=1:2
+           for kk = 1:2
+              L(ii,jj,mm) = L(ii,jj,mm) + sym(1/2)*(diff(g(jj,kk), y(ii)) + diff(g(kk,ii),y(jj)) - diff(g(ii,jj),y(kk)))*gi(kk,mm);
+           end
+       end
+   end
+end
+
+end
