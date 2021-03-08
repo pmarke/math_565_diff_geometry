@@ -1,0 +1,296 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 9
+\end_layout
+
+\begin_layout Author
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a Riemannian manifold with the property: given any two points 
+\begin_inset Formula $p,q\in M$
+\end_inset
+
+, the parallel transport from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+ does not depend on the curve that joins 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Prove that the curvature of 
+\begin_inset Formula $M$
+\end_inset
+
+ is identically zero, that is, for all 
+\begin_inset Formula $X,Y,Z\in\mathcal{X}\left(M\right)$
+\end_inset
+
+, 
+\begin_inset Formula $R\left(X,Y\right)Z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Usint the hint provided in the book.
+ Consider a parameterized surface 
+\begin_inset Formula $f:U\subseteq\mathbb{R}^{2}\to M$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\[
+U=\left\{ \left(s,t\right)\in\mathbb{R}^{2};-\epsilon<t<1+\epsilon,-\epsilon<s<1+\epsilon,\epsilon>0\right\} 
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $f\left(s,0\right)=f\left(0,0\right)$
+\end_inset
+
+, for all 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $V_{0}\in T_{f\left(0,0\right)}M$
+\end_inset
+
+ and define a field 
+\begin_inset Formula $V$
+\end_inset
+
+ along 
+\begin_inset Formula $f$
+\end_inset
+
+ by: 
+\begin_inset Formula $V\left(s,0\right)=V_{0}$
+\end_inset
+
+ and, if 
+\begin_inset Formula $t\neq0$
+\end_inset
+
+, V
+\begin_inset Formula $\left(s,t\right)$
+\end_inset
+
+ is the parallel transport of 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ along the curve 
+\begin_inset Formula $t\to f\left(s,t\right)$
+\end_inset
+
+.
+ Then, from Lemma 4.1,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{D}{\partial s}\frac{D}{\partial t}V=0=\frac{D}{\partial t}\frac{D}{\partial s}V+R\left(\frac{\partial f}{\partial t},\frac{\partial f}{\partial s}\right)V.
+\]
+
+\end_inset
+
+Since parallel transport does not depend on the curve chosen, 
+\begin_inset Formula $V\left(s,1\right)$
+\end_inset
+
+ is the parallel transport of 
+\begin_inset Formula $V\left(0,1\right)$
+\end_inset
+
+ along the curve 
+\begin_inset Formula $s\to f\left(s,1\right)$
+\end_inset
+
+, hence 
+\begin_inset Formula $\frac{D}{\partial s}V\left(s,1\right)=0$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula 
+\[
+R_{f\left(0,1\right)}\left(\frac{\partial f}{\partial t}\left(0,1\right),\frac{\partial f}{\partial s}\left(0,1\right)\right)V\left(0,1\right)=0.
+\]
+
+\end_inset
+
+Since the surface 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ are arbitrary, then for all 
+\begin_inset Formula $X,Y,Z\in\mathcal{X}\left(M\right)$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+R\left(X,Y\right)Z=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+? I feel like the hint solved it.
+\end_layout
+
+\begin_layout Exercise
+Compute the components 
+\begin_inset Formula $R_{ijk}^{l}$
+\end_inset
+
+ of the curvature tensor and the sectional curvature for 
+\end_layout
+
+\begin_layout Enumerate
+The cylinder, and
+\end_layout
+
+\begin_layout Enumerate
+the hyperbolic upper half plane.
+ 
+\end_layout
+
+\begin_layout Standard
+For part 1) we can parameterize the surface as 
+\begin_inset Formula $r\left(u,v\right)=\left(\cos\left(u\right),\sin\left(u\right),v\right)$
+\end_inset
+
+.
+ The differential is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}-\sin\left(u\right) & 0\\
+\cos\left(u\right) & 0\\
+0 & 1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Using the differential we compute the metric to be 
+\begin_inset Formula 
+\[
+g=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
