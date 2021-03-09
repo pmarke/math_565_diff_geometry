@@ -289,6 +289,58 @@ g=\begin{bmatrix}1 & 0\\
 
 \end_inset
 
+From the metric we get that the components 
+\begin_inset Formula $R_{ijk}^{l}=0$
+\end_inset
+
+ for the cylinder.
+ 
+\end_layout
+
+\begin_layout Standard
+For part 2) let 
+\begin_inset Formula $M\subset\mathbb{R}^{2}$
+\end_inset
+
+ denote the upper half plane.
+ Then for 
+\begin_inset Formula $\left(x,y\right)\in M$
+\end_inset
+
+, we use the Riemannian metric defined as 
+\begin_inset Formula 
+\[
+g=\begin{bmatrix}\frac{1}{y^{2}}\\
+ & \frac{1}{y^{2}}
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Using the metric, we compute the Christoffel symbols and get 
+\begin_inset Formula 
+\begin{align*}
+\Gamma_{12}^{1} & =\Gamma_{21}^{1}=-\frac{1}{y}\\
+\Gamma_{11}^{2} & =\frac{1}{y}\\
+\Gamma_{22}^{2} & =-\frac{1}{y}\\
+\Gamma_{12}^{2} & =\Gamma_{21}^{2}=\Gamma_{11}^{1}=\Gamma_{22}^{1}=0.
+\end{align*}
+
+\end_inset
+
+Using the Chrstoffel symbols, the components of 
+\begin_inset Formula $R_{ijk}^{l}=0$
+\end_inset
+
+ except for 
+\begin_inset Formula 
+\begin{align*}
+R_{211}^{2} & =\frac{2}{y^{2}}\\
+R_{121}^{2} & =-\frac{2}{y^{2}}.
+\end{align*}
+
+\end_inset
+
 
 \end_layout
 

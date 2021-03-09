@@ -1,4 +1,7 @@
 
+
+
+%% Part 1 sphere
 syms u v 'real'
 y = [u,v];
 r = [cos(u);sin(u);v];
@@ -8,10 +11,13 @@ g = simplify(dr'*dr);
 % Compute Christoffel symbols
 L = computeChristoffel(g,y);
 
+%% Part 2 upper half plane
+syms x y 'real'
+X = [x,y];
+g = [1/y^2 0; 0 1/y^2];
 
-
-
-
+L = computeChristoffel(g,X);
+R = computeCurvature(L,X);
 
 
 

@@ -263,7 +263,33 @@ the hyperbolic upper half plane.
 \end_layout
 
 \begin_layout Standard
-For part 1)
+For part 1) we can parameterize the surface as 
+\begin_inset Formula $r\left(u,v\right)=\left(\cos\left(u\right),\sin\left(u\right),v\right)$
+\end_inset
+
+.
+ The differential is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}-\sin\left(u\right) & 0\\
+\cos\left(u\right) & 0\\
+0 & 1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Using the differential we compute the metric to be 
+\begin_inset Formula 
+\[
+g=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
