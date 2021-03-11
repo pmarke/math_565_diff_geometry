@@ -1,3 +1,5 @@
+%% Problem 3
+%
 syms a b 'real'
 y = [a,b];
 w = [ (cos(b)+4)*cos(a); (cos(b)+4)*sin(a); sin(b)];

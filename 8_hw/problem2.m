@@ -1,3 +1,5 @@
+%% Problem 2
+%
 syms y1 y2 r 'real'
 y = [y1,y2];
 dphi = [-y1/sqrt(r^2-y1^2-y2^2), -y2/sqrt(r^2-y1^2-y2^2); 1,0; 0,1];

@@ -5,6 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass IEEEtran
+\options onecolumn
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -132,8 +133,10 @@ Proof let
 \begin{align*}
 R\left(fX_{1}+gX_{2},Y_{1}\right)Z & =\nabla_{Y_{1}}\nabla_{fX_{1}+gX_{2}}Z-\nabla_{fX_{1}+gX_{2}}\nabla_{Y_{1}}Z+\nabla_{\left[fX_{1}+gX_{2},Y_{1}\right]}Z\\
  & =\nabla_{Y_{1}}\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)Z-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}Z+\nabla_{\left[fX_{1},y_{1}\right]}Z+\nabla_{\left[gX_{2},Y_{1}\right]}Z\\
- & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}+\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+\nabla_{f\left[X_{1},Y_{1}\right]-Y_{1}\left(f\right)X_{1}}+\nabla_{g\left[X_{2},Y_{1}\right]-Y_{1}\left(g\right)X_{2}}\right)Z\\
- & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{2},Y_{2}\right]}+\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}+\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}-\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}-\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}\right)Z\\
+ & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}+\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}\right)Z\\
+ & +\left(\nabla_{f\left[X_{1},Y_{1}\right]-Y_{1}\left(f\right)X_{1}}+\nabla_{g\left[X_{2},Y_{1}\right]-Y_{1}\left(g\right)X_{2}}\right)Z\\
+ & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{2},Y_{2}\right]}\right)Z\\
+ & +\left(+\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}+\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}-\nabla_{Y_{1}}\left(f\right)\nabla_{X_{1}}-\nabla_{Y_{1}}\left(g\right)\nabla_{X_{2}}\right)Z\\
  & =\left(f\nabla_{Y_{1}}\nabla_{X_{1}}+g\nabla_{Y_{1}}\nabla_{X_{2}}-\left(f\nabla_{X_{1}}+g\nabla_{X_{2}}\right)\nabla_{Y_{1}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{2},Y_{2}\right]}\right)Z\\
  & =fR\left(X_{1},Y_{1}\right)Z+gR\left(X_{2},Y_{1}\right)Z.
 \end{align*}
@@ -148,7 +151,8 @@ Similarly the second one is, omitting the vector field
 \begin_inset Formula 
 \begin{align*}
 R\left(X_{1},fY_{1}+gY_{2}\right) & =\nabla_{fY_{1}+gY_{2}}\nabla_{X_{1}}-\nabla_{X_{1}}\nabla_{fY_{1}+gY_{2}}+\nabla_{\left[X_{1},fY_{1}+gY_{2}\right]}\\
- & =\left(f\nabla_{Y_{1}}+g\nabla_{Y_{2}}\right)\nabla_{X_{1}}-f\nabla_{X_{1}}\nabla_{Y_{1}}-g\nabla_{X_{1}}\nabla_{Y_{2}}-\nabla_{X_{1}}\left(f\right)\nabla_{Y_{1}}-\nabla_{X_{1}}\left(g\right)\nabla_{Y_{2}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{1},Y_{2}\right]}+\nabla_{X_{1}}\left(f\right)\nabla_{Y_{1}}+\nabla_{X_{1}}\left(g\right)\nabla_{Y_{2}}\\
+ & =\left(f\nabla_{Y_{1}}+g\nabla_{Y_{2}}\right)\nabla_{X_{1}}-f\nabla_{X_{1}}\nabla_{Y_{1}}-g\nabla_{X_{1}}\nabla_{Y_{2}}-\nabla_{X_{1}}\left(f\right)\nabla_{Y_{1}}-\nabla_{X_{1}}\left(g\right)\nabla_{Y_{2}}\\
+ & +f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{1},Y_{2}\right]}+\nabla_{X_{1}}\left(f\right)\nabla_{Y_{1}}+\nabla_{X_{1}}\left(g\right)\nabla_{Y_{2}}\\
  & =\left(f\nabla_{Y_{1}}+g\nabla_{Y_{2}}\right)\nabla_{X_{1}}-f\nabla_{X_{1}}\nabla_{Y_{1}}-g\nabla_{X_{1}}\nabla_{Y_{2}}+f\nabla_{\left[X_{1},Y_{1}\right]}+g\nabla_{\left[X_{1},Y_{2}\right]}\\
  & =fR\left(X_{1},Y_{1}\right)+gR\left(X_{1},Y_{2}\right).
 \end{align*}
@@ -837,7 +841,25 @@ dr=\left[r_{\phi},r_{\theta}\right]:T_{p}S\to T_{p}\mathbb{R}^{3}.
 
 \end_inset
 
-Therefore the normal vector is
+The metric of the first form 
+\begin_inset Formula $g1$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+g1=\begin{bmatrix}1 & 0\\
+0 & \sin^{2}\left(\phi\right)
+\end{bmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The normal vector is
 \begin_inset Formula 
 \[
 N\left(p\right)=\frac{r_{\phi}\times r_{\theta}}{\left\Vert r_{\phi}\times r_{\theta}\right\Vert }=\begin{bmatrix}\cos\left(\theta\right)\sin\left(\phi\right)\\
@@ -871,7 +893,7 @@ N'\left(p\right)=-N\left(p\right)=\begin{bmatrix}-\cos\left(\theta\right)\sin\le
 Taking the partial derivative, we get the differential 
 \begin_inset Formula 
 \[
-dN'\left(p\right)=\begin{bmatrix}-\cos\left(\phi\right)\cos\left(\theta\right) & -\sin\left(\phi\right)\sin\left(\theta\right)\\
+dN'\left(p\right)=\begin{bmatrix}-\cos\left(\phi\right)\cos\left(\theta\right) & \sin\left(\phi\right)\sin\left(\theta\right)\\
 -\cos\left(\phi\right)\sin\left(\theta\right) & -\sin\left(\phi\right)\cos\left(\theta\right)\\
 \sin\left(\phi\right) & 0
 \end{bmatrix}.
@@ -879,6 +901,25 @@ dN'\left(p\right)=\begin{bmatrix}-\cos\left(\phi\right)\cos\left(\theta\right) &
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+We can now compute the metric of the second form
+\begin_inset Formula 
+\begin{align*}
+g2 & =\left\langle dN',dr\right\rangle \\
+ & =\begin{bmatrix}-1 & 0\\
+0 & -\sin^{2}\left(\phi\right)
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Let 
 \begin_inset Formula $v=v_{i}\frac{\partial}{\partial x_{i}}$
 \end_inset
@@ -927,6 +968,24 @@ dr=\begin{bmatrix}-\sin\left(u\right) & 0\\
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+The metric of the first form 
+\begin_inset Formula $g1$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+g1=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}.
+\]
+
+\end_inset
+
 and 
 \begin_inset Formula 
 \[
@@ -950,6 +1009,21 @@ dN\left(p\right)=\begin{bmatrix}-\sin\left(u\right) & 0\\
 0 & 0
 \end{bmatrix}.
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now compute the metric of the second form
+\begin_inset Formula 
+\begin{align*}
+g2 & =\left\langle dN',dr\right\rangle \\
+ & =\begin{bmatrix}1 & 0\\
+0 & 0
+\end{bmatrix}.
+\end{align*}
 
 \end_inset
 
@@ -981,12 +1055,30 @@ The differential is
 dr=\begin{bmatrix}1 & 0\\
 0 & 1\\
 -2u & 2v
-\end{bmatrix},
+\end{bmatrix}.
 \]
 
 \end_inset
 
-and 
+
+\end_layout
+
+\begin_layout Standard
+The metric of the first form 
+\begin_inset Formula $g1$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+g1=\begin{bmatrix}4u^{2}+1 & -4uv\\
+-4uv & 4v^{2}+1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+The unit normal vector is 
 \begin_inset Formula 
 \[
 N\left(p\right)=\frac{1}{\left(4u^{2}+4v^{2}+1\right)^{1/2}}\begin{bmatrix}2u\\
@@ -1031,20 +1123,56 @@ dN\left(p_{0}\right)=\begin{bmatrix}2 & 0\\
 
 \end_inset
 
-From 
-\begin_inset Formula $dN\left(p_{_{0}}\right)$
+
+\end_layout
+
+\begin_layout Standard
+We can now compute the metric of the second form
+\begin_inset Formula 
+\begin{align*}
+g2 & =\left\langle dN',dr\right\rangle \\
+ & =\frac{8u^{2}+8v^{2}+2}{\left(4u^{2}+4v^{2}+1\right)^{\left(3/2\right)}}\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix}.
+\end{align*}
+
 \end_inset
 
- we can see that the eigen values and vectors are 
+
+\end_layout
+
+\begin_layout Standard
+Using the first and second form of the metric we can calculate the Gaussian
+ curvature at 
+\begin_inset Formula $p_{0}=\left(0,0\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+K & =\left.g1^{-1}g2\right|_{p_{0}}\\
+ & =\begin{bmatrix}2 & 0\\
+0 & -2
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the Gaussian curvature we can see that the eigenvalues and eigenvectors
+ are 
 \begin_inset Formula $\lambda\pm2$
 \end_inset
 
  and 
-\begin_inset Formula $v_{1}=\left(1,0,0\right)$
+\begin_inset Formula $v_{1}=\left(1,0\right)$
 \end_inset
 
  and 
-\begin_inset Formula $v_{2}=\left(0,-1,0\right)$
+\begin_inset Formula $v_{2}=\left(0,1\right)$
 \end_inset
 
 .
@@ -1084,91 +1212,114 @@ For part a) we got that
 \end_layout
 
 \begin_layout Exercise
-For part b) we got that 
+For part b) we calculated the first and second form of the metric to be
+ 
 \begin_inset Formula 
 \[
-dN\left(p\right)=\begin{bmatrix}-\cos\left(\phi\right)\cos\left(\theta\right) & -\sin\left(\phi\right)\sin\left(\theta\right)\\
--\cos\left(\phi\right)\sin\left(\theta\right) & -\sin\left(\phi\right)\cos\left(\theta\right)\\
-\sin\left(\phi\right) & 0
-\end{bmatrix}.
-\]
-
-\end_inset
-
-Evaluating it at 
-\begin_inset Formula $p_{0}=\left(0,0,0\right)$
-\end_inset
-
- we get 
-\begin_inset Formula 
-\[
-dN\left(p_{0}\right)=\begin{bmatrix}0 & 0\\
-0 & -1\\
-1 & 0
+g1=\begin{bmatrix}1 & 0\\
+0 & \sin^{2}\left(\phi\right)
+\end{bmatrix},\quad g2=\begin{bmatrix}-1 & 0\\
+0 & -\sin^{2}\left(\phi\right)
 \end{bmatrix},
 \]
+
+\end_inset
+
+Using the first and second form of the metric we can calculate the Gaussian
+ curvature at 
+\begin_inset Formula $p_{0}=\left(0,0\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+K & =\left.g1^{-1}g2\right|_{p_{0}}\\
+ & =\begin{bmatrix}-1 & 0\\
+0 & -1
+\end{bmatrix}.
+\end{align*}
 
 \end_inset
 
 thus we get eigenvalues 
-\begin_inset Formula $\lambda\pm1$
+\begin_inset Formula $\lambda_{1,2}=-1$
 \end_inset
 
  with eigenvectors 
-\begin_inset Formula $v_{1}=\left(0,0,1\right)$
+\begin_inset Formula $v_{1}=\left(1,0\right)$
 \end_inset
 
  and 
-\begin_inset Formula $v_{2}=\left(0,1,0\right)$
+\begin_inset Formula $v_{2}=\left(0,1\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Exercise
-For part c) we got that 
+For part c) we calculated the first and second form of the metric to be
+ 
 \begin_inset Formula 
 \[
-dN\left(p\right)=\begin{bmatrix}-\sin\left(u\right) & 0\\
-\cos\left(u\right) & 0\\
-0 & 0
-\end{bmatrix}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Exercise
-Evaluating it at 
-\begin_inset Formula $p_{0}=\left(0,0,0\right)$
-\end_inset
-
- we get 
-\begin_inset Formula 
-\[
-dN\left(p_{0}\right)=\begin{bmatrix}0 & 0\\
-1 & 0\\
+g1=\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix},\quad g2=\begin{bmatrix}1 & 0\\
 0 & 0
 \end{bmatrix},
 \]
 
 \end_inset
 
-thus we get eigenvalue 
-\begin_inset Formula $\lambda=1$
+Using the first and second form of the metric we can calculate the Gaussian
+ curvature at 
+\begin_inset Formula $p_{0}=\left(0,0\right)$
 \end_inset
 
- with eigenvector 
-\begin_inset Formula $v=\left(0,1,0\right)$
+
+\begin_inset Formula 
+\begin{align*}
+K & =\left.g1^{-1}g2\right|_{p_{0}}\\
+ & =\begin{bmatrix}1 & 0\\
+0 & 0
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+thus we get eigenvalues 
+\begin_inset Formula $\lambda_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}=2$
+\end_inset
+
+ with eigenvectors 
+\begin_inset Formula $v_{1}=\left(1,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=\left(0,1\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Exercise
-Part d) was done in the previous problem.
+Part d) was done in the previous problem which yielded eigenvalues and eigenvect
+ors of 
+\begin_inset Formula $\lambda\pm2$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{1}=\left(1,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{2}=\left(0,1\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1266,13 +1417,13 @@ In part a) of exercise 4 we found that for the plane
 \end_layout
 
 \begin_layout Standard
-In part b) of exercise 4 we found that for the sphere 
+In part b) of exercise 5 we found that the Gaussian curvature of the sphere
+ is
 \begin_inset Formula 
 \[
-dN\left(p_{0}\right)=\begin{bmatrix}0 & 0\\
-0 & -1\\
-1 & 0
-\end{bmatrix},
+K=\begin{bmatrix}-1 & 0\\
+0 & -1
+\end{bmatrix}
 \]
 
 \end_inset
@@ -1286,11 +1437,11 @@ and
 \end_layout
 
 \begin_layout Standard
-In part c) of exercise 4 we found that for the cylinder
+In part c) of exercise 5 we found that the Gaussian curvature of the cylinder
+ is
 \begin_inset Formula 
 \[
-dN_{p_{0}}=\begin{bmatrix}0 & 0\\
-1 & 0\\
+K=\begin{bmatrix}1 & 0\\
 0 & 0
 \end{bmatrix}
 \]
@@ -1307,12 +1458,12 @@ thus
 \end_layout
 
 \begin_layout Standard
-In part d) of exercise 4 we found that for the hyperbolic plane we got 
+In part d) of exercise 5 we found that the Gaussian curvature of the hyperbolic
+ plane is 
 \begin_inset Formula 
 \[
-dN_{p_{0}}=\begin{bmatrix}2 & 0\\
-0 & -2\\
-0 & 0
+K=\begin{bmatrix}2 & 0\\
+0 & -2
 \end{bmatrix},
 \]
 
@@ -1323,7 +1474,7 @@ thus
 \end_inset
 
 .
- Therefor the hyperbolic plane is byperbolic.
+ Therefore the hyperbolic plane is hyperbolic.
  
 \end_layout
 
