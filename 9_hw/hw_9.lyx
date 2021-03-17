@@ -241,10 +241,6 @@ R\left(X,Y\right)Z=0.
 
 \end_layout
 
-\begin_layout Proof
-? I feel like the hint solved it.
-\end_layout
-
 \begin_layout Exercise
 Compute the components 
 \begin_inset Formula $R_{ijk}^{l}$
@@ -483,24 +479,16 @@ Let
 \begin_inset Formula $V^{*}$
 \end_inset
 
-, then 
-\begin_inset Formula $dx_{i}\otimes\partial x_{j}$
-\end_inset
-
- is a basis for 
-\begin_inset Formula $A$
+, then in local coordinates 
+\begin_inset Formula $A=a_{i}^{j}dx^{i}\otimes\partial x_{j}$
 \end_inset
 
 , 
-\begin_inset Formula $dx_{i}\otimes\partial x_{j}$
+\begin_inset Formula $f=f_{i}^{j}dx^{i}\otimes\partial x_{j}$
 \end_inset
 
- is a basis for 
-\begin_inset Formula $f$
-\end_inset
-
-, and 
-\begin_inset Formula $\partial x_{i}\otimes\partial x_{j}$
+ , and 
+\begin_inset Formula $g=g^{ik}\partial x_{i}\otimes\partial x_{j}$
 \end_inset
 
  be a basis for 
@@ -508,12 +496,33 @@ Let
 \end_inset
 
 .
- 
-\end_layout
+ Since 
+\begin_inset Formula $g$
+\end_inset
 
-\begin_layout Proof
-??? 
-\begin_inset Formula $g\in T_{2}$
+ is positive definite, the coefficients 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+ in matrix form are invertible.
+ We can now associated to 
+\begin_inset Formula $A$
+\end_inset
+
+ to 
+\begin_inset Formula $f$
+\end_inset
+
+ using 
+\begin_inset Formula $g$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+f_{i}^{j}dx^{i}\otimes\partial x_{j}=g^{jk}a_{k}^{i}.
+\]
+
 \end_inset
 
 
@@ -565,10 +574,40 @@ We suppose directly that there exists an
 \end_inset
 
  such that 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\sigma=0$
 \end_inset
 
-?
+, then 
+\begin_inset Formula 
+\[
+x^{1}-x^{2}+x^{3}-x^{4}=0.
+\]
+
+\end_inset
+
+Squaring both sides gives 
+\begin_inset Formula 
+\begin{align*}
+0 & =\left(x^{1}-x^{2}+x^{3}-x^{4}\right)\left(x^{1}-x^{2}+x^{3}-x^{4}\right)\\
+ & =\left(x^{1}\right)^{2}+\left(x^{2}\right)^{2}+\left(x^{3}\right)^{2}+\left(x^{4}\right)^{2}-2x^{1}x^{2}+2x^{1}x^{3}-2x^{1}x^{4}-2x^{2}x^{3}+2x^{2}x^{4}-2x^{3}x^{4}\\
+ & =1-2x^{1}x^{2}+2x^{1}x^{3}-2x^{1}x^{4}-2x^{2}x^{3}+2x^{2}x^{4}-2x^{3}x^{4}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{bmatrix}1 & -1 & 1 & -1\\
+-1 & 1 & -1 & 1\\
+1 & -1 & 1 & -1\\
+-1 & 1 & -1 & 1
+\end{bmatrix}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
