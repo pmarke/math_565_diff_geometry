@@ -685,30 +685,10 @@ In local coordinates we can write
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left(ab\right)f^{i}\partial x_{i}=a\left(bf^{i}\partial x_{i}\right)$
+\begin_inset Formula $\left(ab\right)$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $1f^{i}\partial x_{i}=f^{i}\partial x_{i}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Therefore, the set of all smooth covector fields on 
-\begin_inset Formula $M$
-\end_inset
-
- is a 
-\begin_inset Formula $C^{\infty}\left(M\right)$
-\end_inset
-
- module.
- 
 \end_layout
 
 \end_body

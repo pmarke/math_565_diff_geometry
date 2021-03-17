@@ -344,5 +344,376 @@ R_{121}^{2} & =-\frac{2}{y^{2}}.
 
 \end_layout
 
+\begin_layout Exercise
+Let 
+\begin_inset Formula $\omega\in\Omega^{2}\left(\mathbb{R}^{3}\right)$
+\end_inset
+
+ be given by 
+\begin_inset Formula 
+\[
+\omega=e^{xz}dx\wedge dy-\sin\left(y\right)z^{2}dy\wedge dz.
+\]
+
+\end_inset
+
+compute 
+\begin_inset Formula $d\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The first term 
+\begin_inset Formula $e^{xz}dx\wedge dy$
+\end_inset
+
+ will be zero when taking the derivative w.r.t.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ or 
+\begin_inset Formula $y$
+\end_inset
+
+ and the second term 
+\begin_inset Formula $\sin\left(y\right)z^{2}dy\wedge dz$
+\end_inset
+
+will be zero when taking the derivative w.r.t.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ or 
+\begin_inset Formula $z$
+\end_inset
+
+, so we get 
+\begin_inset Formula 
+\begin{align*}
+d\omega & =\frac{\partial e^{xz}dx\wedge dy}{\partial z}-\frac{\partial\sin\left(y\right)z^{2}dy\wedge dz}{\partial x}\\
+ & =xe^{xz}dx\wedge dy\wedge dz-0\\
+ & =xe^{xz}dx\wedge dy\wedge dz
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $V$
+\end_inset
+
+ be a finite dimensional vector space.
+ Prove that there is a canonical isomorphism (basis-independent) between
+ the space of bilinear maps of 
+\begin_inset Formula $V\otimes V^{*}$
+\end_inset
+
+ and the space of linear maps from 
+\begin_inset Formula $V\to V$
+\end_inset
+
+ denoted 
+\begin_inset Formula $\text{Hom}\left(V,V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $A:V\to V$
+\end_inset
+
+ be a linear map, 
+\begin_inset Formula $f\in T_{1}^{1}\left(V\right)$
+\end_inset
+
+ be a bilinear map and 
+\begin_inset Formula $g$
+\end_inset
+
+ be a metric on 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ To the linear transformation 
+\begin_inset Formula $A$
+\end_inset
+
+ we associate a bilinear map 
+\begin_inset Formula $\left(v,\varphi\right)\mapsto\left\langle Av,\varphi\right\rangle _{g}$
+\end_inset
+
+ on 
+\begin_inset Formula $V\times V^{*}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ The metric 
+\begin_inset Formula $g$
+\end_inset
+
+ is unique and independent of basis, so the association is independent of
+ basis.
+ Let 
+\begin_inset Formula $dx_{1},\ldots,dx_{n}$
+\end_inset
+
+ be a basis for 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $\partial x_{1},\ldots,\partial x_{n}$
+\end_inset
+
+ be a basis for 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+, then 
+\begin_inset Formula $dx_{i}\otimes\partial x_{j}$
+\end_inset
+
+ is a basis for 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $dx_{i}\otimes\partial x_{j}$
+\end_inset
+
+ is a basis for 
+\begin_inset Formula $f$
+\end_inset
+
+, and 
+\begin_inset Formula $\partial x_{i}\otimes\partial x_{j}$
+\end_inset
+
+ be a basis for 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+??? 
+\begin_inset Formula $g\in T_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Show that the restirction of 
+\begin_inset Formula $\sigma=x^{1}dx^{2}-x^{2}dx^{1}+x^{3}dx^{4}-x^{4}dx^{3}$
+\end_inset
+
+ from 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ to the sphere 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ is never zero on 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+The manifold 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\[
+S^{3}=\left\{ \left(x^{1},x^{2},x^{3},x^{4}\right)\in\mathbb{R}^{4}\mid\sqrt{\left(\sum_{i=1}^{4}\left(x^{i}\right)^{2}\right)}=1\right\} .
+\]
+
+\end_inset
+
+We suppose directly that there exists an 
+\begin_inset Formula $s\in S^{1}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sigma$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+As in problem (1) of Homework 4, prove that the set of all smooth covector
+ fields on 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 
+\begin_inset Formula $C^{\infty}\left(M\right)$
+\end_inset
+
+ module over the functions 
+\begin_inset Formula $C^{\infty}\left(M\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $x\in M$
+\end_inset
+
+, 
+\begin_inset Formula $v\in TM$
+\end_inset
+
+, 
+\begin_inset Formula $a,b\in C^{\infty}\left(M\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $f,g\in\mathcal{X}^{*}\left(M\right)$
+\end_inset
+
+.
+ For the set of all smooth covector fields on 
+\begin_inset Formula $M$
+\end_inset
+
+ to be a module, it must have the the following properties.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\left(f_{x}\left(v\right)+g_{x}\left(v\right)\right)=af_{x}\left(v\right)+ag_{x}\left(v\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a+b\right)f_{x}\left(v\right)=af_{x}\left(v\right)+bf_{x}\left(v\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(ab\right)f_{x}\left(v\right)=a\left(bf_{x}\left(v\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1f_{x}\left(v\right)=f_{x}\left(v\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the subscript 
+\begin_inset Formula $x$
+\end_inset
+
+ denotes the covector field evaluated at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In local coordinates we can write 
+\begin_inset Formula $f=f^{i}\partial x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $g=g^{i}\partial x_{i}$
+\end_inset
+
+, thus 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\left(f^{i}\partial x_{i}+g^{i}\partial x_{i}\right)=af^{i}\partial x_{i}+ag^{i}\partial x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a+b\right)f^{i}\partial x_{i}=af^{i}\partial x_{i}+bf^{i}\partial x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(ab\right)f^{i}\partial x_{i}=a\left(bf^{i}\partial x_{i}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1f^{i}\partial x_{i}=f^{i}\partial x_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, the set of all smooth covector fields on 
+\begin_inset Formula $M$
+\end_inset
+
+ is a 
+\begin_inset Formula $C^{\infty}\left(M\right)$
+\end_inset
+
+ module.
+ 
+\end_layout
+
 \end_body
 \end_document
