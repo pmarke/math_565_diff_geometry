@@ -564,23 +564,108 @@ The manifold
  is defined as
 \begin_inset Formula 
 \[
-S^{3}=\left\{ \left(x^{1},x^{2},x^{3},x^{4}\right)\in\mathbb{R}^{4}\mid\sqrt{\left(\sum_{i=1}^{4}\left(x^{i}\right)^{2}\right)}=1\right\} .
+S^{3}=\left\{ \left(x^{1},x^{2},x^{3},x^{4}\right)\in\mathbb{R}^{4}\mid\sqrt{\left(\sum_{i=1}^{4}\left(x^{i}\right)^{2}\right)}=1\right\} ;
 \]
 
 \end_inset
 
-We suppose directly that there exists an 
-\begin_inset Formula $s\in S^{1}$
+therefore, the vectors in 
+\begin_inset Formula $T_{p}S$
 \end_inset
 
- such that 
-\begin_inset Formula $\sigma=0$
+ mapped into 
+\begin_inset Formula $T_{p}\mathbb{R}^{4}$
 \end_inset
 
-, then 
+ have the constraint
 \begin_inset Formula 
 \[
-x^{1}-x^{2}+x^{3}-x^{4}=0
+\sum_{i=1}^{4}\dot{x}^{i}x^{i}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+I can rotate my sphere using a rotation 
+\begin_inset Formula $R$
+\end_inset
+
+ such that the rotated point of 
+\begin_inset Formula $p$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+Rp=\left(1,0,0,0\right).
+\]
+
+\end_inset
+
+At this point, the contraint on the velocity is 
+\begin_inset Formula 
+\[
+\dot{x}^{1}\cdot1+\dot{x}^{2}\cdot0+\dot{x}^{3}\cdot0+\dot{x}^{4}\cdot0=0
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\[
+\dot{x}^{1}=0
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\dot{x}^{2}\text{ and/or }\dot{x}^{3}\text{ and or }\dot{x}^{4}\neq0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\dot{x}\in T_{p}\mathbb{R}^{4}$
+\end_inset
+
+ defined as 
+\begin_inset Formula $\dot{x}=\left[\dot{x}^{1},\dot{x}^{2},\dot{x}^{3},\dot{x}^{4}\right]^{\top}$
+\end_inset
+
+ with the above constriant.
+ The restriction can be written as a tensor in matrix notation as 
+\begin_inset Formula 
+\[
+\sigma=\begin{bmatrix}-x^{2} & x^{1} & -x^{4} & x^{3}\end{bmatrix},
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+\sigma\left(\dot{x}\right)=-\dot{x}^{1}x^{2}+\dot{x}^{2}x^{1}-\dot{x}^{3}x^{4}+\dot{x}^{4}x^{3}.
+\]
+
+\end_inset
+
+At the rotated point of 
+\begin_inset Formula $p$
+\end_inset
+
+, the restriction simplifies to 
+\begin_inset Formula 
+\[
+\sigma\left(\dot{x}\right)=\dot{x}^{2}.
 \]
 
 \end_inset
