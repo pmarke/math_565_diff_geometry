@@ -1,0 +1,1241 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 10
+\end_layout
+
+\begin_layout Author
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Show that the origin 
+\begin_inset Formula $\left(0,0,0\right)$
+\end_inset
+
+ of the hyperboloid 
+\begin_inset Formula $r\left(u,v\right)=\left(u,v,auv\right)$
+\end_inset
+
+ we have 
+\begin_inset Formula $K=-a^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $H=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+The differential of the surface is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}1 & 0\\
+0 & 1\\
+av & au
+\end{bmatrix},
+\]
+
+\end_inset
+
+from which we obtain the first fundamental form or the induced metric 
+\begin_inset Formula 
+\begin{align*}
+I_{p} & =dr'dr\\
+ & =\begin{bmatrix}a^{2}v^{2}+1 & a^{2}uv\\
+a^{2}uv & a^{2}u^{2}+1
+\end{bmatrix},
+\end{align*}
+
+\end_inset
+
+the normal unit vector 
+\begin_inset Formula 
+\begin{align*}
+N & =\frac{dr_{u}\times dr_{v}}{\left\Vert dr_{u}\times dr_{v}\right\Vert }\\
+ & =\frac{1}{\sqrt{a^{2}v^{2}+a^{2}u^{2}+1}}\begin{bmatrix}-av\\
+-au\\
+1
+\end{bmatrix},
+\end{align*}
+
+\end_inset
+
+and its derivative
+\begin_inset Formula 
+\[
+dN=\frac{1}{\left(a^{2}v^{2}+a^{2}u^{2}+1\right)^{3/2}}\begin{bmatrix}a^{3}uv & -a\left(a^{2}u^{2}+1\right)\\
+-a\left(a^{2}v^{2}+1\right) & a^{3}uv\\
+-a^{2}u & -a^{2}v
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Using the derivative of the normal unit vector and the differential of the
+ surface, we compute the second fundamental form 
+\begin_inset Formula 
+\begin{align*}
+II_{p} & =dr'dN\\
+ & =\frac{1}{\left(a^{2}v^{2}+a^{2}u^{2}+1\right)^{3/2}}\begin{bmatrix}0 & -\left(a^{3}u^{2}+a^{3}v^{2}+a\right)\\
+-\left(a^{3}u^{2}+a^{3}v^{2}+a\right) & 0
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Using the first and second fundamental form we can calculate the Gaussian
+ curvature and the mean curvature
+\begin_inset Formula 
+\begin{align*}
+K & =\frac{-\left(a^{3}u^{2}+a^{3}v^{2}+a\right)^{2}}{\left(a^{2}v^{2}+a^{2}u^{2}+1\right)^{3}\left(\left(a^{2}v^{2}+1\right)\left(a^{2}u^{2}+1\right)-a^{2}uv\right)}\\
+H & =\frac{1}{2}\frac{2\left(a^{3}u^{2}+a^{3}v^{2}+a\right)a^{2}uv}{\left(a^{2}v^{2}+a^{2}u^{2}+1\right)^{3}\left(\left(a^{2}v^{2}+1\right)\left(a^{2}u^{2}+1\right)-a^{2}uv\right)}.
+\end{align*}
+
+\end_inset
+
+Evaluating them at 
+\begin_inset Formula $p=\left(0,0,0\right)$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\begin{align*}
+K & =-a^{2}\\
+H & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Consider Enneper's surface
+\begin_inset Formula 
+\[
+r\left(u,v\right)=\left(u-\frac{u^{3}}{3}+uv^{2},v-\frac{v^{3}}{3}+vu^{2},u^{2}-v^{2}\right)
+\]
+
+\end_inset
+
+and show that 
+\end_layout
+
+\begin_layout Enumerate
+the coefficients for the first fundamental form are 
+\begin_inset Formula $E=G=\left(1+u^{2}+v^{2}\right)^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $F=0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+the coefficients for the second fundamental form are 
+\begin_inset Formula $e=2$
+\end_inset
+
+, 
+\begin_inset Formula $f=0$
+\end_inset
+
+, and 
+\begin_inset Formula $g=-2$
+\end_inset
+
+, and 
+\end_layout
+
+\begin_layout Enumerate
+the principle curvatures are 
+\begin_inset Formula 
+\[
+k_{1}=\frac{2}{\left(1+u^{2}+v^{2}\right)^{2}}\text{ and }k_{2}=-\frac{2}{\left(1+u^{2}+v^{2}\right)^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The differential of the surface is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}-u^{2}+v^{2}+1 & 2uv\\
+2uv & u^{2}-v^{2}+1\\
+2u & -2v
+\end{bmatrix},
+\]
+
+\end_inset
+
+from which we obtain the first fundamental form or the induced metric 
+\begin_inset Formula 
+\begin{align*}
+I_{p} & =dr'dr\\
+ & =\begin{bmatrix}\left(1+u^{2}+v^{2}\right)^{2} & 0\\
+0 & \left(1+u^{2}+v^{2}\right)^{2}
+\end{bmatrix},
+\end{align*}
+
+\end_inset
+
+the normal unit vector 
+\begin_inset Formula 
+\begin{align*}
+N & =\frac{dr_{u}\times dr_{v}}{\left\Vert dr_{u}\times dr_{v}\right\Vert }\\
+ & =\frac{1}{\left(1+u^{2}+v^{2}\right)}\begin{bmatrix}-2u\\
+2v\\
+1-u^{2}-v^{2}
+\end{bmatrix},
+\end{align*}
+
+\end_inset
+
+and its derivative
+\begin_inset Formula 
+\[
+dN=\frac{1}{\left(1+u^{2}+v^{2}\right)^{2}}\begin{bmatrix}-2\left(1+v^{2}-u^{2}\right) & 4uv\\
+-4uv & 2\left(1+u^{2}-v^{2}\right)\\
+-4u\left(u^{2}+v^{2}-2\right) & -4v\left(u^{2}+v^{2}-2\right)
+\end{bmatrix}.
+\]
+
+\end_inset
+
+Using the derivative of the normal unit vector and the differential of the
+ surface, we compute the second fundamental form 
+\begin_inset Formula 
+\begin{align*}
+II_{p} & =-dr'dN\\
+ & =\begin{bmatrix}2 & 0\\
+0 & -2
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the first and second fundamental forms, we calculate the principal
+ curvatures
+\begin_inset Formula 
+\begin{align*}
+k_{1} & =\frac{2\left(1+u^{2}+v^{2}\right)^{2}}{\left(1+u^{2}+v^{2}\right)^{4}}\\
+ & =\frac{2}{\left(1+u^{2}+v^{2}\right)^{2}}\\
+k_{2} & =\frac{-2\left(1+u^{2}+v^{2}\right)^{2}}{\left(1+u^{2}+v^{2}\right)^{4}}\\
+ & =\frac{-2}{\left(1+u^{2}+v^{2}\right)^{2}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Using the theorem in the homework assignment, show that no neighborhood
+ of a point in a sphere may be isometrically mapped into a plane.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Using the above results show that there exists no surface 
+\begin_inset Formula $r\left(u,v\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $E=G=1$
+\end_inset
+
+, 
+\begin_inset Formula $F=0$
+\end_inset
+
+ and 
+\begin_inset Formula $e=1$
+\end_inset
+
+, 
+\begin_inset Formula $g=-1$
+\end_inset
+
+, and 
+\begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be Riemannian manifolds, and consider the product 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+, with the product metric.
+ Let 
+\begin_inset Formula $\nabla^{1}$
+\end_inset
+
+ be the Riemannian connection of 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\nabla^{2}$
+\end_inset
+
+ be the Riemannian connection of 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that the Riemannian connection 
+\begin_inset Formula $\nabla$
+\end_inset
+
+ of 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\nabla_{Y_{1}+Y_{2}}\left(X_{1}+X_{2}\right)=\nabla_{Y_{1}}^{1}X_{1}+\nabla_{Y_{2}}^{2}X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{1},Y_{1}\in\mathcal{X}\left(M_{1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2},Y_{2}\in\mathcal{X}\left(M_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For every 
+\begin_inset Formula $p\in M_{1}$
+\end_inset
+
+, the set 
+\begin_inset Formula $\left(M_{2}\right)_{p}=\left\{ \left(p,q\right)\in M_{1}\times M_{2}\mid q\in M_{2}\right\} $
+\end_inset
+
+ is a submanifold of 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+, naturally diffeomorphic to 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+ is a totally geodesic submanifold of 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $\sigma\left(x,y\right)\subset T_{\left(p,q\right)}\left(M_{1}\times M_{2}\right)$
+\end_inset
+
+ be a plane such that 
+\begin_inset Formula $x\in T_{p}M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in T_{q}M_{2}$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $K\left(\sigma\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We suppose directly that 
+\begin_inset Formula $\left(M_{1},g^{1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(M_{2},g^{2}\right)$
+\end_inset
+
+ are Riemannian manifolds with connections 
+\begin_inset Formula $\nabla^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\nabla^{2}$
+\end_inset
+
+ and dimension 
+\begin_inset Formula $n^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+, and that the Riemannian manifold 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+ has the product metric 
+\begin_inset Formula $g$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+g\left(u,v\right)=g^{1}\left(d\pi_{1}u,d\pi_{1}v\right)+g^{2}\left(d\pi_{2}u,d\pi_{2}v\right)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\pi_{i}:M_{1}\times M_{2}\to M_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $u,v\in TM_{1}\times M_{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $X,Y\in TM_{1}\times M_{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $d\pi_{1}X=X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $d\pi_{2}X=X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $d\pi_{1}Y=Y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $d\pi_{2}Y=Y_{2}$
+\end_inset
+
+; in other words 
+\begin_inset Formula $X=X_{1}+X_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y=Y_{1}+Y_{2}$
+\end_inset
+
+.
+ In local coordinates, the vector fields can be expressed as 
+\begin_inset Formula $X=x_{i}e_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y=y_{i}e_{i}$
+\end_inset
+
+.
+ The connection 
+\begin_inset Formula $\nabla$
+\end_inset
+
+ in local coordinates can be written as 
+\begin_inset Formula 
+\[
+\nabla_{X}Y=\sum_{k=1}^{n^{1}+n^{2}}\left(\sum_{i,j}x_{i}y_{j}\Gamma_{ij}^{k}+\sum_{i}x_{i}\frac{\partial y_{k}}{\partial e_{i}}\right)e_{k}.
+\]
+
+\end_inset
+
+Since the first 
+\begin_inset Formula $n^{1}$
+\end_inset
+
+ coefficients of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are dependent on 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and the last 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ coefficients of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are only dependent on 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+, the partial derivative 
+\begin_inset Formula 
+\[
+\frac{\partial y_{k}}{\partial e_{i}}=0
+\]
+
+\end_inset
+
+ if 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $i$
+\end_inset
+
+ are not both less than or equal to
+\begin_inset Formula $n^{1}$
+\end_inset
+
+ or greater than
+\begin_inset Formula $n^{1}$
+\end_inset
+
+.
+ We also note that since the Christoffel symbols are derived from the metric
+ 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ The fact that 
+\begin_inset Formula $g$
+\end_inset
+
+ doesn't have any cross terms between 
+\begin_inset Formula $g^{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $g^{2}$
+\end_inset
+
+ means that the Christoffel symbols 
+\begin_inset Formula 
+\[
+\Gamma_{ij}^{k}=0
+\]
+
+\end_inset
+
+ when 
+\begin_inset Formula $i,j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ are not all less than or equal to
+\begin_inset Formula $n^{1}$
+\end_inset
+
+ or greater than
+\begin_inset Formula $n^{1}$
+\end_inset
+
+.
+ Therefore, we can simplify the connection to 
+\begin_inset Formula 
+\begin{align*}
+\nabla_{X}Y & =\sum_{k=1}^{n^{1}}\left(\sum_{i,j}x_{i}y_{j}\Gamma_{ij}^{k}+\sum_{i}x_{i}\frac{\partial y_{k}}{\partial e_{i}}\right)e_{k}+\sum_{k=n^{1}+1}^{n^{1}+n^{2}}\left(\sum_{i,j}x_{i}y_{j}\Gamma_{ij}^{k}+\sum_{i}x_{i}\frac{\partial y_{k}}{\partial e_{i}}\right)e_{k}\\
+ & =\nabla_{d\pi_{1}X}^{1}d\pi_{1}Y+\nabla_{d\pi_{2}X}^{2}d\pi_{2}Y\\
+ & =\nabla_{X_{1}}^{1}Y_{1}+\nabla_{X_{2}}^{2}Y_{2}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The submanifold 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+ is totally geodesic if any geodesic on the submanifold 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+ with its induced Riemannian metric 
+\begin_inset Formula $g$
+\end_inset
+
+ is also a geodesic on the Riemannian manifold 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\gamma^{2}:I\to M_{2}$
+\end_inset
+
+ be a geodesic on 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\gamma:I\to\left(M_{2}\right)_{p}$
+\end_inset
+
+ be a geodesic on 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+\gamma\left(t\right)=\left(p,\gamma^{2}\left(t\right)\right).
+\]
+
+\end_inset
+
+ Note that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is also a curve on 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+.
+ We want to show that if 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a geodesic on 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+, then it is also a geodesic on 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\gamma\left(t\right)=x^{i}\left(t\right)e_{i}$
+\end_inset
+
+ in local coordinates.
+ The differential equation of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ on 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\left(\frac{d^{2}x^{k}}{dt^{2}}+\Gamma_{ij}^{k}\frac{dx^{i}}{dt}\frac{dx^{j}}{dt}\right)e_{k}=0.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\gamma\left(t\right)=\left(p,\gamma^{2}\left(t\right)\right)$
+\end_inset
+
+, the first 
+\begin_inset Formula $n^{1}$
+\end_inset
+
+ terms are zero, also since 
+\begin_inset Formula $\Gamma_{ij}^{k}=0$
+\end_inset
+
+ when 
+\begin_inset Formula $i,j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ are not all less than or equal to
+\begin_inset Formula $n^{1}$
+\end_inset
+
+ or greater than
+\begin_inset Formula $n^{1}$
+\end_inset
+
+, this differential simplifies to 
+\begin_inset Formula 
+\[
+\nabla_{d\pi_{2}\gamma'}^{2}d\pi_{2}\gamma'=0.
+\]
+
+\end_inset
+
+On 
+\begin_inset Formula $M_{1}\times M_{2}$
+\end_inset
+
+, we need 
+\begin_inset Formula $\nabla_{\gamma'}\gamma'=0$
+\end_inset
+
+.
+ Expanding it out we get 
+\begin_inset Formula 
+\begin{align*}
+\nabla_{\gamma'}\gamma' & =\nabla_{d\pi_{1}\gamma'}^{1}d\pi_{1}\gamma'+\nabla_{d\pi_{1}\gamma'}^{2}d\pi_{1}\gamma'\\
+ & =\nabla_{d\pi_{2}\gamma'}^{2}d\pi_{2}\gamma'\\
+ & =0,
+\end{align*}
+
+\end_inset
+
+since 
+\begin_inset Formula $d\pi_{1}\gamma'=0$
+\end_inset
+
+.
+ Therefore, if 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a geodesic on 
+\begin_inset Formula $\left(M_{2}\right)_{p}$
+\end_inset
+
+, then it is a geodesic on 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Next we suppose that 
+\begin_inset Formula $\sigma\left(x,y\right)\subset T_{\left(p,q\right)}\left(M_{1}\times M_{2}\right)$
+\end_inset
+
+ is a plane such that 
+\begin_inset Formula $x\in T_{p}M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in T_{q}M_{2}$
+\end_inset
+
+.
+ The sectional curvature is defined as 
+\begin_inset Formula 
+\[
+K\left(\sigma\left(x,y\right)\right)=\frac{g\left(R\left(x,y\right)x,y\right)}{\left\Vert x\wedge y\right\Vert }
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $R$
+\end_inset
+
+ is the curvature defined as 
+\begin_inset Formula 
+\[
+R\left(x,y\right)x=\nabla_{y}\nabla_{x}x-\nabla_{x}\nabla_{y}x+\nabla_{\left[x,y\right]}x.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $x\in T_{p}M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in T_{q}M_{2}$
+\end_inset
+
+ and by the definition of the connection: 
+\begin_inset Formula $\nabla_{y}x=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\nabla_{x}y=0$
+\end_inset
+
+.
+ From the symmetry property of the connection, we get 
+\begin_inset Formula $\left[x,y\right]=0$
+\end_inset
+
+.
+ Lastly, since 
+\begin_inset Formula $\nabla_{x}x\in T_{p}M_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\nabla_{y}\nabla_{x}x=0$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $R\left(x,y\right)x=0$
+\end_inset
+
+ and the sectional curvature is also zero.
+ 
+\end_layout
+
+\begin_layout Exercise
+(The Clifford torus).
+ Consider the immersion 
+\begin_inset Formula $r:\mathbb{R}^{2}\to\mathbb{R}^{4}$
+\end_inset
+
+ defined as 
+\begin_inset Formula 
+\[
+r\left(\theta,\phi\right)=\frac{1}{\sqrt{2}}\left(\cos\left(\theta\right),\sin\left(\theta\right),\cos\left(\phi\right),\sin\left(\phi\right)\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Show that the vectors 
+\begin_inset Formula 
+\begin{align*}
+e_{1} & =\left(-\sin\left(\theta\right),\cos\left(\theta\right),0,0\right)\\
+e_{2} & =\left(0,0,-\sin\left(\phi\right),\cos\left(\phi\right)\right)
+\end{align*}
+
+\end_inset
+
+form an orthonormal basis of the tangent space, and that the vectors 
+\begin_inset Formula 
+\begin{align*}
+n_{1} & =\frac{1}{\sqrt{2}}\left(\cos\left(\theta\right),\sin\left(\theta\right),\cos\left(\phi\right),\sin\left(\phi\right)\right)\\
+n_{2} & =\frac{1}{\sqrt{2}}\left(-\cos\left(\theta\right),-\sin\left(\theta\right),\cos\left(\phi\right),\sin\left(\phi\right)\right)
+\end{align*}
+
+\end_inset
+
+form an orthonormal basis of the normal space.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use the fact that 
+\begin_inset Formula 
+\[
+\left\langle S_{n_{k}}\left(e_{i}\right),e_{j}\right\rangle =-\left\langle \bar{\nabla}_{e_{i}}n_{k},e_{j}\right\rangle =\left\langle \bar{\nabla}_{e_{i}}e_{j},n_{k}\right\rangle ,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\bar{\nabla}$
+\end_inset
+
+ is the covariant derivative (that is the usual derivative of 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+), and 
+\begin_inset Formula $i,j,k=1,2$
+\end_inset
+
+ to establish that the matrices of 
+\begin_inset Formula $S_{n_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{n_{2}}$
+\end_inset
+
+ with respect to the basis 
+\begin_inset Formula $\left\{ e_{1},e_{2}\right\} $
+\end_inset
+
+ are 
+\begin_inset Formula 
+\begin{align*}
+s_{n_{1}} & =\begin{bmatrix}-1 & 0\\
+0 & -1
+\end{bmatrix}\\
+s_{n_{2}} & =\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We begin by showing part 1).
+ Since 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ is 4 dimensions, it's tangent space is also 4 dimensions; thus, a basis
+ is composed of four vectors.
+ Now, the differential of the map 
+\begin_inset Formula $r$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+dr=\frac{1}{\sqrt{2}}\begin{bmatrix}-\sin\left(\theta\right) & 0\\
+\cos\left(\theta\right) & 0\\
+0 & -\sin\left(\phi\right)\\
+0 & \cos\left(\phi\right)
+\end{bmatrix}.
+\]
+
+\end_inset
+
+From the differential 
+\begin_inset Formula $dr$
+\end_inset
+
+, we get that the vectors 
+\begin_inset Formula 
+\begin{align*}
+E_{1} & =\frac{1}{\sqrt{2}}\left(-\sin\left(\theta\right),\cos\left(\theta\right),0,0\right)\\
+E_{2} & =\frac{1}{\sqrt{2}}\left(0,0,-\sin\left(\phi\right),\cos\left(\phi\right)\right)
+\end{align*}
+
+\end_inset
+
+span the tangent plane and that they are orthogonal to each other.
+ Making each one orthonormal gives us the orthonormal basis vectors 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+.
+ Now we proceed to show that 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ are orthonormal vectors that span the normal space.
+ It is easily shown that 
+\begin_inset Formula $\sqrt{\left\langle n_{1},n_{1}\right\rangle }=1$
+\end_inset
+
+, and 
+\begin_inset Formula $\sqrt{\left\langle n_{2},n_{2}\right\rangle }=1$
+\end_inset
+
+ which indicates that they are unit vectors.
+ Next we perform the calculations to show that they are all orthogonal to
+ each other
+\begin_inset Formula 
+\begin{align*}
+\left\langle e_{1},e_{2}\right\rangle  & =0\\
+\left\langle e_{1},n_{1}\right\rangle  & =0\\
+\left\langle e_{1},n_{2}\right\rangle  & =0\\
+\left\langle e_{2},n_{1}\right\rangle  & =0\\
+\left\langle e_{2},n_{2}\right\rangle  & =0\\
+\left\langle n_{1},n_{2}\right\rangle  & =0.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Since each vector in 
+\begin_inset Formula $\left\{ e_{1},e_{2},n_{1},n_{2}\right\} $
+\end_inset
+
+ is orthonormal, they must span the space 
+\begin_inset Formula $T\mathbb{R}^{4}$
+\end_inset
+
+.
+ Now since 
+\begin_inset Formula $\left\{ e_{1},e_{2}\right\} $
+\end_inset
+
+ span the tangent space, 
+\begin_inset Formula $\left\{ n_{1},n_{2}\right\} $
+\end_inset
+
+ must span the normal space.
+ 
+\end_layout
+
+\begin_layout Proof
+We now proceed to show part 2).
+ The shape operator in 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ can be simplified to
+\begin_inset Formula 
+\begin{align*}
+s_{n_{k}}e_{i} & =-\left(\bar{\nabla}_{e_{i}}n_{k}\right)^{\top}\\
+ & =a^{\ell}\frac{\partial}{\partial x_{\ell}}\left(b^{j}\right)\frac{\partial}{\partial x_{j}}
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $e_{i}=a^{\ell}\frac{\partial}{\partial x_{\ell}}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{k}=b^{j}\frac{\partial}{\partial x_{j}}$
+\end_inset
+
+ since all of the Christoffel symbols are zero.
+ We now calculate the different combinations by noting that from the parameteriz
+ation of the surface 
+\begin_inset Formula 
+\begin{align*}
+x_{1} & =\frac{1}{\sqrt{2}}\cos\left(\theta\right)\\
+x_{2} & =\frac{1}{\sqrt{2}}\sin\left(\theta\right)\\
+x_{3} & =\frac{1}{\sqrt{2}}\cos\left(\phi\right)\\
+x_{4} & =\frac{1}{\sqrt{2}}\sin\left(\phi\right)
+\end{align*}
+
+\end_inset
+
+which allows us to write the surface as 
+\begin_inset Formula 
+\[
+r\left(\theta,\phi\right)=\left(x_{1},x_{2},x_{3},x_{4}\right).
+\]
+
+\end_inset
+
+Using this, we can easily see that 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x_{i}}\left(n_{1}\right)=\frac{\partial}{\partial x_{i}}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x_{i}}\left(n_{2}\right)=\begin{cases}
+-\frac{\partial}{\partial x_{i}} & i=1,2\\
+\frac{\partial}{\partial x_{i}} & i=3,4
+\end{cases};
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula 
+\begin{align*}
+\nabla_{e_{1}}n_{1} & =e_{1}\\
+\nabla_{e_{2}}n_{1} & =e_{2}\\
+\nabla_{e_{1}}n_{2} & =-e_{1}\\
+\nabla_{e_{2}}n_{2} & =e_{2}
+\end{align*}
+
+\end_inset
+
+which gives us 
+\begin_inset Formula 
+\begin{align*}
+s_{n_{1}}e_{1} & =-e_{1}\\
+s_{n_{1}}e_{2} & =-e_{2}\\
+s_{n_{2}}e_{1} & =e_{1}\\
+s_{n_{2}}e_{2} & =-e_{2};
+\end{align*}
+
+\end_inset
+
+therefore, the matrices of 
+\begin_inset Formula $S_{n_{1}}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{n_{2}}$
+\end_inset
+
+ with respect to the basis 
+\begin_inset Formula $\left\{ e_{1},e_{2}\right\} $
+\end_inset
+
+ are 
+\begin_inset Formula 
+\begin{align*}
+s_{n_{1}} & =\begin{bmatrix}-1 & 0\\
+0 & -1
+\end{bmatrix}\\
+s_{n_{2}} & =\begin{bmatrix}1 & 0\\
+0 & -1
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
