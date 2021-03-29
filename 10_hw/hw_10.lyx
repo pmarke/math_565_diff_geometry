@@ -5,6 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass IEEEtran
+\options onecolumn
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -335,6 +336,21 @@ Using the theorem in the homework assignment, show that no neighborhood
  
 \end_layout
 
+\begin_layout Exercise
+In homework 8 we computed that the Gaussian curvature of the sphere was
+ nonzero constant and thus equal at every point.
+ Therefore, the curvature 
+\begin_inset Formula $R$
+\end_inset
+
+ is also the same at every point according to the Bonnet theorem.
+ In order for a neighborhood of a point on the sphere to be isometric to
+ the plane, the point on the sphere and the plane would need to have the
+ same curvature.
+ Since the curvature of a plane is zero and the curvature of a sphere is
+ nonzero constant at every point, there is no such isometry.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -365,6 +381,52 @@ Using the above results show that there exists no surface
 
 , and 
 \begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $E$
+\end_inset
+
+, 
+\begin_inset Formula $F$
+\end_inset
+
+, 
+\begin_inset Formula $G$
+\end_inset
+
+ are zero, their partial derivatives are zero.
+ This means that the Christoffel symbols are also zero.
+ Therefore,
+\begin_inset Formula 
+\[
+\Gamma_{12}^{2}+\Gamma_{11}^{2}+\Gamma_{12}^{1}\Gamma_{11}^{2}-\Gamma_{11}^{2}\Gamma_{22}^{2}-\Gamma_{11}^{1}\Gamma_{12}^{2}=0.
+\]
+
+\end_inset
+
+According to the Gauss equation, this implies that 
+\begin_inset Formula 
+\[
+-E\frac{eg-f^{2}}{EG-F^{2}}=0;
+\]
+
+\end_inset
+
+however 
+\begin_inset Formula 
+\[
+-E\frac{eg-f^{2}}{EG-F^{2}}=-1\frac{1\cdot1-0^{2}}{1\cdot1-0^{2}}=-1
+\]
+
+\end_inset
+
+ which is a contradiction; thus there exists no such surface 
+\begin_inset Formula $r\left(u,v\right)$
 \end_inset
 
 .
