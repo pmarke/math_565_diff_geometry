@@ -123,7 +123,11 @@ Show that
 \end_layout
 
 \begin_layout Proof
-Since 
+We begin with part 1 and then prove part 2.
+\end_layout
+
+\begin_layout Proof
+Part 1) Since 
 \begin_inset Formula $M$
 \end_inset
 
@@ -194,6 +198,260 @@ where
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Exercise
+The 
+\begin_inset Formula $\left(M,g\right)$
+\end_inset
+
+ be a Riemannian 2-manifold.
+ A curved polygon on 
+\begin_inset Formula $M$
+\end_inset
+
+ whose sides are geodesic segments is called a geodesic polygon.
+ If 
+\begin_inset Formula $g$
+\end_inset
+
+ has everywhere nonpositive Gaussian curvature, prove that there are no
+ geodesic polygons with exactly 
+\begin_inset Formula $1$
+\end_inset
+
+ or 
+\begin_inset Formula $2$
+\end_inset
+
+ vertices.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\gamma\left(t\right)$
+\end_inset
+
+ be the curve that makes up the geodesic polygon.
+ According to the Gauss-Bonnet Formula
+\begin_inset Formula 
+\[
+\int_{\Omega}KdA+\int_{\gamma}K_{n}dt+\sum\epsilon_{i}=2\pi.
+\]
+
+\end_inset
+
+Since the edges are geodesics, 
+\begin_inset Formula $K_{n}=0$
+\end_inset
+
+ which simplifies the formula to 
+\begin_inset Formula 
+\[
+\int_{\Omega}KdA+\sum\epsilon_{i}=2\pi.
+\]
+
+\end_inset
+
+ Under the assumption that 
+\begin_inset Formula $g$
+\end_inset
+
+ has everywhere nonpositive Gaussian curvature, 
+\begin_inset Formula $K\leq0$
+\end_inset
+
+ which implies 
+\begin_inset Formula 
+\[
+\sum\epsilon_{i}\geq2\pi.
+\]
+
+\end_inset
+
+Since each vertex is not a cusp, is has an angle between 
+\begin_inset Formula $\left(-\pi,\pi\right)$
+\end_inset
+
+.
+ Therefore there must be more than two vertices for the formula to hold.
+ 
+\end_layout
+
+\begin_layout Exercise
+A geodesic triangle on a Riemannian 2-manifold 
+\begin_inset Formula $\left(M,g\right)$
+\end_inset
+
+ is a three-sided geodesic polygon.
+ Prove that if 
+\begin_inset Formula $M$
+\end_inset
+
+ has constant Gaussian curvature 
+\begin_inset Formula $K$
+\end_inset
+
+, show that the sum of the interior angles of a geodesic traingle 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\pi+KA$
+\end_inset
+
+, where 
+\begin_inset Formula $A$
+\end_inset
+
+ is the area of the region bounded by 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We suppose directly that 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is a geodesic triangle.
+ According to the Gauss-Bonnet Formula 
+\begin_inset Formula 
+\[
+\int_{\Omega}KdA+\int_{\gamma}K_{n}dt+\sum\epsilon_{i}=2\pi.
+\]
+
+\end_inset
+
+Since the triangle 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is geodesic 
+\begin_inset Formula $K_{n}=0$
+\end_inset
+
+.
+ This allows us to simplify the formula to 
+\begin_inset Formula 
+\[
+\int_{\Omega}KdA+\sum\epsilon_{i}=2\pi.
+\]
+
+\end_inset
+
+The interrior angles 
+\begin_inset Formula $\theta_{i}=\pi-\epsilon_{i}$
+\end_inset
+
+.
+ Substituting this in we get 
+\begin_inset Formula 
+\begin{align*}
+\int_{\Omega}KdA-\sum\theta_{i}+3\pi & =2\pi
+\end{align*}
+
+\end_inset
+
+which yields 
+\begin_inset Formula 
+\[
+\int_{\Omega}KdA+\pi=\sum\theta_{i}.
+\]
+
+\end_inset
+
+Since the curvature is constant, we get 
+\begin_inset Formula 
+\[
+KA+\pi=\sum\theta_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+An ideal triangle in the hyperbolic plane 
+\begin_inset Formula $\mathbb{H}^{2}$
+\end_inset
+
+ is a region whose bounary consists of three geodesics, any two of which
+ meet at a common point on the boundary of the disk (meaning both geodesics
+ are vertical and would meet at infinity).
+ Compute the area of an ideal triangle of your choice using the model of
+ your coice and show it is 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+A hyperbolic space has constant negative sectional curvature of 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ Since the three edges of the triangle are geodesics and are verticle, they
+ make a right angle on the boundary.
+ Let 
+\begin_inset Formula $\gamma_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{j}$
+\end_inset
+
+ be two of the goedesics that meet at point 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\gamma_{i}$
+\end_inset
+
+ is moving towards 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{j}$
+\end_inset
+
+ is moving away from 
+\begin_inset Formula $p_{ij}$
+\end_inset
+
+ as would be the case for a geodesic polygon.
+ Since both 
+\begin_inset Formula $\gamma_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma_{j}$
+\end_inset
+
+ make right angles at the boundary and are moving in a counter-clockwise
+ direction, the exterior angle between the two is 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+ Therefore, using the Gauss-Bonnet Formula we get 
+\begin_inset Formula 
+\begin{align*}
+A & =\sum\epsilon_{i}-2\pi\\
+ & =3\pi-2\pi\\
+ & =\pi
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
