@@ -5,6 +5,7 @@
 \save_transient_properties true
 \origin unavailable
 \textclass IEEEtran
+\options onecolumn
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -132,23 +133,128 @@ Part 1) Since
 \end_inset
 
  is compact, then it is complete as a metric space and geodesically complete.
- Let 
-\begin_inset Formula $p,q\in M$
+ Thus given a point 
+\begin_inset Formula $p\in M$
 \end_inset
 
- be points such that 
+ at the origin, there exists a point 
+\begin_inset Formula $q\in M$
+\end_inset
+
+ such that 
 \begin_inset Formula $q$
 \end_inset
 
- is at a maximum distance from 
+ is at a maximum distance away from 
 \begin_inset Formula $p$
 \end_inset
 
-, and let 
-\begin_inset Formula $\gamma\left(t\right)$
+.
+ At 
+\begin_inset Formula $q$
 \end_inset
 
+, if the curvature is negative then there exists a point 
+\begin_inset Formula $r$
+\end_inset
 
+ next to 
+\begin_inset Formula $q$
+\end_inset
+
+ such that 
+\begin_inset Formula $r$
+\end_inset
+
+ is farther away from 
+\begin_inset Formula $p$
+\end_inset
+
+, then 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $q$
+\end_inset
+
+ is the farthest point from 
+\begin_inset Formula $p$
+\end_inset
+
+, the curvature at 
+\begin_inset Formula $q$
+\end_inset
+
+ cannot be negative.
+ Now assume that the curvature at 
+\begin_inset Formula $q$
+\end_inset
+
+ is zero, then the surface at this point has a straight segment.
+ Let 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ be points next to 
+\begin_inset Formula $q$
+\end_inset
+
+ on the straight segment such that 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ are on opposite sides.
+ If 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ is closer to 
+\begin_inset Formula $p$
+\end_inset
+
+ than 
+\begin_inset Formula $q$
+\end_inset
+
+, then 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ must be farther from 
+\begin_inset Formula $p$
+\end_inset
+
+ than 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ This is a contradiction; thus, the curvature at 
+\begin_inset Formula $q$
+\end_inset
+
+ cannot be zero.
+ This leaves us with the only option that the curvature at 
+\begin_inset Formula $q$
+\end_inset
+
+ is positive.
+ Therefore, the Gaussian curvature 
+\begin_inset Formula $K$
+\end_inset
+
+ cannot be non positive everywhere.
+ 
 \end_layout
 
 \begin_layout Proof
