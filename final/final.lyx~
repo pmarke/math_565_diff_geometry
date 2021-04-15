@@ -1,0 +1,1107 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Final
+\end_layout
+
+\begin_layout Author
+Mark Petersen
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a Riemannian manifold where, for any 
+\begin_inset Formula $p,q\in M$
+\end_inset
+
+, the parallel transport from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+ does not depend on the curve that joins 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Prove that the Riemannian curvature tensor on 
+\begin_inset Formula $M$
+\end_inset
+
+ is identically zero.
+ 
+\end_layout
+
+\begin_layout Proof
+Using the hint provided in the book.
+ Consider a parameterized surface 
+\begin_inset Formula $f:U\subseteq\mathbb{R}^{2}\to M$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\[
+U=\left\{ \left(s,t\right)\in\mathbb{R}^{2};-\epsilon<t<1+\epsilon,-\epsilon<s<1+\epsilon,\epsilon>0\right\} 
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula $f\left(s,0\right)=f\left(0,0\right)$
+\end_inset
+
+, for all 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ evaluated at a specific 
+\begin_inset Formula $s$
+\end_inset
+
+ is a curve from 
+\begin_inset Formula $p$
+\end_inset
+
+ to 
+\begin_inset Formula $q$
+\end_inset
+
+, thus 
+\begin_inset Formula $s$
+\end_inset
+
+ selects the curve we are traveling on.
+ 
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $V_{0}\in T_{f\left(0,0\right)}M$
+\end_inset
+
+ and define a field 
+\begin_inset Formula $V$
+\end_inset
+
+ along 
+\begin_inset Formula $f$
+\end_inset
+
+ by: 
+\begin_inset Formula $V\left(s,0\right)=V_{0}$
+\end_inset
+
+ and, if 
+\begin_inset Formula $t\neq0$
+\end_inset
+
+, V
+\begin_inset Formula $\left(s,t\right)$
+\end_inset
+
+ is the parallel transport of 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ along the curve 
+\begin_inset Formula $t\to f\left(s,t\right)$
+\end_inset
+
+.
+ Then, from Lemma 4.1,
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\frac{D}{\partial s}\frac{D}{\partial t}V=0=\frac{D}{\partial t}\frac{D}{\partial s}V+R\left(\frac{\partial f}{\partial t},\frac{\partial f}{\partial s}\right)V.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The first term 
+\begin_inset Formula $\frac{D}{\partial s}\frac{D}{\partial t}V=0$
+\end_inset
+
+ since the vector is being parallel transported along the curve.
+ The second term 
+\begin_inset Formula $\frac{D}{\partial t}\frac{D}{\partial s}V=0$
+\end_inset
+
+ since parallel transport does not depend on the curve chosen according
+ to the assumption made.
+ Thus, 
+\begin_inset Formula $V\left(s,1\right)$
+\end_inset
+
+ is the parallel transport of 
+\begin_inset Formula $V\left(0,1\right)$
+\end_inset
+
+ along the curve 
+\begin_inset Formula $s\to f\left(s,1\right)$
+\end_inset
+
+, hence 
+\begin_inset Formula $\frac{D}{\partial s}V\left(s,1\right)=0$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula 
+\[
+R_{f\left(0,1\right)}\left(\frac{\partial f}{\partial t}\left(0,1\right),\frac{\partial f}{\partial s}\left(0,1\right)\right)V\left(0,1\right)=0.
+\]
+
+\end_inset
+
+Since the surface 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+ are arbitrary, then for all 
+\begin_inset Formula $X,Y,Z\in\mathcal{X}\left(M\right)$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+R\left(X,Y\right)Z=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Therefore, the curvature is zero.
+ 
+\end_layout
+
+\begin_layout Exercise
+Consider 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ with the connection 
+\begin_inset Formula $\nabla_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x}=\lambda,$
+\end_inset
+
+ for some 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $c:\left[0,1\right]\to\mathbb{R}$
+\end_inset
+
+ be a curve such that 
+\begin_inset Formula $\frac{dc}{dt}=\frac{\partial}{\partial x}$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\left[0,1\right]$
+\end_inset
+
+.
+ Show that the parallel transport along 
+\begin_inset Formula $c$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+P_{c\left(t\right),c\left(0\right)}\left(v\frac{\partial}{\partial x}\right)=ve^{-\lambda t}\frac{\partial}{\partial x}
+\]
+
+\end_inset
+
+ for 
+\begin_inset Formula $v\in T_{c\left(t\right)}\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+According to the equation in Do Carmo, A vector that is parallel transported
+ must satisfy the equation 
+\begin_inset Formula 
+\[
+\frac{dv^{k}}{dt}+\sum_{i,j}\Gamma_{ij}^{k}v^{j}\frac{dx_{i}}{dt}=\frac{Dv}{dt}=0.
+\]
+
+\end_inset
+
+Since we are working in one dimension and 
+\begin_inset Formula $\nabla_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x}=\lambda$
+\end_inset
+
+, we can simplify the equation to 
+\begin_inset Formula 
+\[
+\frac{dv}{dt}\frac{\partial}{\partial x}=-\lambda v\frac{\partial}{\partial x}.
+\]
+
+\end_inset
+
+Solving the differential equation with initial conditions 
+\begin_inset Formula $v\left(0\right)=v$
+\end_inset
+
+ gives us 
+\begin_inset Formula 
+\[
+P_{c\left(t\right),c\left(0\right)}\left(v\frac{\partial}{\partial x}\right)=ve^{-\lambda t}\frac{\partial}{\partial x}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Consider 
+\begin_inset Formula $z=6xy-x^{2}-y^{2}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ with the induced metric.
+ At the point 
+\begin_inset Formula $\left(0,0,0\right)$
+\end_inset
+
+ the vectors 
+\begin_inset Formula $\frac{\partial}{\partial x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial}{\partial y}$
+\end_inset
+
+ form an orthonormal basis for the tangent space to the surface at the point.
+ Find the matrix of the derivative of the Gauss map with respect to this
+ basis.
+ Also, find the Gaussian curvature, principal curvatures, and principal
+ directions at this point.
+ 
+\end_layout
+
+\begin_layout Proof
+We will use Matlab to help with the computations.
+ Let 
+\begin_inset Formula $r:\mathbb{\mathbb{R}}^{2}\to\mathbb{R}^{3}$
+\end_inset
+
+ be the parameterized surface 
+\begin_inset Formula $r\left(u,v\right)=\left(u,v,6uv-u^{2}-v^{2}\right)$
+\end_inset
+
+.
+ The differential of 
+\begin_inset Formula $r$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+dr=\begin{bmatrix}1 & 0\\
+0 & 1\\
+6v-2u & 6u-2v
+\end{bmatrix},
+\]
+
+\end_inset
+
+from which we can calculate the induced metric 
+\begin_inset Formula 
+\[
+I_{p}=g=dr'dr=\begin{bmatrix}\left(2u-6v\right)^{2}+1 & -\left(2u-6v\right)\left(6u-2v\right)\\
+-\left(2u-6v\right)\left(6u-2v\right) & \left(6u-2v\right)^{2}+1
+\end{bmatrix};
+\]
+
+\end_inset
+
+therefore, the coefficients of the first fundamental form are
+\begin_inset Formula 
+\begin{align*}
+E & =\left(2u-6v\right)^{2}+1\\
+F & =-\left(2u-6v\right)\left(6u-2v\right)\\
+G & =\left(6u-2v\right)^{2}+1.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+The Gaus map is 
+\begin_inset Formula 
+\[
+N=\frac{dr_{u}\times dr_{v}}{\left\Vert dr_{u}\times dr_{v}\right\Vert }=\frac{1}{\sqrt{\left(2u-6v\right)^{2}+\left(2v-6u\right)^{2}+1}}\begin{bmatrix}2u-6v\\
+2v-6u\\
+1
+\end{bmatrix}.
+\]
+
+\end_inset
+
+The derivative of the Gaus map is 
+\begin_inset Formula 
+\[
+dN=\begin{bmatrix}\left(-64v^{2}+192uv+2\right)/c_{1} & -\left(192u^{2}-64vu+6\right)/c_{1}\\
+-\left(192v^{2}-64uv+6\right)/c_{1} & \left(-64u^{2}+192uv+2\right)/c_{1}\\
+-\left(80u-48v\right)/c_{2} & \left(48u-80v\right)/c_{2}
+\end{bmatrix},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{align*}
+c_{1} & =\left(40u^{2}-48uv+40v^{2}+1\right)^{\frac{3}{2}},\\
+c_{2} & =2\left(\left(2u-6v\right)^{2}+\left(6u-2v\right)^{2}+1\right)^{\frac{3}{2}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Using the derivative of the Gauss map, we can compute the second fundamental
+ form
+\begin_inset Formula 
+\begin{align*}
+II_{p} & =-\left\langle dN,dr\right\rangle =\begin{bmatrix}e & f\\
+f & g
+\end{bmatrix},
+\end{align*}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+e & =-\left(80u^{2}-96uv+80v^{2}+2\right)/c_{3}\\
+f & =\left(240u^{2}-288uv+240v^{2}+6\right)/c_{3}\\
+g & =-\left(80u^{2}-96uv+80v^{2}+2\right)/c_{3}\\
+c_{3} & =\left(40u^{2}-48uv+40v^{2}+1\right)^{3/2}.
+\end{align*}
+
+\end_inset
+
+Since we are interested in the curvature at the point 
+\begin_inset Formula $\left(0,0,0\right)$
+\end_inset
+
+ we evaluate the first and second fundamental forms at that point to get
+ 
+\begin_inset Formula 
+\begin{align*}
+I_{p}\left(0,0,0\right) & =\begin{bmatrix}1 & 0\\
+0 & 1
+\end{bmatrix}\\
+II_{p}\left(0,0,0\right) & =\begin{bmatrix}-2 & 6\\
+6 & -2
+\end{bmatrix}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Using the coefficients of the first and second fundamental form, we compute
+ the Gaussian curvature
+\begin_inset Formula 
+\[
+K=\frac{ef-f^{2}}{EG-F^{2}}=-36.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+We can define the derivative of the Gauss map on the surface intrinsically
+ as 
+\begin_inset Formula 
+\[
+dN_{p}=\begin{bmatrix}a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{bmatrix},
+\]
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+a_{11} & =\frac{fF-eG}{EG-F^{2}}\\
+a_{12} & =\frac{gF-fG}{EG-F^{2}}\\
+a_{21} & =\frac{eF-fE}{EG-F^{2}}\\
+a_{22} & =\frac{fF-gE}{EG-F^{2}}.
+\end{align*}
+
+\end_inset
+
+Evaluating it at the point 
+\begin_inset Formula $\left(0,0,0\right)$
+\end_inset
+
+ gives us 
+\begin_inset Formula 
+\[
+dN_{p}=\begin{bmatrix}2 & -6\\
+-6 & 2
+\end{bmatrix}.
+\]
+
+\end_inset
+
+The eigenvalues and eigenvectors of 
+\begin_inset Formula $dN_{p}$
+\end_inset
+
+ are the principle curvature and principle directions which are 
+\begin_inset Formula 
+\begin{align*}
+\lambda & =-4,8\\
+v & =\begin{bmatrix}1\\
+1
+\end{bmatrix},\begin{bmatrix}-1\\
+1
+\end{bmatrix}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Let 
+\begin_inset Formula $\mathbb{H}^{2}=\left\{ \left(x_{1}.\ldots x_{n}\right)\in\mathbb{R}^{2}:x_{n}>0\right\} $
+\end_inset
+
+ and let 
+\begin_inset Formula $g_{ij}=\frac{\delta_{ij}}{x_{n}^{2}}$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $\mathbb{H}^{n}$
+\end_inset
+
+ with this metric has constant sectional curvature 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since we did exercise 1 on page 179 of Do Carmo I am going to use the results
+ in this proof without proving them since I proved them previously.
+ We can rewrite the metric as 
+\begin_inset Formula 
+\[
+g_{ij}=\frac{\delta_{ij}}{F^{2}},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $F=x_{n}$
+\end_inset
+
+.
+ According to what we proved in exercise 1 on page 179, the metric 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+ has constant curvature 
+\begin_inset Formula $K$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $F$
+\end_inset
+
+ is of the form 
+\begin_inset Formula 
+\[
+F=\sum G_{i}\left(x_{i}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+G_{i}\left(x_{i}\right)=ax_{i}^{2}+b_{i}x_{i}+c_{i}.
+\]
+
+\end_inset
+
+By the definition of our metric 
+\begin_inset Formula 
+\[
+G_{i}\left(x_{i}\right)=\begin{cases}
+0 & i\neq n\\
+x_{i} & i=n
+\end{cases},
+\]
+
+\end_inset
+
+therefore, the metric has constant curvature.
+ From the same exercise, it follows that the constant curvature 
+\begin_inset Formula $K$
+\end_inset
+
+ can calculated as 
+\begin_inset Formula 
+\[
+\sum\left(4c_{i}a-b_{i}^{2}\right)=K,
+\]
+
+\end_inset
+
+which is simplified to 
+\begin_inset Formula 
+\[
+-1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+Show that if 
+\begin_inset Formula $J$
+\end_inset
+
+ is a Jacobi field such that 
+\begin_inset Formula $J\left(0\right)=0$
+\end_inset
+
+ along a geodesic 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ that the component of 
+\begin_inset Formula $J$
+\end_inset
+
+ tangent to 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and normal to 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ are both Jacobi fields.
+ 
+\end_layout
+
+\begin_layout Proof
+For simplicity, we assume that the geodesic has unit speed, i.e.
+ 
+\begin_inset Formula $\left\Vert \gamma'\right\Vert =1$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\left\{ E_{i}\right\} $
+\end_inset
+
+ be an orthonormal frame along 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+J\left(t\right) & =\sum J_{i}\left(t\right)E_{i}\\
+\gamma'\left(t\right) & =\gamma_{i}'\left(t\right)E_{i}.
+\end{align*}
+
+\end_inset
+
+The component of 
+\begin_inset Formula $J\left(t\right)$
+\end_inset
+
+ along the geodesic is 
+\begin_inset Formula 
+\[
+\left\langle J,\gamma'\right\rangle \frac{\gamma'}{\left\Vert \gamma'\right\Vert }=\left(\sum J_{j}\gamma_{j}\right)\gamma_{i}'E_{i}=J^{T}\left(t\right).
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\frac{D\gamma'}{dt}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $R\left(\gamma',\gamma'\right)\gamma'=0$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{DJ^{\top}}{dt}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $R\left(\gamma',J^{\top}\right)\gamma'=0$
+\end_inset
+
+, thus 
+\begin_inset Formula $J^{\top}\left(t\right)$
+\end_inset
+
+ is a Jacobi field.
+ The component of 
+\begin_inset Formula $J$
+\end_inset
+
+ normal to 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+J-J^{\top}=J^{N}.
+\]
+
+\end_inset
+
+Since Jacobi fields form a vector space, 
+\begin_inset Formula $J^{N}$
+\end_inset
+
+ must also be a Jacobi field.
+ We can show this differently.
+ The Jacobi field 
+\begin_inset Formula $J$
+\end_inset
+
+ is a solution to 
+\begin_inset Formula 
+\[
+\frac{D^{2}J}{dt}+R\left(\gamma',J\right)\gamma'=0,
+\]
+
+\end_inset
+
+thus the solution to 
+\begin_inset Formula $J^{N}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{D^{2}J}{dt}+R\left(\gamma',J\right)\gamma'-\frac{D^{2}J^{\top}}{dt}-R\left(\gamma',J^{\top}\right)\gamma'=0.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\frac{D^{2}J^{\top}}{dt}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $R\left(\gamma',J^{\top}\right)\gamma'=0$
+\end_inset
+
+, we get that 
+\begin_inset Formula 
+\[
+\frac{D^{2}J}{dt}+R\left(\gamma',J\right)\gamma'=0,
+\]
+
+\end_inset
+
+thus 
+\begin_inset Formula $J^{N}$
+\end_inset
+
+ is also a solution.
+ 
+\end_layout
+
+\begin_layout Exercise
+Identify 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ with 
+\begin_inset Formula $C^{2}$
+\end_inset
+
+ by letting 
+\begin_inset Formula $\left(x_{1},x_{2},x_{3},x_{4}\right)$
+\end_inset
+
+ correspond to 
+\begin_inset Formula $\left(x_{1}+ix_{2},x_{3}+ix_{4}\right)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula 
+\[
+S^{3}=\left\{ \left(z_{1},z_{2}\right)\in C^{2}\,:\,\left|z_{1}\right|+\left|z_{2}\right|=1\right\} ,
+\]
+
+\end_inset
+
+and let 
+\begin_inset Formula $h:S^{3}\to S^{3}$
+\end_inset
+
+ be given by 
+\begin_inset Formula 
+\[
+h\left(z_{1},z_{2}\right)=\left(e^{\frac{2\pi i}{q}}z_{1},e^{\frac{2\pi ir}{q}}z_{2}\right),\quad\left(z_{1},z_{2}\right)\in S^{3}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+ are relatively prime integers, 
+\begin_inset Formula $q>2$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $G=\left\{ id,h,\ldots h^{q-1}\right\} $
+\end_inset
+
+ is a group of isometries of the sphere 
+\begin_inset Formula $S^{3}$
+\end_inset
+
+, with the usual metric, which operates in a totally discontinuous manner.
+ 
+\end_layout
+
+\begin_layout Proof
+We begin by showing that it is a group with the operator being the concatenation
+ .
+ By construction of the set 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $id\in G$
+\end_inset
+
+.
+ The function 
+\begin_inset Formula $h^{k}$
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\[
+h^{k}\left(z_{1},z_{2}\right)=\left(e^{\frac{k2\pi i}{q}}z_{1},e^{\frac{k2\pi ir}{q}}z_{2}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $k=\{0,\ldots,q-1\}$
+\end_inset
+
+.
+ From this we can easily see that 
+\begin_inset Formula $h^{\left(q-k\right)\text{mod}q}\circ h^{k}=id$
+\end_inset
+
+.
+ Thus the inverse exists.
+ Lastly, we can see that 
+\begin_inset Formula $id\circ h^{k}=h^{k}\circ id=h^{k}$
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $G$
+\end_inset
+
+ is a group.
+ Next, we proceed to show that 
+\begin_inset Formula $h^{k}$
+\end_inset
+
+ acts totally discontinuously.
+ Let 
+\begin_inset Formula $x=\left(z_{1},z_{2}\right)\in S^{3}$
+\end_inset
+
+.
+ We construct the subsets 
+\begin_inset Formula $U_{1},U_{2}\subset S^{3}$
+\end_inset
+
+ as follows.
+ Let 
+\begin_inset Formula $U_{i}$
+\end_inset
+
+ be a neighborhood of 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+h^{1}\left(U_{1},U_{2}\right)\cap U_{1}\times U_{2}=\emptyset
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+h^{q-1}\left(U_{1},U_{2}\right)\cap U_{1}\times U_{2}=\emptyset.
+\]
+
+\end_inset
+
+If such a set exists, then it follows that 
+\begin_inset Formula 
+\[
+h^{m}\left(U_{1},U_{2}\right)\cap U_{1}\times U_{2}=\emptyset
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $m=\{1,\ldots,q-1\}$
+\end_inset
+
+.
+ Thus we just need to construct 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula 
+\begin{align*}
+U_{1} & =\left\{ \left(e^{ni}z_{1},z_{2}\right):-\frac{\pi}{q}<n<\frac{\pi}{q}\right\} \\
+U_{2} & =\left\{ \left(z_{1},e^{ni}z_{2}\right):-\frac{\pi r}{q}<n<\frac{\pi r}{q}\right\} .
+\end{align*}
+
+\end_inset
+
+In other words 
+\begin_inset Formula 
+\[
+U_{1}=\left(e^{-\frac{\pi}{q}i}z_{1},e^{\frac{\pi}{q}i}z_{1}\right)\times z_{2}
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+U_{2}=z_{1}\times\left(e^{-\frac{\pi r}{q}i}z_{2},e^{\frac{\pi ri}{q}}z_{2}\right).
+\]
+
+\end_inset
+
+Applying 
+\begin_inset Formula $h^{1}$
+\end_inset
+
+ we get 
+\begin_inset Formula 
+\[
+h^{1}\left(U_{1},U_{2}\right)=U_{1}'\times U_{2}^{'}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\begin{align*}
+U'_{1} & =\left(e^{\frac{\pi}{q}i}z_{1},e^{\frac{3\pi}{q}i}z_{1}\right)\times z_{2}\\
+U'_{2} & =z_{1}\times\left(e^{\frac{\pi r}{q}i}z_{2},e^{\frac{3\pi ri}{q}}z_{2}\right).
+\end{align*}
+
+\end_inset
+
+From this we can see that 
+\begin_inset Formula 
+\[
+h^{1}\left(U_{1},U_{2}\right)\cap U_{1}\times U_{2}=\emptyset.
+\]
+
+\end_inset
+
+We can similarly show that 
+\begin_inset Formula 
+\[
+h^{q-1}\left(U_{1},U_{2}\right)\cap U_{1}\times U_{2}=\emptyset.
+\]
+
+\end_inset
+
+Thus, 
+\begin_inset Formula $G$
+\end_inset
+
+ is a totally discontinuous group.
+ Since the functions 
+\begin_inset Formula $h^{k}$
+\end_inset
+
+ are simply rotating 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ around a circle and rotation preserve length, we know that 
+\begin_inset Formula $G$
+\end_inset
+
+ is also a group of isometries.
+ In summary, 
+\begin_inset Formula $G$
+\end_inset
+
+ is a totally discontinuous group of isometries.
+ 
+\end_layout
+
+\end_body
+\end_document
